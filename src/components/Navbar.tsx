@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -34,9 +35,17 @@ export function Navbar() {
             <a
               href="#home"
               onClick={closeMenu}
-              className="truncate text-lg font-semibold tracking-tight text-slate-900 dark:text-white"
+              className="flex min-w-0 items-center gap-3 text-lg font-semibold tracking-tight text-slate-900 dark:text-white"
             >
-              Marcelo Farias
+              <Image
+                src="/icon.png"
+                alt=""
+                width={32}
+                height={32}
+                className="h-8 w-8 shrink-0 rounded-lg"
+                priority
+              />
+              <span className="truncate">Marcelo Farias</span>
             </a>
 
             <div className="hidden items-center gap-4 text-xs text-slate-600 dark:text-slate-300 md:flex lg:gap-6 lg:text-sm">
