@@ -18,7 +18,7 @@ export function About() {
           <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-3 shadow-xl shadow-slate-900/10 dark:border-white/10 dark:bg-slate-900 dark:shadow-2xl dark:shadow-cyan-950/30">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-slate-200 dark:bg-slate-800">
               <Image
-                src="/images/profile.png"
+                src="/images/profile2.png"
                 alt={m.about.imageAlt}
                 fill
                 className="object-cover"

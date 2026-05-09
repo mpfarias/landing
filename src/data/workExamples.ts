@@ -17,4 +17,10 @@ export const workExamples = [
       "A web app deployment workflow with GitHub integration, custom domain configuration, DNS setup and SSL activation.",
     tags: ["Vercel", "Cloudflare", "DNS", "SSL"],
   },
+  {
+    title: "Custom Web App MVP",
+    description:
+      "A tailored web application structure for dashboards, admin panels and SaaS MVPs with frontend, backend and database integration.",
+    tags: ["Full Stack", "Dashboard", "SaaS MVP"],
+  },
 ];

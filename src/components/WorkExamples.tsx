@@ -71,6 +71,37 @@ function DashboardMockup() {
   );
 }
 
+function CustomWebAppMockup() {
+  return (
+    <div className="h-full w-full bg-gradient-to-br from-slate-800 to-slate-950 p-5">
+      <div className="grid h-full grid-rows-[auto_1fr] gap-3 rounded-2xl border border-white/10 bg-slate-950/80 p-4">
+        <div className="flex items-center justify-between">
+          <div className="h-3 w-28 rounded-full bg-cyan-300/70" />
+          <div className="h-7 w-20 rounded-full bg-emerald-300/15" />
+        </div>
+
+        <div className="grid grid-cols-[0.9fr_1.1fr] gap-3">
+          <div className="space-y-2 rounded-xl bg-white/5 p-3">
+            <div className="h-8 rounded-lg bg-cyan-300/20" />
+            <div className="h-8 rounded-lg bg-white/10" />
+            <div className="h-8 rounded-lg bg-white/10" />
+            <div className="h-8 rounded-lg bg-white/10" />
+          </div>
+
+          <div className="space-y-3">
+            <div className="grid grid-cols-2 gap-2">
+              <div className="h-14 rounded-xl bg-cyan-300/15" />
+              <div className="h-14 rounded-xl bg-emerald-300/15" />
+            </div>
+            <div className="h-20 rounded-xl bg-white/5" />
+            <div className="h-10 rounded-xl bg-cyan-300/20" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function DeploymentMockup({ productionLabel }: { productionLabel: string }) {
   const steps = ["GitHub", "Vercel", "Domain", "SSL"];
 
@@ -108,6 +139,7 @@ export function WorkExamples() {
         key="deployment"
         productionLabel={m.work.productionReady}
       />,
+      <CustomWebAppMockup key="custom-web-app" />,
     ],
     [m.work.productionReady],
   );
@@ -132,7 +164,7 @@ export function WorkExamples() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {m.work.items.map((project, index) => (
             <article
               key={`${project.title}-${index}`}

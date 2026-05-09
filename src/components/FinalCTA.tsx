@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { links } from "@/data/links";
 
 export function FinalCTA() {
   const { messages: m } = useLanguage();
@@ -22,7 +23,7 @@ export function FinalCTA() {
 
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
           <a
-            href="https://br.fiverr.com/s/jjBDpbG"
+            href={links.fiverr.main}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-cyan-400 px-8 py-3 text-center text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"

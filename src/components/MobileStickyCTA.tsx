@@ -1,12 +1,13 @@
 "use client";
 
+import { links } from "@/data/links";
 import { useLanguage } from "@/i18n/LanguageProvider";
 
 export function MobileStickyCTA() {
   const { messages: m } = useLanguage();
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-slate-200 bg-white/95 px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 text-slate-900 shadow-2xl shadow-slate-900/15 backdrop-blur dark:border-white/10 dark:bg-slate-950/95 dark:text-white dark:shadow-slate-950/80 md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-slate-200 bg-white/95 px-4 py-3 text-slate-900 shadow-2xl shadow-slate-900/15 backdrop-blur dark:border-white/10 dark:bg-slate-950/95 dark:text-white dark:shadow-slate-950/80 md:hidden">
       <div className="mx-auto flex max-w-md items-center justify-between gap-4">
         <div>
           <p className="text-sm font-semibold text-slate-900 dark:text-white">
@@ -18,7 +19,7 @@ export function MobileStickyCTA() {
         </div>
 
         <a
-          href="https://br.fiverr.com/s/jjBDpbG"
+          href={links.fiverr.main}
           target="_blank"
           rel="noopener noreferrer"
           className="shrink-0 rounded-full bg-cyan-400 px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"

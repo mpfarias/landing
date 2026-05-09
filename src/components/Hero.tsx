@@ -70,6 +70,9 @@ export function Hero() {
                     {m.hero.tagLanding}
                   </span>
                   <span className="rounded-full bg-cyan-500/15 px-3 py-1 text-sm text-cyan-800 dark:bg-cyan-400/10 dark:text-cyan-300">
+                    {m.hero.tagWebApps}
+                  </span>
+                  <span className="rounded-full bg-cyan-500/15 px-3 py-1 text-sm text-cyan-800 dark:bg-cyan-400/10 dark:text-cyan-300">
                     {m.hero.tagBug}
                   </span>
                   <span className="rounded-full bg-cyan-500/15 px-3 py-1 text-sm text-cyan-800 dark:bg-cyan-400/10 dark:text-cyan-300">

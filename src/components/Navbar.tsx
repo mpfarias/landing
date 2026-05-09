@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { links } from "@/data/links";
 
 export function Navbar() {
   const { messages } = useLanguage();
@@ -15,6 +16,8 @@ export function Navbar() {
       { label: messages.nav.about, href: "#about" },
       { label: messages.nav.techStack, href: "#tech" },
       { label: messages.nav.work, href: "#work" },
+      { label: messages.nav.howIWork, href: "#how-i-work" },
+      { label: messages.nav.faq, href: "#faq" },
     ],
     [messages],
   );
@@ -36,7 +39,7 @@ export function Navbar() {
               Marcelo Farias
             </a>
 
-            <div className="hidden items-center gap-8 text-sm text-slate-600 dark:text-slate-300 md:flex">
+            <div className="hidden items-center gap-4 text-xs text-slate-600 dark:text-slate-300 md:flex lg:gap-6 lg:text-sm">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -53,7 +56,7 @@ export function Navbar() {
             <LanguageToggle />
             <ThemeToggle />
             <a
-              href="https://br.fiverr.com/s/jjBDpbG"
+              href={links.fiverr.main}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden rounded-full bg-cyan-400 px-5 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300 md:inline-flex"
@@ -88,7 +91,7 @@ export function Navbar() {
               ))}
 
               <a
-                href="https://br.fiverr.com/s/jjBDpbG"
+                href={links.fiverr.main}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMenu}

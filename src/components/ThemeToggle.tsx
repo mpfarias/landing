@@ -37,6 +37,7 @@ function MoonIcon({ className }: { className?: string }) {
 }
 
 export function ThemeToggle() {
+  const { messages } = useLanguage();
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
