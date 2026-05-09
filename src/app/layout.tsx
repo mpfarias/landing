@@ -9,7 +9,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://landing-kappa-seven-58.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcelofarias.dev.br";
 
 export const viewport = {
   width: "device-width",
