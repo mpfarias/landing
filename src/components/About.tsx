@@ -21,6 +21,7 @@ export function About() {
                 src="/images/profile2.png"
                 alt={m.about.imageAlt}
                 fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover"
                 priority
               />

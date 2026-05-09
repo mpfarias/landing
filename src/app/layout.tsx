@@ -42,6 +42,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Marcelo Farias" }],
   creator: "Marcelo Farias",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "1024x1024" },
+    ],
+    shortcut: [{ url: "/favicon.ico", type: "image/x-icon", sizes: "any" }],
+    apple: [{ url: "/icon.png", type: "image/png", sizes: "1024x1024" }],
+  },
   openGraph: {
     title: "Marcelo Farias | Full Stack Web Developer",
     description:
