@@ -39,17 +39,18 @@ export function About() {
           </h2>
 
           <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-8 shadow-lg shadow-slate-900/5 dark:border-white/10 dark:bg-slate-900/80 dark:shadow-xl dark:shadow-slate-950/40">
-            <p className="text-lg leading-8 text-slate-600 dark:text-slate-300">
-              {m.about.p1}
-            </p>
-
-            <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
-              {m.about.p2}
-            </p>
-
-            <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
-              {m.about.p3}
-            </p>
+            {m.about.paragraphs.map((text, index) => (
+              <p
+                key={index}
+                className={
+                  index === 0
+                    ? "text-lg leading-8 text-slate-600 dark:text-slate-300"
+                    : "mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300"
+                }
+              >
+                {text}
+              </p>
+            ))}
           </div>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
