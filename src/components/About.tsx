@@ -53,33 +53,20 @@ export function About() {
             ))}
           </div>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-white/10 dark:bg-white/[0.03]">
-              <p className="text-sm font-semibold text-slate-900 dark:text-white">
-                {m.about.roleLabel}
-              </p>
-              <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-                {m.about.roleValue}
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-white/10 dark:bg-white/[0.03]">
-              <p className="text-sm font-semibold text-slate-900 dark:text-white">
-                {m.about.focusLabel}
-              </p>
-              <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-                {m.about.focusValue}
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-white/10 dark:bg-white/[0.03]">
-              <p className="text-sm font-semibold text-slate-900 dark:text-white">
-                {m.about.stackLabel}
-              </p>
-              <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-                {m.about.stackValue}
-              </p>
-            </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {m.about.cards.map((card, index) => (
+              <div
+                key={`${card.label}-${index}`}
+                className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-white/10 dark:bg-white/[0.03]"
+              >
+                <p className="text-sm font-semibold text-slate-900 dark:text-white">
+                  {card.label}
+                </p>
+                <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                  {card.value}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

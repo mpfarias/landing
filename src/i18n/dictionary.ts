@@ -114,12 +114,24 @@ const en = {
       "Today, I bring this practical experience to freelance web development, helping businesses, entrepreneurs and developers build landing pages, custom web apps, dashboards, admin panels, SaaS MVPs, bug fixes and reliable deployment setups using modern technologies.",
       "My work combines technical development, problem-solving, clean interfaces, organized code and a strong focus on delivering solutions that are useful, maintainable and ready for real use.",
     ],
-    roleLabel: "Role",
-    roleValue: "Full Stack Web Developer",
-    focusLabel: "Focus",
-    focusValue: "Landing pages, web apps & bug fixing",
-    stackLabel: "Stack",
-    stackValue: "React, Next.js, Node.js",
+    cards: [
+      {
+        label: "Education",
+        value: "B.Sc. in Information Systems",
+      },
+      {
+        label: "Experience",
+        value: "Public sector technology since 2010",
+      },
+      {
+        label: "Focus",
+        value: "Web apps, dashboards & deployment",
+      },
+      {
+        label: "Approach",
+        value: "Practical, reliable and business-oriented",
+      },
+    ],
   },
   tech: {
     kicker: "Tech Stack",
@@ -426,12 +438,24 @@ const pt = {
       "Hoje levo essa experiência prática para o desenvolvimento web freelance, ajudando empresas, empreendedores e desenvolvedores a criarem landing pages, aplicações web personalizadas, dashboards, painéis administrativos, MVPs SaaS, correção de bugs e setups de deploy confiáveis com tecnologias modernas.",
       "Meu trabalho une desenvolvimento técnico, resolução de problemas, interfaces limpas, código organizado e um foco forte em entregar soluções úteis, sustentáveis e prontas para uso real.",
     ],
-    roleLabel: "Função",
-    roleValue: "Desenvolvedor full stack",
-    focusLabel: "Foco",
-    focusValue: "Landing pages, apps web e correção de bugs",
-    stackLabel: "Stack",
-    stackValue: "React, Next.js, Node.js",
+    cards: [
+      {
+        label: "Formação",
+        value: "Bacharelado em Sistemas de Informação",
+      },
+      {
+        label: "Experiência",
+        value: "Tecnologia no setor público desde 2010",
+      },
+      {
+        label: "Foco",
+        value: "Apps web, dashboards e deploy",
+      },
+      {
+        label: "Abordagem",
+        value: "Prática, confiável e orientada ao negócio",
+      },
+    ],
   },
   tech: {
     kicker: "Stack",
