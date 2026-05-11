@@ -45,13 +45,22 @@ export const projects = [
     service: "Frontend Development",
   },
   {
-    title: "Legacy Developer Portfolio",
-    category: "Frontend Portfolio",
+    title: "Schedly — Business Scheduling SaaS Platform",
+    category: "SaaS MVP / Full Stack Web App",
     description:
-      "An earlier portfolio project built with HTML, CSS and JavaScript, showing the evolution of my frontend development work and personal web presence.",
-    stack: ["HTML", "CSS", "JavaScript"],
-    href: "https://github.com/mpfarias/portfolio",
-    service: "Frontend Development",
+      "A business scheduling platform designed to help companies manage clients, services, professionals, appointments, payments and customer communication through a modern web dashboard and REST API.",
+    stack: [
+      "React",
+      "Vite",
+      "Next.js",
+      "Express",
+      "Prisma",
+      "PostgreSQL",
+      "JWT",
+      "Playwright",
+    ],
+    href: "https://github.com/mpfarias/schedly",
+    service: "Custom Web Apps",
   },
 ] as const;
 

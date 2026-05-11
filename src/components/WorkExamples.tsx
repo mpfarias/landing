@@ -4,7 +4,50 @@ import { projects, projectSlugFromHref } from "@/data/projects";
 import { links } from "@/data/links";
 import { useLanguage } from "@/i18n/LanguageProvider";
 
-function ProjectMockup({ category }: { category: string }) {
+function SchedlyMockup({
+  brand,
+  tagline,
+  chips,
+}: {
+  brand: string;
+  tagline: string;
+  chips: string;
+}) {
+  return (
+    <div className="h-full w-full bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 p-5">
+      <div className="flex h-full flex-col items-center justify-center rounded-2xl border border-cyan-400/20 bg-slate-950/90 px-5 py-6 text-center">
+        <p className="text-[11px] font-bold tracking-[0.35em] text-cyan-300">
+          {brand}
+        </p>
+        <p className="mt-3 text-sm font-semibold text-white">{tagline}</p>
+        <p className="mt-4 max-w-[280px] text-xs leading-relaxed text-slate-400">
+          {chips}
+        </p>
+        <div className="mt-5 h-1 w-16 rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400" />
+      </div>
+    </div>
+  );
+}
+
+function ProjectMockup({
+  category,
+  slug,
+  schedlyPreview,
+}: {
+  category: string;
+  slug: string;
+  schedlyPreview: { brand: string; tagline: string; chips: string };
+}) {
+  if (slug === "schedly") {
+    return (
+      <SchedlyMockup
+        brand={schedlyPreview.brand}
+        tagline={schedlyPreview.tagline}
+        chips={schedlyPreview.chips}
+      />
+    );
+  }
+
   if (category.includes("API")) {
     return (
       <div className="h-full w-full bg-gradient-to-br from-slate-800 to-slate-950 p-5">
@@ -160,7 +203,11 @@ export function WorkExamples() {
                 className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-900/5 transition hover:-translate-y-1 hover:border-cyan-400/60 dark:border-white/10 dark:bg-slate-900/80 dark:shadow-slate-950/40"
               >
                 <div className="h-56">
-                  <ProjectMockup category={project.category} />
+                  <ProjectMockup
+                    category={project.category}
+                    slug={slug}
+                    schedlyPreview={m.work.schedlyPreview}
+                  />
                 </div>
 
                 <div className="flex min-h-[360px] flex-col p-6">

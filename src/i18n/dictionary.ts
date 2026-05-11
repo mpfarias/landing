@@ -146,6 +146,11 @@ const en = {
       "Real projects and public repositories that demonstrate my work with landing pages, web applications, dashboards, APIs and frontend development.",
     viewGithub: "View on GitHub",
     hireSimilar: "Hire similar work",
+    schedlyPreview: {
+      brand: "SCHEDLY",
+      tagline: "Business Scheduling SaaS",
+      chips: "Appointments · Clients · Payments · Messages",
+    },
     projectTranslations: {
       landing: {
         title: "Personal Developer Landing Page",
@@ -182,12 +187,12 @@ const en = {
         description:
           "A React and Vite application focused on list-based workflows, frontend structure and component-based development.",
       },
-      portfolio: {
-        title: "Legacy Developer Portfolio",
-        category: "Frontend Portfolio",
-        service: "Frontend Development",
+      schedly: {
+        title: "Schedly — Business Scheduling SaaS Platform",
+        category: "SaaS MVP / Full Stack Web App",
+        service: "Custom Web Apps",
         description:
-          "An earlier portfolio project built with HTML, CSS and JavaScript, showing the evolution of my frontend development work and personal web presence.",
+          "A business scheduling platform designed to help companies manage clients, services, professionals, appointments, payments and customer communication through a modern web dashboard and REST API.",
       },
     },
   },
@@ -489,6 +494,11 @@ const pt = {
       "Projetos reais e repositórios públicos que mostram meu trabalho com landing pages, aplicações web, painéis, APIs e desenvolvimento frontend.",
     viewGithub: "Ver no GitHub",
     hireSimilar: "Contratar trabalho semelhante",
+    schedlyPreview: {
+      brand: "SCHEDLY",
+      tagline: "SaaS de agendamento para negócios",
+      chips: "Agendamentos · Clientes · Pagamentos · Mensagens",
+    },
     projectTranslations: {
       landing: {
         title: "Landing page pessoal do desenvolvedor",
@@ -525,12 +535,12 @@ const pt = {
         description:
           "Aplicação React e Vite focada em fluxos baseados em listas, estrutura de frontend e desenvolvimento por componentes.",
       },
-      portfolio: {
-        title: "Portfólio legado do desenvolvedor",
-        category: "Portfólio frontend",
-        service: "Desenvolvimento frontend",
+      schedly: {
+        title: "Schedly — plataforma SaaS de agendamento para negócios",
+        category: "MVP SaaS / aplicação web full stack",
+        service: "Aplicações web personalizadas",
         description:
-          "Projeto de portfólio anterior em HTML, CSS e JavaScript, mostrando a evolução do meu trabalho em frontend e presença web pessoal.",
+          "Plataforma de agendamento para empresas gerenciarem clientes, serviços, profissionais, compromissos, pagamentos e comunicação com clientes por meio de um dashboard web moderno e API REST.",
       },
     },
   },
