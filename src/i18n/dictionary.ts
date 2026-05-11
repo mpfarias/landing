@@ -20,7 +20,7 @@ const en = {
     services: "Services",
     about: "About",
     techStack: "Tech Stack",
-    work: "Work",
+    work: "Portfolio",
     howIWork: "How I Work",
     faq: "FAQ",
   },
@@ -140,37 +140,56 @@ const en = {
       "I use modern technologies to build fast, responsive and scalable web solutions.",
   },
   work: {
-    kicker: "Work",
-    title: "Work Examples",
+    kicker: "Portfolio",
+    title: "Selected work",
     subtitle:
-      "A selection of demo projects and work samples focused on commercial web development.",
-    productionReady: "Production Ready",
-    items: [
-      {
-        title: "Business Landing Page",
+      "Real projects and public repositories that demonstrate my work with landing pages, web applications, dashboards, APIs and frontend development.",
+    viewGithub: "View on GitHub",
+    hireSimilar: "Hire similar work",
+    projectTranslations: {
+      landing: {
+        title: "Personal Developer Landing Page",
+        category: "Landing Page",
+        service: "Landing Page Development",
         description:
-          "A modern and responsive landing page designed for businesses that need a professional online presence and clear conversion flow.",
-        tags: ["Next.js", "Tailwind CSS", "Responsive Design"],
+          "A modern personal landing page built to present freelance web development services, portfolio projects, multilingual content, dark/light mode and conversion-focused Fiverr CTAs.",
       },
-      {
-        title: "SaaS Dashboard Interface",
+      "controle-equipes": {
+        title: "Public Safety Management Platform",
+        category: "Full Stack Web App",
+        service: "Custom Web Apps",
         description:
-          "A clean web application interface with dashboard structure, reusable components and modern layout patterns.",
-        tags: ["React", "TypeScript", "UI Design"],
+          "A modular operational management platform focused on workforce organization, personnel availability, administrative workflows, auditability and role-based access control for public safety environments.",
       },
-      {
-        title: "Deployment Setup Example",
+      "tarifas-energia-api": {
+        title: "Energy Tariff Public API",
+        category: "REST API",
+        service: "API Development",
         description:
-          "A web app deployment workflow with GitHub integration, custom domain configuration, DNS setup and SSL activation.",
-        tags: ["Vercel", "Cloudflare", "DNS", "SSL"],
+          "A public API for estimating electricity consumption costs based on distributors, tariff flags and regional taxes, with endpoints for status, tariff flags, distributor search, cache and cost projection.",
       },
-      {
-        title: "Custom Web App MVP",
+      "ctb-api": {
+        title: "Traffic Violations Public API",
+        category: "REST API",
+        service: "API Development",
         description:
-          "A tailored web application structure for dashboards, admin panels and SaaS MVPs with frontend, backend and database integration.",
-        tags: ["Full Stack", "Dashboard", "SaaS MVP"],
+          "A public API that provides structured Brazilian traffic violation data, including legal basis, points, fines and administrative measures, built with Node.js, Express and Swagger documentation.",
       },
-    ],
+      "ta-na-lista": {
+        title: "React List Management App",
+        category: "Frontend App",
+        service: "Frontend Development",
+        description:
+          "A React and Vite application focused on list-based workflows, frontend structure and component-based development.",
+      },
+      portfolio: {
+        title: "Legacy Developer Portfolio",
+        category: "Frontend Portfolio",
+        service: "Frontend Development",
+        description:
+          "An earlier portfolio project built with HTML, CSS and JavaScript, showing the evolution of my frontend development work and personal web presence.",
+      },
+    },
   },
   why: {
     kicker: "Why Work With Me",
@@ -343,7 +362,7 @@ const pt = {
     services: "Serviços",
     about: "Sobre",
     techStack: "Stack",
-    work: "Trabalhos",
+    work: "Portfólio",
     howIWork: "Processo",
     faq: "FAQ",
   },
@@ -464,37 +483,56 @@ const pt = {
       "Uso tecnologias modernas para construir soluções web rápidas, responsivas e escaláveis.",
   },
   work: {
-    kicker: "Trabalhos",
-    title: "Exemplos de trabalho",
+    kicker: "Portfólio",
+    title: "Projetos em destaque",
     subtitle:
-      "Amostras e demos focadas em páginas, interfaces e fluxos comuns para negócios digitais.",
-    productionReady: "Pronto para produção",
-    items: [
-      {
-        title: "Landing page comercial",
+      "Projetos reais e repositórios públicos que mostram meu trabalho com landing pages, aplicações web, painéis, APIs e desenvolvimento frontend.",
+    viewGithub: "Ver no GitHub",
+    hireSimilar: "Contratar trabalho semelhante",
+    projectTranslations: {
+      landing: {
+        title: "Landing page pessoal do desenvolvedor",
+        category: "Landing page",
+        service: "Desenvolvimento de landing page",
         description:
-          "Landing page moderna e responsiva para empresas brasileiras que precisam de presença profissional e chamadas claras para contato, orçamento ou compra.",
-        tags: ["Next.js", "Tailwind CSS", "Design responsivo"],
+          "Landing page pessoal moderna para apresentar serviços freelance de desenvolvimento web, projetos de portfólio, conteúdo multilíngue, tema claro/escuro e CTAs focados em conversão no Fiverr.",
       },
-      {
-        title: "Interface de dashboard SaaS",
+      "controle-equipes": {
+        title: "Plataforma institucional de gestão operacional",
+        category: "Aplicação web full stack",
+        service: "Aplicações web personalizadas",
         description:
-          "Interface de aplicação web com estrutura de dashboard, componentes reutilizáveis e layout atual para produtos, sistemas internos e áreas administrativas.",
-        tags: ["React", "TypeScript", "UI"],
+          "Plataforma modular de apoio à gestão operacional voltada à organização de equipes, disponibilidade de pessoal, fluxos administrativos, rastreabilidade e controle de acesso por perfil, em contexto de segurança pública.",
       },
-      {
-        title: "Exemplo de pipeline de deploy",
+      "tarifas-energia-api": {
+        title: "API pública de tarifas de energia",
+        category: "API REST",
+        service: "Desenvolvimento de API",
         description:
-          "Fluxo de publicação com GitHub, domínio personalizado, DNS e ativação de SSL para deixar o projeto no ar com segurança.",
-        tags: ["Vercel", "Cloudflare", "DNS", "SSL"],
+          "API pública para estimativa de custo de consumo de energia com base em distribuidoras, bandeiras tarifárias e tributos regionais, com endpoints de status, bandeiras, busca de distribuidora, cache e projeção de custo.",
       },
-      {
-        title: "MVP de aplicação web",
+      "ctb-api": {
+        title: "API pública de infrações de trânsito",
+        category: "API REST",
+        service: "Desenvolvimento de API",
         description:
-          "Estrutura de aplicação sob medida para dashboards, painéis administrativos e MVPs SaaS com integração entre frontend, backend e banco de dados.",
-        tags: ["Full stack", "Dashboard", "MVP SaaS"],
+          "API pública com dados estruturados de infrações do CTB brasileiro, incluindo base legal, pontuação, valores e medidas administrativas, com Node.js, Express e documentação Swagger.",
       },
-    ],
+      "ta-na-lista": {
+        title: "App React de gestão de listas",
+        category: "Aplicação frontend",
+        service: "Desenvolvimento frontend",
+        description:
+          "Aplicação React e Vite focada em fluxos baseados em listas, estrutura de frontend e desenvolvimento por componentes.",
+      },
+      portfolio: {
+        title: "Portfólio legado do desenvolvedor",
+        category: "Portfólio frontend",
+        service: "Desenvolvimento frontend",
+        description:
+          "Projeto de portfólio anterior em HTML, CSS e JavaScript, mostrando a evolução do meu trabalho em frontend e presença web pessoal.",
+      },
+    },
   },
   why: {
     kicker: "Por que comigo",
