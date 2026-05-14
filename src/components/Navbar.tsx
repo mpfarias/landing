@@ -17,6 +17,7 @@ export function Navbar() {
       { label: messages.nav.about, href: "#about" },
       { label: messages.nav.techStack, href: "#tech" },
       { label: messages.nav.work, href: "#work" },
+      { label: messages.nav.contact, href: "#contact" },
       { label: messages.nav.howIWork, href: "#how-i-work" },
       { label: messages.nav.faq, href: "#faq" },
     ],

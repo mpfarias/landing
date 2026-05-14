@@ -23,6 +23,7 @@ const en = {
     work: "Portfolio",
     howIWork: "How I Work",
     faq: "FAQ",
+    contact: "Contact",
   },
   hero: {
     badge: "Available for international freelance projects",
@@ -327,6 +328,24 @@ const en = {
       },
     ],
   },
+  contact: {
+    kicker: "Contact",
+    title: "Need a custom project?",
+    lead:
+      "For larger or different projects, you can contact me directly to discuss the scope.",
+    body:
+      "If your project does not fit one of my Fiverr services, you can contact me directly to discuss custom web apps, dashboards, admin panels, SaaS MVPs, APIs or other web development needs.",
+    secondary:
+      "Tell me what you want to build, your current stage, main goals and any technical requirements. I will review the scope and suggest the best way to move forward.",
+    emailLabel: "Email",
+    emailHint:
+      "Best for detailed project requests and professional contact.",
+    phoneLabel: "Phone / WhatsApp",
+    phoneDisplay: "+55 61 99972-9293",
+    phoneHint:
+      "Use this option for direct contact about larger or custom projects.",
+    fiverrCta: "Or start with my Custom Web Apps service on Fiverr",
+  },
   final: {
     kicker: "Start Your Project",
     title: "Let's build something professional together.",
@@ -370,6 +389,7 @@ const pt = {
     work: "Portfólio",
     howIWork: "Processo",
     faq: "FAQ",
+    contact: "Contato",
   },
   hero: {
     badge: "Disponível para projetos no Brasil e no exterior",
@@ -674,6 +694,25 @@ const pt = {
         href: "https://www.fiverr.com/s/8zLqVEv",
       },
     ],
+  },
+  contact: {
+    kicker: "Contato",
+    title: "Precisa de um projeto sob medida?",
+    lead:
+      "Para projetos maiores ou diferentes, você pode falar comigo diretamente para alinhar escopo.",
+    body:
+      "Se o seu projeto não se encaixa exatamente em um dos meus Gigs no Fiverr, entre em contato para conversarmos sobre aplicações web personalizadas, dashboards, painéis administrativos, MVPs SaaS, APIs e outras necessidades de desenvolvimento web.",
+    secondary:
+      "Conte o que quer construir, em que estágio está, os principais objetivos e requisitos técnicos. Avalio o escopo e indico o melhor caminho para seguir.",
+    emailLabel: "E-mail",
+    emailHint:
+      "Melhor para pedidos detalhados e contato profissional.",
+    phoneLabel: "Telefone / WhatsApp",
+    phoneDisplay: "+55 61 99972-9293",
+    phoneHint:
+      "Use esta opção para falar diretamente sobre projetos maiores ou sob medida.",
+    fiverrCta:
+      "Ou comece pelo meu serviço de aplicações web personalizadas no Fiverr",
   },
   final: {
     kicker: "Comece seu projeto",

@@ -8,8 +8,10 @@ export const links = {
   },
 
   social: {
-    linkedin: "https://www.linkedin.com/in/marcelo-farias-660714218/",
-    github: "https://github.com/mpfarias",
-    email: "mailto:contato@marcelo-farias.dev",
+    linkedin: "#",
+    github: "#",
+    email: "mailto:contato@marcelofarias.dev.br",
+    phone: "tel:+5561999729293",
+    whatsapp: "https://wa.me/5561999729293",
   },
 };
