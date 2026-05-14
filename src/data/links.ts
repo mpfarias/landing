@@ -10,7 +10,7 @@ export const links = {
   social: {
     linkedin: "#",
     github: "#",
-    email: "mailto:contato@marcelofarias.dev.br",
+    email: "mailto:contact@marcelofarias.dev.br",
     phone: "tel:+5561999729293",
     whatsapp: "https://wa.me/5561999729293",
   },
