@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "title": "Marcelo Pires de Farias | Tecnologia, IA e Automação",
+    "description": "Desenvolvo sistemas, automações e soluções digitais que unem tecnologia, inteligência artificial e eficiência operacional."
+  },
+  "common": {
+    "brand": "MPF.",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "themeLight": "Tema claro",
+    "themeDark": "Tema escuro",
+    "language": "Idioma",
+    "photoPlaceholderLabel": "Foto editorial",
+    "photoPlaceholderHint": "Espaço reservado para fotografia profissional vertical",
+    "backHome": "Voltar para a home"
+  },
+  "navigation": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "experience": "Experiência",
+    "contact": "Contato",
+    "cta": "Vamos conversar",
+    "ariaLabel": "Navegação principal"
+  },
+  "hero": {
+    "location": "BRASÍLIA, BRASIL",
+    "headlineLine1": "Tecnologia para",
+    "headlineLine2": "transformar",
+    "headlineLine3": "problemas",
+    "headlineAccent": "reais.",
+    "description": "Desenvolvo sistemas, automações e soluções digitais que unem tecnologia, inteligência artificial e eficiência operacional.",
+    "primaryCta": "Explorar projetos",
+    "secondaryCta": "Sobre mim",
+    "name": "MARCELO PIRES DE FARIAS",
+    "expertise": "Software • IA • Automação • Transformação Digital"
+  },
+  "impact": {
+    "ariaLabel": "Indicadores profissionais",
+    "items": {
+      "experience": {
+        "value": "15+ ANOS",
+        "label": "Experiência profissional"
+      },
+      "systems": {
+        "value": "SISTEMAS REAIS",
+        "label": "Soluções em operação"
+      },
+      "operations": {
+        "value": "OPERAÇÕES CRÍTICAS",
+        "label": "Tecnologia aplicada ao mundo real"
+      },
+      "automation": {
+        "value": "IA + AUTOMAÇÃO",
+        "label": "Foco em eficiência e escala"
+      }
+    }
+  },
+  "about": {
+    "label": "01 / SOBRE",
+    "headlineLine1": "Construo tecnologia a partir\u00a0de",
+    "headlineLine2": "problemas que",
+    "headlineAccentLead": "precisam ser",
+    "headlineAccentEnd": "resolvidos.",
+    "paragraph1": "Minha trajetória une tecnologia, gestão e experiência em ambientes onde sistemas precisam funcionar de verdade. Ao longo dos anos, desenvolvi soluções para simplificar processos, automatizar rotinas e transformar problemas operacionais em produtos digitais utilizáveis.",
+    "paragraph2": "Hoje, concentro meu trabalho no desenvolvimento de sistemas, inteligência artificial, automação e transformação digital — sempre buscando soluções que gerem impacto mensurável e façam sentido para quem realmente vai utilizá-las."
+  },
+  "projects": {
+    "label": "02 / PROJETOS",
+    "headlineLine1": "Projetos construídos para",
+    "headlineLine2": "resolver problemas reais.",
+    "intro": "Soluções desenvolvidas a partir de necessidades concretas, combinando software, automação, inteligência artificial e experiência operacional.",
+    "hefesto": {
+      "eyebrow": "PROJETO EM DESTAQUE",
+      "name": "HEFESTO",
+      "category": "Tecnologia para operações de emergência",
+      "description": "Plataforma criada para otimizar o atendimento e a geração de ocorrências 190/193, integrando automação, dados e inteligência operacional em um ambiente de missão crítica.",
+      "cta": "Ver projeto completo",
+      "metrics": {
+        "calls": {
+          "value": "~4.000",
+          "label": "ligações/dia"
+        },
+        "incidents": {
+          "value": "~25.000",
+          "label": "ocorrências/mês"
+        },
+        "time": {
+          "value": "~1,5 min",
+          "label": "geração de ocorrência"
+        }
+      },
+      "product": {
+        "ariaLabel": "Prévia visual do sistema Hefesto",
+        "status": "Em operação",
+        "call": {
+          "title": "Chamada",
+          "line": "190 • Ativa",
+          "duration": "00:42"
+        },
+        "location": {
+          "title": "Localização",
+          "value": "Asa Norte, Brasília"
+        },
+        "narrative": {
+          "title": "Narrativa",
+          "value": "Preenchimento assistido"
+        },
+        "dispatch": {
+          "title": "Despacho",
+          "value": "CAD • Prioridade"
+        }
+      },
+      "placeholder": {
+        "title": "HEFESTO",
+        "eyebrow": "Case study",
+        "description": "O case completo deste projeto será desenvolvido em breve. Por enquanto, esta página reserva o espaço da documentação detalhada da solução.",
+        "cta": "Voltar para projetos"
+      }
+    }
+  },
+  "experience": {
+    "label": "03 / EXPERIÊNCIA",
+    "headlineLine1": "Tecnologia construída",
+    "headlineLine2": "com",
+    "headlineAccent": "experiência de campo.",
+    "intro": "Minha trajetória profissional foi construída entre tecnologia, gestão e operação. Essa combinação me deu uma perspectiva que considero essencial: compreender o problema antes de desenvolver a solução.",
+    "closingLine1": "A tecnologia mudou ao longo dos anos.",
+    "closingLine2": "O princípio continua o mesmo:",
+    "closingAccent": "resolver o problema certo.",
+    "moments": {
+      "formation": {
+        "period": "2009",
+        "title": "FORMAÇÃO EM TECNOLOGIA",
+        "role": "Bacharel em Sistemas de Informação",
+        "text": "A formação em Sistemas de Informação estabeleceu a base técnica para uma trajetória voltada ao desenvolvimento de software, análise de processos e aplicação prática da tecnologia."
+      },
+      "processes": {
+        "period": "2016",
+        "title": "TECNOLOGIA APLICADA A PROCESSOS",
+        "role": "Desenvolvimento de soluções internas",
+        "text": "A experiência com processos administrativos levou à criação de sistemas para digitalizar rotinas, organizar informações e substituir controles manuais por soluções mais eficientes."
+      },
+      "operations": {
+        "period": "2024",
+        "title": "TECNOLOGIA EM OPERAÇÕES CRÍTICAS",
+        "role": "Atuação em tecnologia aplicada ao atendimento de emergência",
+        "text": "A experiência passou a incorporar sistemas utilizados em ambientes operacionais de alta demanda, aproximando ainda mais desenvolvimento de software, automação e necessidades reais do usuário."
+      },
+      "today": {
+        "period": "HOJE",
+        "title": "SOFTWARE, IA E AUTOMAÇÃO",
+        "role": "Construção de soluções digitais",
+        "text": "Hoje, concentro minha atuação na criação de sistemas, automações e soluções baseadas em inteligência artificial, combinando experiência operacional, arquitetura de software e foco em eficiência."
+      }
+    }
+  }
+}

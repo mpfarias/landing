@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "title": "Marcelo Pires de Farias | Technology, AI & Automation",
+    "description": "I build systems, automations, and digital solutions that combine technology, artificial intelligence, and operational efficiency."
+  },
+  "common": {
+    "brand": "MPF.",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "themeLight": "Light theme",
+    "themeDark": "Dark theme",
+    "language": "Language",
+    "photoPlaceholderLabel": "Editorial photo",
+    "photoPlaceholderHint": "Reserved space for a vertical professional photograph",
+    "backHome": "Back to home"
+  },
+  "navigation": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "cta": "Let's talk",
+    "ariaLabel": "Main navigation"
+  },
+  "hero": {
+    "location": "BRASÍLIA, BRAZIL",
+    "headlineLine1": "Technology that",
+    "headlineLine2": "transforms",
+    "headlineLine3": "real-world",
+    "headlineAccent": "problems.",
+    "description": "I build systems, automations, and digital solutions that combine technology, artificial intelligence, and operational efficiency.",
+    "primaryCta": "Explore projects",
+    "secondaryCta": "About me",
+    "name": "MARCELO PIRES DE FARIAS",
+    "expertise": "Software • AI • Automation • Digital Transformation"
+  },
+  "impact": {
+    "ariaLabel": "Professional indicators",
+    "items": {
+      "experience": {
+        "value": "15+ YEARS",
+        "label": "Professional experience"
+      },
+      "systems": {
+        "value": "REAL SYSTEMS",
+        "label": "Solutions running in production"
+      },
+      "operations": {
+        "value": "CRITICAL OPERATIONS",
+        "label": "Technology applied to real-world environments"
+      },
+      "automation": {
+        "value": "AI + AUTOMATION",
+        "label": "Focused on efficiency and scale"
+      }
+    }
+  },
+  "about": {
+    "label": "01 / ABOUT",
+    "headlineLine1": "I build technology around",
+    "headlineLine2": "problems that",
+    "headlineAccentLead": "need to be",
+    "headlineAccentEnd": "solved.",
+    "paragraph1": "My career brings together technology, management, and experience in environments where systems need to work in the real world. Over the years, I have built solutions to simplify processes, automate workflows, and turn operational challenges into practical digital products.",
+    "paragraph2": "Today, my work focuses on software development, artificial intelligence, automation, and digital transformation — always pursuing solutions that deliver measurable impact and make sense for the people who actually use them."
+  },
+  "projects": {
+    "label": "02 / PROJECTS",
+    "headlineLine1": "Projects built to",
+    "headlineLine2": "solve real-world problems.",
+    "intro": "Solutions shaped by concrete needs, combining software, automation, artificial intelligence, and operational experience.",
+    "hefesto": {
+      "eyebrow": "FEATURED PROJECT",
+      "name": "HEPHAESTUS",
+      "category": "Technology for emergency operations",
+      "description": "A platform built to optimize emergency call handling and incident creation for 190/193 operations, combining automation, data, and operational intelligence in a mission-critical environment.",
+      "cta": "View full project",
+      "metrics": {
+        "calls": {
+          "value": "~4,000",
+          "label": "calls/day"
+        },
+        "incidents": {
+          "value": "~25,000",
+          "label": "incidents/month"
+        },
+        "time": {
+          "value": "~1.5 min",
+          "label": "incident creation"
+        }
+      },
+      "product": {
+        "ariaLabel": "Visual preview of the Hephaestus system",
+        "status": "Live",
+        "call": {
+          "title": "Call",
+          "line": "190 • Active",
+          "duration": "00:42"
+        },
+        "location": {
+          "title": "Location",
+          "value": "Asa Norte, Brasília"
+        },
+        "narrative": {
+          "title": "Narrative",
+          "value": "Assisted completion"
+        },
+        "dispatch": {
+          "title": "Dispatch",
+          "value": "CAD • Priority"
+        }
+      },
+      "placeholder": {
+        "title": "HEPHAESTUS",
+        "eyebrow": "Case study",
+        "description": "The full case study for this project will be developed soon. For now, this page reserves space for the detailed documentation of the solution.",
+        "cta": "Back to projects"
+      }
+    }
+  },
+  "experience": {
+    "label": "03 / EXPERIENCE",
+    "headlineLine1": "Technology built",
+    "headlineLine2": "on",
+    "headlineAccent": "real-world experience.",
+    "intro": "My professional journey has been shaped by technology, management, and operational experience. That combination gave me a perspective I consider essential: understanding the problem before building the solution.",
+    "closingLine1": "Technology has changed over the years.",
+    "closingLine2": "The principle remains the same:",
+    "closingAccent": "solve the right problem.",
+    "moments": {
+      "formation": {
+        "period": "2009",
+        "title": "TECHNOLOGY FOUNDATION",
+        "role": "Bachelor's Degree in Information Systems",
+        "text": "A degree in Information Systems established the technical foundation for a career focused on software development, process analysis, and practical applications of technology."
+      },
+      "processes": {
+        "period": "2016",
+        "title": "TECHNOLOGY APPLIED TO PROCESSES",
+        "role": "Development of internal solutions",
+        "text": "Experience with administrative processes led to the creation of systems to digitize workflows, organize information, and replace manual controls with more efficient solutions."
+      },
+      "operations": {
+        "period": "2024",
+        "title": "TECHNOLOGY IN CRITICAL OPERATIONS",
+        "role": "Technology applied to emergency operations",
+        "text": "My work expanded into systems used in high-demand operational environments, bringing software development, automation, and real user needs even closer together."
+      },
+      "today": {
+        "period": "TODAY",
+        "title": "SOFTWARE, AI & AUTOMATION",
+        "role": "Building digital solutions",
+        "text": "Today, I focus on building systems, automations, and AI-powered solutions, combining operational experience, software architecture, and a strong focus on efficiency."
+      }
+    }
+  }
+}

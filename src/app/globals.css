@@ -2,42 +2,179 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme inline {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans);
+}
+
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --background: #f7f9fc;
+  --background-secondary: #ffffff;
+  --surface: #ffffff;
+  --foreground: #111827;
+  --muted: #667085;
+  --border: rgba(15, 23, 42, 0.08);
+  --primary: #2563eb;
+  --secondary: #0891b2;
+  --ring: #2563eb;
+
+  --glow-primary: rgba(37, 99, 235, 0.14);
+  --glow-secondary: rgba(8, 145, 178, 0.1);
+  --grid-line: rgba(15, 23, 42, 0.045);
+  --shadow-soft: 0 18px 50px rgba(15, 23, 42, 0.08);
+  --shadow-portrait: 0 24px 60px rgba(15, 23, 42, 0.1);
+  --header-bg: rgba(247, 249, 252, 0.72);
+  --overlay: rgba(247, 249, 252, 0.96);
+  --surface-elevated: #f1f4f9;
 }
 
 .dark {
-  --background: #020617;
-  --foreground: #ffffff;
+  --background: #080b10;
+  --background-secondary: #0d1117;
+  --surface: #10151d;
+  --foreground: #f5f7fa;
+  --muted: #a3adb9;
+  --border: rgba(255, 255, 255, 0.09);
+  --primary: #3b82f6;
+  --secondary: #22d3ee;
+  --ring: #60a5fa;
+
+  --glow-primary: rgba(59, 130, 246, 0.2);
+  --glow-secondary: rgba(34, 211, 238, 0.12);
+  --grid-line: rgba(255, 255, 255, 0.04);
+  --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.35);
+  --shadow-portrait: 0 28px 70px rgba(0, 0, 0, 0.5);
+  --header-bg: rgba(8, 11, 16, 0.78);
+  --overlay: rgba(8, 11, 16, 0.97);
+  --surface-elevated: #141b25;
 }
 
-* {
-  box-sizing: border-box;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-  /* Fixa o alvo do scroll abaixo da navbar (position: fixed), em qualquer largura. */
-  scroll-padding-top: 5.5rem;
+@layer utilities {
+  .tech-grid {
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(
+      ellipse 80% 70% at 50% 40%,
+      black 20%,
+      transparent 75%
+    );
+  }
+
+  .text-accent-gradient {
+    background-image: linear-gradient(
+      120deg,
+      var(--primary) 0%,
+      var(--secondary) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .nav-link {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity: 0.55;
+  }
+
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  .icon-shift {
+    transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .cta-primary {
+    transition: background-color 250ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .cta-primary:hover,
+  .cta-primary:focus-visible {
+    background-color: color-mix(in srgb, var(--foreground) 88%, var(--primary));
+  }
+
+  .group\/cta-primary:hover .icon-shift-down,
+  .group\/cta-primary:focus-visible .icon-shift-down {
+    transform: translateY(2px);
+  }
+
+  .group\/cta-secondary:hover .icon-shift-right,
+  .group\/cta-secondary:focus-visible .icon-shift-right {
+    transform: translateX(2px);
+  }
+
+  .group\/nav-cta:hover .icon-shift-diag,
+  .group\/nav-cta:focus-visible .icon-shift-diag {
+    transform: translate(2px, -2px);
+  }
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: var(--background);
-  color: var(--foreground);
-}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-a {
-  text-decoration: none;
-}
+  .nav-link::after,
+  .icon-shift,
+  .cta-primary {
+    transition: none !important;
+  }
 
-::selection {
-  background: rgba(34, 211, 238, 0.35);
-  color: #0f172a;
-}
+  .group\/cta-primary:hover .icon-shift-down,
+  .group\/cta-primary:focus-visible .icon-shift-down,
+  .group\/cta-secondary:hover .icon-shift-right,
+  .group\/cta-secondary:focus-visible .icon-shift-right,
+  .group\/nav-cta:hover .icon-shift-diag,
+  .group\/nav-cta:focus-visible .icon-shift-diag {
+    transform: none;
+  }
 
-.dark ::selection {
-  color: #ffffff;
+  .cta-primary:hover,
+  .cta-primary:focus-visible {
+    background-color: var(--foreground);
+  }
 }

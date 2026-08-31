@@ -2,17 +2,17 @@
 
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
-type Props = {
+type ThemeProviderProps = {
   children: React.ReactNode;
 };
 
-export function ThemeProvider({ children }: Props) {
+export function ThemeProvider({ children }: ThemeProviderProps) {
   return (
     <NextThemesProvider
       attribute="class"
       defaultTheme="dark"
-      enableSystem
-      storageKey="marcelo-farias-theme"
+      enableSystem={false}
+      disableTransitionOnChange
     >
       {children}
     </NextThemesProvider>

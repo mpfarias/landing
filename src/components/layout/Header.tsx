@@ -1,0 +1,167 @@
+"use client";
+
+import { ArrowUpRight, Menu, X } from "lucide-react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
+import { Link } from "@/i18n/navigation";
+import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
+
+const navKeys = ["about", "projects", "experience", "contact"] as const;
+
+const navHrefs: Record<(typeof navKeys)[number], string> = {
+  about: "#sobre",
+  projects: "#projetos",
+  experience: "#experiencia",
+  contact: "#contato",
+};
+
+export function Header() {
+  const t = useTranslations("navigation");
+  const tCommon = useTranslations("common");
+  const reduceMotion = useReducedMotion();
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
+  const duration = reduceMotion ? 0 : 0.55;
+
+  return (
+    <>
+      <motion.header
+        initial={reduceMotion ? false : { opacity: 0, y: -12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration, ease: [0.22, 1, 0.36, 1] }}
+        className={[
+          "fixed inset-x-0 top-0 z-50 transition-[background-color,backdrop-filter,border-color] duration-300",
+          scrolled
+            ? "border-b border-border bg-[var(--header-bg)] backdrop-blur-xl"
+            : "border-b border-transparent bg-transparent",
+        ].join(" ")}
+      >
+        <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between gap-3 px-5 sm:gap-4 sm:px-8 lg:px-10">
+          <Link
+            href="/"
+            className="shrink-0 text-[16px] font-semibold tracking-[0.2em] text-foreground transition-opacity duration-200 hover:opacity-75 focus-visible:opacity-75"
+          >
+            {tCommon("brand")}
+          </Link>
+
+          <nav
+            className="hidden items-center gap-8 lg:flex"
+            aria-label={t("ariaLabel")}
+          >
+            {navKeys.map((key) => (
+              <a
+                key={key}
+                href={navHrefs[key]}
+                className="nav-link text-[13.5px] font-medium text-muted transition-colors duration-200 hover:text-foreground"
+              >
+                {t(key)}
+              </a>
+            ))}
+          </nav>
+
+          <div className="hidden items-center gap-2 lg:flex">
+            <LanguageSwitcher />
+            <ThemeToggle />
+            <a
+              href="#contato"
+              className="group/nav-cta ml-1 inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-4 py-2 text-[13px] font-medium text-foreground transition-[border-color,background-color] duration-200 hover:border-primary/30 hover:bg-background-secondary"
+            >
+              {t("cta")}
+              <ArrowUpRight
+                className="icon-shift icon-shift-diag size-3.5 opacity-70"
+                aria-hidden
+              />
+            </a>
+          </div>
+
+          <div className="flex min-w-0 items-center gap-1 sm:gap-1.5 lg:hidden">
+            <LanguageSwitcher />
+            <ThemeToggle />
+            <button
+              type="button"
+              className="inline-flex size-9 shrink-0 items-center justify-center rounded-full text-foreground transition-colors duration-200 hover:bg-foreground/[0.04]"
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
+              aria-label={menuOpen ? tCommon("closeMenu") : tCommon("openMenu")}
+              onClick={() => setMenuOpen((open) => !open)}
+            >
+              {menuOpen ? (
+                <X className="size-5" aria-hidden />
+              ) : (
+                <Menu className="size-5" aria-hidden />
+              )}
+            </button>
+          </div>
+        </div>
+      </motion.header>
+
+      <AnimatePresence>
+        {menuOpen ? (
+          <motion.div
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label={t("ariaLabel")}
+            initial={reduceMotion ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={reduceMotion ? undefined : { opacity: 0 }}
+            transition={{ duration: reduceMotion ? 0 : 0.25 }}
+            className="fixed inset-0 z-40 overflow-y-auto bg-[var(--overlay)] backdrop-blur-md lg:hidden"
+          >
+            <div className="flex min-h-full flex-col px-5 pb-10 pt-24 sm:px-8">
+              <nav className="flex flex-col gap-1" aria-label={t("ariaLabel")}>
+                {navKeys.map((key, index) => (
+                  <motion.a
+                    key={key}
+                    href={navHrefs[key]}
+                    onClick={() => setMenuOpen(false)}
+                    initial={reduceMotion ? false : { opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: reduceMotion ? 0 : 0.04 * index,
+                      duration: reduceMotion ? 0 : 0.4,
+                    }}
+                    className="rounded-xl px-3 py-3.5 text-2xl font-medium tracking-tight text-foreground transition-colors duration-200 hover:bg-foreground/[0.03]"
+                  >
+                    {t(key)}
+                  </motion.a>
+                ))}
+              </nav>
+
+              <div className="mt-auto pt-8">
+                <a
+                  href="#contato"
+                  onClick={() => setMenuOpen(false)}
+                  className="group/nav-cta inline-flex w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 py-3.5 text-sm font-medium text-background transition-opacity duration-200 hover:opacity-90"
+                >
+                  {t("cta")}
+                  <ArrowUpRight
+                    className="icon-shift icon-shift-diag size-4"
+                    aria-hidden
+                  />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+    </>
+  );
+}
