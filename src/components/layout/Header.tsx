@@ -8,21 +8,12 @@ import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
-const navKeys = [
-  "about",
-  "projects",
-  "experience",
-  "technology",
-  "publications",
-  "contact",
-] as const;
+const navKeys = ["about", "projects", "experience", "contact"] as const;
 
 const navHashes: Record<(typeof navKeys)[number], string> = {
   about: "sobre",
   projects: "projetos",
   experience: "experiencia",
-  technology: "tecnologia",
-  publications: "publicacoes",
   contact: "contato",
 };
 
@@ -54,7 +45,7 @@ export function Header({ variant = "home" }: HeaderProps) {
   }, [menuOpen]);
 
   useEffect(() => {
-    const media = window.matchMedia("(min-width: 1280px)");
+    const media = window.matchMedia("(min-width: 1024px)");
     const onChange = () => {
       if (media.matches) setMenuOpen(false);
     };
@@ -119,7 +110,7 @@ export function Header({ variant = "home" }: HeaderProps) {
           </Link>
 
           <nav
-            className="hidden items-center gap-6 xl:flex xl:gap-7"
+            className="hidden items-center gap-6 lg:flex lg:gap-7"
             aria-label={t("ariaLabel")}
           >
             {navKeys.map((key) => {
@@ -155,7 +146,7 @@ export function Header({ variant = "home" }: HeaderProps) {
             })}
           </nav>
 
-          <div className="hidden items-center gap-2 xl:flex">
+          <div className="hidden items-center gap-2 lg:flex">
             <LanguageSwitcher />
             <ThemeToggle />
             {internal ? (
@@ -183,7 +174,7 @@ export function Header({ variant = "home" }: HeaderProps) {
             )}
           </div>
 
-          <div className="flex min-w-0 items-center gap-1 sm:gap-1.5 xl:hidden">
+          <div className="flex min-w-0 items-center gap-1 sm:gap-1.5 lg:hidden">
             <LanguageSwitcher />
             <ThemeToggle />
             <button
@@ -215,7 +206,7 @@ export function Header({ variant = "home" }: HeaderProps) {
             animate={{ opacity: 1 }}
             exit={reduceMotion ? undefined : { opacity: 0 }}
             transition={{ duration: reduceMotion ? 0 : 0.25 }}
-            className="fixed inset-0 z-40 overflow-y-auto bg-[var(--overlay)] backdrop-blur-md xl:hidden"
+            className="fixed inset-0 z-40 overflow-y-auto bg-[var(--overlay)] backdrop-blur-md lg:hidden"
           >
             <div className="flex min-h-full flex-col px-5 pb-10 pt-24 sm:px-8">
               <nav className="flex flex-col gap-1" aria-label={t("ariaLabel")}>

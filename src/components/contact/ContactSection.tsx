@@ -68,13 +68,13 @@ function EmailBlock({ email }: { email: string }) {
       <p className="text-[11px] font-medium tracking-[0.18em] text-muted">
         {t("emailLabel")}
       </p>
-      <p className="mt-2 break-all text-[17px] font-medium tracking-tight text-foreground sm:text-lg">
+      <p className="mt-2 break-all text-[17px] font-medium tracking-tight text-foreground">
         {email}
       </p>
       <button
         type="button"
         onClick={copyEmail}
-        className="mt-3 inline-flex min-h-11 items-center text-sm font-medium text-muted transition-colors duration-200 hover:text-foreground"
+        className="mt-2 inline-flex min-h-10 items-center text-sm font-medium text-muted transition-colors duration-200 hover:text-foreground"
         aria-label={copied ? t("copied") : t("copyEmail")}
       >
         {copied ? t("copied") : t("copyEmail")}
@@ -96,7 +96,7 @@ function SocialLinks() {
         <li key={link.id}>
           <a
             href={link.href}
-            className="group/nav-cta inline-flex min-h-11 items-center gap-1.5 text-sm font-medium text-foreground transition-colors duration-200 hover:text-muted"
+            className="group/nav-cta inline-flex min-h-10 items-center gap-1.5 text-sm font-medium text-foreground transition-colors duration-200 hover:text-muted"
             {...(link.external
               ? { target: "_blank", rel: "noopener noreferrer" }
               : {})}
@@ -120,92 +120,52 @@ export function ContactSection() {
   const socials = getActiveSocialLinks();
   const hasChannels = Boolean(email) || socials.length > 0;
 
-  const reveal = (delay = 0) => ({
-    initial: reduceMotion ? false : ({ opacity: 0, y: 16 } as const),
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, amount: 0.25 },
-    transition: {
-      delay: reduceMotion ? 0 : delay,
-      duration: reduceMotion ? 0 : 0.6,
-      ease: [0.22, 1, 0.36, 1] as const,
-    },
-  });
-
   return (
     <section
       id="contato"
       aria-labelledby="contact-heading"
       className="relative scroll-mt-24 overflow-x-hidden border-t border-border bg-background"
     >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.18] tech-grid"
-        style={{
-          maskImage:
-            "linear-gradient(to bottom, black 8%, transparent 72%)",
-        }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-32 top-16 h-[26rem] w-[26rem] rounded-full blur-3xl"
-        style={{
-          background:
-            "radial-gradient(circle, var(--glow-primary), transparent 70%)",
-        }}
-      />
-
-      <div className="relative mx-auto max-w-[1280px] px-5 py-24 sm:px-8 sm:py-28 lg:px-10 lg:py-36 xl:py-40">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.7fr)] lg:items-end lg:gap-20">
+      <div className="mx-auto max-w-[1280px] px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{
+            duration: reduceMotion ? 0 : 0.55,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.7fr)] lg:items-end lg:gap-16"
+        >
           <div className="min-w-0">
-            <motion.p
-              {...reveal(0)}
-              className="text-[12px] font-medium tracking-[0.2em] text-muted"
-            >
+            <p className="text-[12px] font-medium tracking-[0.2em] text-muted">
               {t("label")}
-            </motion.p>
-            <motion.h2
+            </p>
+            <h2
               id="contact-heading"
-              {...reveal(0.08)}
-              className="mt-6 max-w-[16ch] text-[clamp(2.15rem,6.4vw,4.5rem)] font-semibold leading-[1.06] tracking-[-0.04em] text-foreground"
+              className="mt-4 max-w-[16ch] text-[clamp(1.85rem,4.8vw,3.25rem)] font-semibold leading-[1.08] tracking-[-0.04em] text-foreground"
             >
               <span className="block">{t("headlineLine1")}</span>
               <span className="block">{t("headlineLine2")}</span>
-              <span className="mt-3 block text-accent-gradient">
+              <span className="mt-2 block text-accent-gradient">
                 {t("headlineAccent")}
               </span>
-            </motion.h2>
-            <motion.p
-              {...reveal(0.16)}
-              className="mt-8 max-w-xl text-[15px] leading-relaxed text-muted sm:text-base"
-            >
+            </h2>
+            <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-muted">
               {t("body")}
-            </motion.p>
+            </p>
           </div>
 
           <div className="min-w-0">
-            <motion.div {...reveal(0.2)}>
-              <ContactCta email={email} label={t("cta")} />
-            </motion.div>
-
+            <ContactCta email={email} label={t("cta")} />
             {hasChannels ? (
-              <motion.div
-                {...reveal(0.28)}
-                className="mt-10 flex flex-col gap-8"
-              >
+              <div className="mt-8 flex flex-col gap-6">
                 {email ? <EmailBlock email={email} /> : null}
                 <SocialLinks />
-              </motion.div>
+              </div>
             ) : null}
           </div>
-        </div>
-
-        <motion.p
-          {...reveal(0.12)}
-          className="mt-20 max-w-sm text-[14px] leading-relaxed text-muted sm:mt-24"
-        >
-          <span className="block">{t("closingLine1")}</span>
-          <span className="block">{t("closingLine2")}</span>
-        </motion.p>
+        </motion.div>
       </div>
     </section>
   );

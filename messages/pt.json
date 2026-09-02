@@ -16,8 +16,6 @@
     "about": "Sobre",
     "projects": "Projetos",
     "experience": "Experiência",
-    "technology": "Tecnologia",
-    "publications": "Publicações",
     "contact": "Contato",
     "cta": "Vamos conversar",
     "ariaLabel": "Navegação principal"
@@ -35,72 +33,25 @@
     "portraitAlt": "Retrato profissional de Marcelo Pires de Farias",
     "expertise": "Software • IA • Automação • Transformação Digital"
   },
-  "impact": {
-    "ariaLabel": "Indicadores profissionais",
-    "items": {
-      "experience": {
-        "value": "15+ ANOS",
-        "label": "Experiência profissional"
-      },
-      "systems": {
-        "value": "SISTEMAS REAIS",
-        "label": "Soluções em operação"
-      },
-      "operations": {
-        "value": "OPERAÇÕES CRÍTICAS",
-        "label": "Tecnologia aplicada ao mundo real"
-      },
-      "automation": {
-        "value": "IA + AUTOMAÇÃO",
-        "label": "Foco em eficiência e escala"
-      }
-    }
-  },
   "about": {
     "label": "01 / SOBRE",
     "headlineLine1": "Construo tecnologia a partir de",
     "headlineLine2": "problemas que",
     "headlineAccentLead": "precisam ser",
     "headlineAccentEnd": "resolvidos.",
-    "paragraph1": "Minha trajetória une tecnologia, gestão e experiência em ambientes onde sistemas precisam funcionar de verdade. Ao longo dos anos, desenvolvi soluções para simplificar processos, automatizar rotinas e transformar problemas operacionais em produtos digitais utilizáveis.",
-    "paragraph2": "Hoje, concentro meu trabalho no desenvolvimento de sistemas, inteligência artificial, automação e transformação digital — sempre buscando soluções que gerem impacto mensurável e façam sentido para quem realmente vai utilizá-las."
-  },
-  "help": {
-    "label": "02 / COMO POSSO AJUDAR",
-    "headlineLine1": "Tecnologia pensada",
-    "headlineLine2": "para resolver o seu problema.",
-    "intro": "Atuo na criação de soluções digitais a partir de necessidades reais — da compreensão do problema à arquitetura, desenvolvimento, automação e evolução do produto.",
-    "areas": {
-      "systems": {
-        "title": "Desenvolvimento de sistemas",
-        "text": "Soluções sob medida para transformar processos, necessidades e ideias em produtos digitais funcionais."
-      },
-      "automation": {
-        "title": "Automação de processos",
-        "text": "Redução de tarefas repetitivas e criação de fluxos mais rápidos, integrados e eficientes."
-      },
-      "ai": {
-        "title": "Inteligência artificial",
-        "text": "Aplicação prática de IA, processamento de linguagem e automação inteligente em produtos e processos."
-      },
-      "integration": {
-        "title": "Integração de sistemas",
-        "text": "APIs, dados, serviços externos e sistemas existentes trabalhando de forma integrada."
-      },
-      "products": {
-        "title": "Produtos digitais",
-        "text": "Da identificação do problema à arquitetura, implementação e evolução de soluções digitais."
-      }
-    },
-    "ctaQuestion": "Tem uma ideia ou um problema para resolver?",
-    "cta": "Vamos conversar"
+    "paragraph": "Minha trajetória combina tecnologia, gestão e experiência em ambientes onde sistemas precisam funcionar de verdade. Desenvolvo soluções digitais para simplificar processos, automatizar rotinas e transformar necessidades reais em produtos funcionais.",
+    "helpLabel": "Posso ajudar com",
+    "help": {
+      "systems": "Desenvolvimento de sistemas",
+      "automation": "Automação & IA",
+      "integration": "Integração de sistemas",
+      "products": "Produtos digitais"
+    }
   },
   "projects": {
-    "label": "03 / PROJETOS",
+    "label": "02 / PROJETOS",
     "headlineLine1": "Soluções que saíram",
     "headlineLine2": "do problema para a prática.",
-    "intro": "Cada projeto é uma prova de capacidade — entender o problema, projetar a solução e entregar sistemas, integrações e produtos digitais em operação.",
-    "competenciesLabel": "Competências demonstradas",
     "hefesto": {
       "navName": "Hefesto",
       "name": "HEFESTO",
@@ -108,14 +59,12 @@
       "headlineLine1": "Tecnologia aplicada",
       "headlineLine2": "ao primeiro minuto",
       "headlineLine3": "de uma emergência.",
-      "description": "Plataforma desenvolvida para otimizar o atendimento e a geração de ocorrências 190/193, reduzindo tarefas repetitivas e transformando informações do atendimento em registros mais rápidos e estruturados.",
+      "description": "Plataforma criada para otimizar o atendimento e a geração de ocorrências 190/193, reduzindo tarefas repetitivas e estruturando informações com mais rapidez.",
       "cta": "Ver projeto",
-      "competencies": [
+      "tags": [
         "Software",
         "Automação",
-        "IA",
-        "Integrações",
-        "Dados"
+        "IA"
       ],
       "metrics": {
         "calls": {
@@ -129,34 +78,6 @@
         "time": {
           "value": "~1,5 min",
           "label": "geração de ocorrência"
-        }
-      },
-      "product": {
-        "ariaLabel": "Prévia visual do sistema Hefesto",
-        "status": "Em operação",
-        "call": {
-          "title": "Chamada",
-          "value": "190 / 193"
-        },
-        "attendance": {
-          "title": "Atendimento",
-          "value": "Em curso"
-        },
-        "location": {
-          "title": "Localização",
-          "value": "Asa Norte"
-        },
-        "narrative": {
-          "title": "Narrativa",
-          "value": "Assistida"
-        },
-        "incident": {
-          "title": "Ocorrência",
-          "value": "Em geração"
-        },
-        "dispatch": {
-          "title": "Despacho",
-          "value": "CAD"
         }
       },
       "placeholder": {
@@ -253,45 +174,16 @@
     "orion": {
       "navName": "Órion",
       "name": "ÓRION",
-      "category": "ECOSSISTEMA CORPORATIVO / SISTEMAS INTEGRADOS",
+      "category": "Ecossistema corporativo • Sistemas integrados",
       "headlineLine1": "Vários sistemas.",
       "headlineLine2": "Uma única arquitetura.",
-      "description": "Ecossistema de aplicações desenvolvido para integrar diferentes áreas administrativas e operacionais em uma estrutura compartilhada de autenticação, dados, permissões, APIs e auditoria.",
+      "description": "Ecossistema de aplicações que integra diferentes áreas em uma arquitetura compartilhada de autenticação, dados, permissões e serviços.",
       "cta": "Ver projeto",
-      "competencies": [
-        "Software",
-        "Integrações",
+      "tags": [
         "Arquitetura",
-        "Dados"
+        "Integrações",
+        "Gestão"
       ],
-      "coreLabel": "Núcleo",
-      "modulesLabel": "Módulos",
-      "services": [
-        "SSO",
-        "APIs",
-        "Auditoria"
-      ],
-      "modules": [
-        "SAD",
-        "Qualidade",
-        "Jurídico",
-        "Patrimônio",
-        "Mulher",
-        "Assessoria",
-        "Operações",
-        "Afastamentos"
-      ],
-      "capabilities": [
-        "SSO",
-        "Controle de acesso",
-        "APIs",
-        "Auditoria",
-        "Arquitetura modular",
-        "Integração entre sistemas"
-      ],
-      "product": {
-        "ariaLabel": "Prévia visual da arquitetura modular do Órion"
-      },
       "placeholder": {
         "title": "ÓRION",
         "eyebrow": "Case study",
@@ -305,12 +197,12 @@
       "category": "PLATAFORMA WEB / GESTÃO",
       "headlineLine1": "Uma presença digital construída",
       "headlineLine2": "como plataforma, não apenas como site.",
-      "description": "Plataforma institucional com site público e ambiente próprio de gestão, reunindo comunicação, transparência e operação da associação.",
+      "description": "Site institucional e ambiente próprio de gestão para comunicação, documentos, assembleias, transparência e administração de conteúdo.",
       "cta": "Ver projeto",
-      "competencies": [
-        "Produtos digitais",
-        "Software",
-        "Dados"
+      "tags": [
+        "Web",
+        "CMS",
+        "Gestão"
       ],
       "placeholder": {
         "title": "Plataforma Digital da ASSEDUB",
@@ -330,11 +222,12 @@
       "category": "PRODUTO DIGITAL / GAME",
       "headlineLine1": "Gestão, estratégia",
       "headlineLine2": "e simulação em um produto web.",
-      "description": "Produto digital de gerenciamento de futebol desenvolvido como aplicação web — da modelagem de regras à simulação e evolução do jogo.",
+      "description": "Produto web de gerenciamento de futebol envolvendo regras de negócio, dados, evolução de jogadores e simulação.",
       "cta": "Ver projeto",
-      "competencies": [
-        "Produtos digitais",
-        "Software"
+      "tags": [
+        "Produto digital",
+        "Software",
+        "Dados"
       ],
       "placeholder": {
         "title": "ELITE FC",
@@ -349,11 +242,12 @@
       "category": "DADOS / IA / ESTATÍSTICA",
       "headlineLine1": "Dados transformados",
       "headlineLine2": "em análise.",
-      "description": "Plataforma experimental de análise estatística e inteligência artificial para identificar padrões e tendências em grandes conjuntos de dados.",
+      "description": "Plataforma experimental de análise estatística e inteligência artificial para identificação de padrões e tendências em dados.",
       "cta": "Ver projeto",
-      "competencies": [
+      "tags": [
         "IA",
-        "Dados"
+        "Dados",
+        "Estatística"
       ],
       "placeholder": {
         "title": "ORÁCULO DOS NÚMEROS",
@@ -364,146 +258,67 @@
     }
   },
   "experience": {
-    "label": "04 / EXPERIÊNCIA",
+    "label": "03 / EXPERIÊNCIA",
     "headlineLine1": "Tecnologia construída",
     "headlineLine2": "com",
     "headlineAccent": "experiência de campo.",
-    "intro": "Minha trajetória profissional foi construída entre tecnologia, gestão e operação. Essa combinação me deu uma perspectiva que considero essencial: compreender o problema antes de desenvolver a solução.",
-    "closingLine1": "A tecnologia mudou ao longo dos anos.",
-    "closingLine2": "O princípio continua o mesmo:",
-    "closingAccent": "resolver o problema certo.",
-    "moments": {
+    "intro": "Mais de 15 anos de experiência profissional, com formação em Sistemas de Informação e atuação na criação de soluções para processos administrativos, produtos digitais e operações críticas.",
+    "stackLabel": "Tecnologias",
+    "stack": [
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "Next.js",
+      "PostgreSQL",
+      "MongoDB",
+      "Docker",
+      "Linux",
+      "Asterisk",
+      "LLMs",
+      "Whisper",
+      "APIs"
+    ],
+    "milestones": {
       "formation": {
         "period": "2009",
-        "title": "FORMAÇÃO EM TECNOLOGIA",
-        "role": "Bacharel em Sistemas de Informação",
-        "text": "A formação em Sistemas de Informação estabeleceu a base técnica para uma trajetória voltada ao desenvolvimento de software, análise de processos e aplicação prática da tecnologia."
+        "title": "Sistemas de Informação"
       },
       "processes": {
-        "period": "2016",
-        "title": "TECNOLOGIA APLICADA A PROCESSOS",
-        "role": "Desenvolvimento de soluções internas",
-        "text": "A experiência com processos administrativos levou à criação de sistemas para digitalizar rotinas, organizar informações e substituir controles manuais por soluções mais eficientes."
+        "period": "2016+",
+        "title": "Tecnologia aplicada a processos"
       },
       "operations": {
-        "period": "2024",
-        "title": "TECNOLOGIA EM OPERAÇÕES CRÍTICAS",
-        "role": "Atuação em tecnologia aplicada ao atendimento de emergência",
-        "text": "A experiência passou a incorporar sistemas utilizados em ambientes operacionais de alta demanda, aproximando ainda mais desenvolvimento de software, automação e necessidades reais do usuário."
-      },
-      "today": {
-        "period": "HOJE",
-        "title": "SOFTWARE, IA E AUTOMAÇÃO",
-        "role": "Construção de soluções digitais",
-        "text": "Hoje, concentro minha atuação na criação de sistemas, automações e soluções baseadas em inteligência artificial, combinando experiência operacional, arquitetura de software e foco em eficiência."
-      }
-    }
-  },
-  "technology": {
-    "label": "05 / TECNOLOGIA",
-    "headlineLine1": "Da arquitetura",
-    "headlineAccent": "à operação.",
-    "subLine1": "Tecnologias diferentes,",
-    "subLine2": "um mesmo objetivo:",
-    "subLine3": "construir soluções que funcionam.",
-    "body": "Meu trabalho combina desenvolvimento de software, dados, inteligência artificial, automação e integrações. A escolha das ferramentas parte do problema a ser resolvido, da arquitetura necessária e do contexto em que a solução será utilizada.",
-    "closingLine": "Tecnologia é ferramenta.",
-    "closingAccent": "A solução é o objetivo.",
-    "areas": {
-      "software": {
-        "index": "01",
-        "title": "ENGENHARIA DE SOFTWARE",
-        "description": "Desenvolvimento de aplicações, APIs e produtos digitais com foco em arquitetura organizada, manutenção e evolução contínua.",
-        "items": [
-          "JavaScript",
-          "TypeScript",
-          "Node.js",
-          "NestJS",
-          "Next.js"
-        ]
-      },
-      "data": {
-        "index": "02",
-        "title": "DADOS & BACK-END",
-        "description": "Estruturação de dados e serviços para aplicações que precisam de consistência, integração e capacidade de crescimento.",
-        "items": [
-          "PostgreSQL",
-          "MongoDB",
-          "Prisma",
-          "APIs REST"
-        ]
-      },
-      "ai": {
-        "index": "03",
-        "title": "IA & AUTOMAÇÃO",
-        "description": "Uso de inteligência artificial e automação para reduzir tarefas manuais, estruturar informações e tornar processos mais rápidos e inteligentes.",
-        "items": [
-          "LLMs",
-          "Whisper",
-          "Speech-to-Text",
-          "Text-to-Speech",
-          "Automação de processos"
-        ]
-      },
-      "infra": {
-        "index": "04",
-        "title": "INFRAESTRUTURA & INTEGRAÇÕES",
-        "description": "Integração entre aplicações, telefonia e serviços externos, com ambientes preparados para implantação, isolamento e operação contínua.",
-        "items": [
-          "Docker",
-          "Linux",
-          "Asterisk",
-          "APIs",
-          "Webhooks",
-          "Integrações entre sistemas"
-        ]
+        "period": "2024+",
+        "title": "Sistemas e automação em operações críticas"
       }
     }
   },
   "publications": {
-    "label": "06 / PUBLICAÇÕES",
-    "headlineLine1": "Tecnologia também precisa",
-    "headlineAccent": "ser compreendida.",
-    "body": "Parte do meu trabalho também envolve transformar conceitos técnicos em conhecimento aplicável. Escrevo sobre inteligência artificial, automação e tecnologia com foco em tornar ferramentas complexas mais úteis para pessoas e negócios.",
-    "coverPlaceholderLabel": "Capa",
-    "coverPlaceholderHint": "Espaço reservado para a capa do livro",
+    "eyebrow": "Também escrevo",
     "items": {
       "ia-pequenos-negocios": {
-        "eyebrow": "LIVRO / INTELIGÊNCIA ARTIFICIAL",
         "title": "Pequenos Negócios com IA",
-        "subtitleLine1": "O Sistema Completo Para Vender,",
-        "subtitleLine2": "Atender e Trabalhar Melhor",
-        "description": "Um guia prático sobre como pequenos negócios podem utilizar inteligência artificial no dia a dia para melhorar atendimento, vendas, produtividade e organização — sem exigir conhecimento técnico avançado.",
-        "tags": [
-          "Guia prático",
-          "Inteligência Artificial",
-          "Pequenos Negócios"
-        ],
+        "description": "Um guia prático sobre aplicação de inteligência artificial em pequenos negócios.",
         "purchaseCta": "Adquirir o e-book",
         "detailsCta": "Saiba mais",
-        "coverAlt": "Capa do livro Pequenos Negócios com IA, com notebook e gráfico de crescimento em um ambiente de trabalho",
-        "seriesNote": "Primeiro título de uma série sobre IA aplicada a pequenos negócios."
+        "coverAlt": "Capa do livro Pequenos Negócios com IA, com notebook e gráfico de crescimento em um ambiente de trabalho"
       }
     }
   },
   "contact": {
-    "label": "07 / CONTATO",
+    "label": "04 / CONTATO",
     "headlineLine1": "Tem um problema que",
     "headlineLine2": "a tecnologia pode resolver?",
     "headlineAccent": "Vamos conversar.",
-    "body": "Projetos, tecnologia, automação, inteligência artificial ou simplesmente uma boa ideia que precisa sair do papel. Se houver um problema interessante para resolver, podemos começar por uma conversa.",
+    "body": "Projetos, automação, inteligência artificial ou uma ideia que precisa sair do papel. Podemos começar por uma conversa.",
     "cta": "Vamos conversar",
     "emailLabel": "E-MAIL",
     "copyEmail": "Copiar e-mail",
-    "copied": "Copiado",
-    "closingLine1": "Boas soluções começam",
-    "closingLine2": "com boas perguntas."
+    "copied": "Copiado"
   },
   "footer": {
     "name": "Marcelo Pires de Farias",
-    "tagline": "Tecnologia • Software • IA • Automação",
     "copyright": "© {year} Marcelo Pires de Farias. Todos os direitos reservados.",
-    "signature": "Construído com tecnologia e propósito.",
     "ariaLabel": "Navegação do rodapé"
   },
   "projectCase": {
