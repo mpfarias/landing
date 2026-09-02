@@ -1,27 +1,29 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 
 type ProjectCtaProps = {
   line1: string;
   line2: string;
-  question?: string;
   action: string;
+  backLabel?: string;
 };
 
-export function ProjectCta({ line1, line2, question, action }: ProjectCtaProps) {
+export function ProjectCta({
+  line1,
+  line2,
+  action,
+  backLabel,
+}: ProjectCtaProps) {
   return (
     <section className="border-t border-border">
-      <div className="mx-auto max-w-[850px] px-5 py-14 sm:px-8 sm:py-16 lg:px-10">
+      <div className="mx-auto max-w-[850px] px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
         <p className="text-[clamp(1.35rem,2.8vw,1.85rem)] font-semibold leading-snug tracking-[-0.03em] text-foreground">
           <span className="block">{line1}</span>
           <span className="block">{line2}</span>
         </p>
-        {question ? (
-          <p className="mt-5 text-[15px] text-muted">{question}</p>
-        ) : null}
         <Link
           href={{ pathname: "/", hash: "contato" }}
-          className="group/cta-secondary mt-6 inline-flex items-center gap-2 text-sm font-medium text-foreground"
+          className="group/cta-secondary mt-7 inline-flex items-center gap-2 text-sm font-medium text-foreground"
         >
           {action}
           <ArrowRight
@@ -29,6 +31,20 @@ export function ProjectCta({ line1, line2, question, action }: ProjectCtaProps) 
             aria-hidden
           />
         </Link>
+        {backLabel ? (
+          <div className="mt-12">
+            <Link
+              href={{ pathname: "/", hash: "projetos" }}
+              className="group/cta-secondary inline-flex items-center gap-2 text-[13px] font-medium text-muted transition-colors duration-200 hover:text-foreground"
+            >
+              <ArrowLeft
+                className="icon-shift size-3.5 transition-transform duration-200 group-hover/cta-secondary:-translate-x-0.5 group-focus-visible/cta-secondary:-translate-x-0.5"
+                aria-hidden
+              />
+              {backLabel}
+            </Link>
+          </div>
+        ) : null}
       </div>
     </section>
   );

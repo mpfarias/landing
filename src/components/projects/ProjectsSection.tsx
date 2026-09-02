@@ -23,23 +23,31 @@ function projectHref(slug: string) {
   };
 }
 
-function StackList({ stack }: { stack: readonly string[] }) {
+function CompetencyList({
+  label,
+  items,
+}: {
+  label: string;
+  items: readonly string[];
+}) {
+  if (items.length === 0) return null;
+
   return (
-    <ul className="mt-6 flex flex-wrap gap-2">
-      {stack.map((tech, index) => (
-        <li
-          key={tech}
-          className={[
-            "rounded-full border px-3 py-1 text-[11px] font-medium tracking-[0.04em]",
-            index === 0
-              ? "border-primary/30 bg-[color-mix(in_srgb,var(--primary)_8%,var(--background))] text-foreground"
-              : "border-border bg-background-secondary/80 text-muted",
-          ].join(" ")}
-        >
-          {tech}
-        </li>
-      ))}
-    </ul>
+    <div className="mt-6">
+      <p className="text-[11px] font-medium tracking-[0.14em] text-muted">
+        {label}
+      </p>
+      <ul className="mt-3 flex flex-wrap gap-x-1 gap-y-2">
+        {items.map((item) => (
+          <li
+            key={item}
+            className="border-l border-border pl-3 pr-4 text-[12px] tracking-[0.04em] text-foreground/85"
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
@@ -78,13 +86,6 @@ function FeaturedHefesto({
           <h3 className="mt-3 text-[clamp(2rem,4.5vw,3.25rem)] font-semibold tracking-[-0.04em] text-foreground">
             {t("hefesto.name")}
           </h3>
-          <p className="mt-4 max-w-xl text-[clamp(1.15rem,2.2vw,1.45rem)] font-medium leading-snug tracking-[-0.02em] text-foreground">
-            <span className="block">{t("hefesto.headlineLine1")}</span>
-            <span className="block">{t("hefesto.headlineLine2")}</span>
-            <span className="block text-secondary">
-              {t("hefesto.headlineLine3")}
-            </span>
-          </p>
           <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-muted">
             {t("hefesto.description")}
           </p>
@@ -102,7 +103,10 @@ function FeaturedHefesto({
             ))}
           </dl>
 
-          <StackList stack={project.stack} />
+          <CompetencyList
+            label={t("competenciesLabel")}
+            items={t.raw("hefesto.competencies") as string[]}
+          />
           <CtaLabel label={t("hefesto.cta")} />
         </div>
 
@@ -123,7 +127,6 @@ function FeaturedOrion({
 }) {
   const t = useTranslations("projects");
   const slug = project.slugs[locale];
-  const capabilities = t.raw("orion.capabilities") as string[];
 
   return (
     <Link
@@ -152,18 +155,10 @@ function FeaturedOrion({
             {t("orion.description")}
           </p>
 
-          <ul className="mt-6 flex flex-wrap gap-x-1 gap-y-2">
-            {capabilities.map((item) => (
-              <li
-                key={item}
-                className="border-l border-border pl-3 pr-4 text-[12px] tracking-[0.04em] text-foreground/85"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-
-          <StackList stack={project.stack} />
+          <CompetencyList
+            label={t("competenciesLabel")}
+            items={t.raw("orion.competencies") as string[]}
+          />
           <CtaLabel label={t("orion.cta")} />
         </div>
       </div>
@@ -200,7 +195,10 @@ function SecondaryCard({
       <p className="mt-4 flex-1 text-[14px] leading-relaxed text-muted">
         {t(`${id}.description`)}
       </p>
-      <StackList stack={project.stack} />
+      <CompetencyList
+        label={t("competenciesLabel")}
+        items={t.raw(`${id}.competencies`) as string[]}
+      />
       <CtaLabel label={t(`${id}.cta`)} />
     </Link>
   );

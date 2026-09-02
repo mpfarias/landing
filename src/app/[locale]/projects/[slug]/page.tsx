@@ -1,13 +1,8 @@
-import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Header } from "@/components/layout/Header";
-import { ProjectBreadcrumb } from "@/components/project-case/ProjectBreadcrumb";
-import { ProjectCta } from "@/components/project-case/ProjectCta";
-import { ProjectHero } from "@/components/project-case/ProjectHero";
-import { ProjectNavigation } from "@/components/project-case/ProjectNavigation";
-import { HefestoCase } from "@/components/projects/hefesto/HefestoCase";
+import { ProjectCase } from "@/components/project-case/ProjectCase";
 import {
   getAllLocalizedProjectParams,
   getProjectSlug,
@@ -16,7 +11,6 @@ import {
   resolveProjectIdFromSlug,
   type ProjectId,
 } from "@/data/projects";
-import { Link } from "@/i18n/navigation";
 import {
   localeOpenGraph,
   locales,
@@ -49,11 +43,11 @@ export async function generateMetadata({
     namespace: `projects.${projectId}`,
   });
 
-  const title = t.has("case.seoTitle")
-    ? t("case.seoTitle")
+  const title = t.has("page.seoTitle")
+    ? t("page.seoTitle")
     : `${t("name")} | Marcelo Pires de Farias`;
-  const description = t.has("case.seoDescription")
-    ? t("case.seoDescription")
+  const description = t.has("page.seoDescription")
+    ? t("page.seoDescription")
     : t("description");
   const canonical = projectUrl(typedLocale, projectId);
 
@@ -98,66 +92,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const expectedSlug = getProjectSlug(projectId, locale as Locale);
   if (slug !== expectedSlug) notFound();
 
-  const project = projects[projectId];
-
   return (
     <>
       <Header variant="internal" />
       <main>
-        {projectId === "hefesto" ? (
-          <HefestoCase project={project} />
-        ) : (
-          <GenericProjectCase projectId={projectId} />
-        )}
+        <ProjectCase project={projects[projectId]} />
       </main>
     </>
-  );
-}
-
-async function GenericProjectCase({ projectId }: { projectId: ProjectId }) {
-  const project = projects[projectId];
-  const t = await getTranslations(`projects.${projectId}`);
-  const tCase = await getTranslations("projectCase");
-
-  const headlines = [
-    t("headlineLine1"),
-    t("headlineLine2"),
-    t.has("headlineLine3") ? t("headlineLine3") : null,
-  ].filter((line): line is string => Boolean(line));
-
-  return (
-    <article>
-      <ProjectHero
-        leading={
-          <>
-            <Link
-              href={{ pathname: "/", hash: "projetos" }}
-              className="group/cta-secondary inline-flex items-center gap-2 text-[13px] font-medium text-muted transition-colors duration-200 hover:text-foreground"
-            >
-              <ArrowLeft
-                className="icon-shift size-3.5 transition-transform duration-200 group-hover/cta-secondary:-translate-x-0.5 group-focus-visible/cta-secondary:-translate-x-0.5"
-                aria-hidden
-              />
-              {tCase("backToProjects")}
-            </Link>
-            <div className="mt-6">
-              <ProjectBreadcrumb projectId={projectId} />
-            </div>
-          </>
-        }
-        eyebrow={t("category")}
-        title={t("name")}
-        headlines={headlines}
-        summary={t("description")}
-        stack={project.stack}
-        stackLabel={tCase("technologies")}
-      />
-      <ProjectCta
-        line1={tCase("ctaLine1")}
-        line2={tCase("ctaLine2")}
-        action={tCase("cta")}
-      />
-      <ProjectNavigation projectId={projectId} />
-    </article>
   );
 }

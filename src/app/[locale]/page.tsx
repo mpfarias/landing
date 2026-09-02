@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { AboutSection } from "@/components/about/AboutSection";
+import { HelpSection } from "@/components/help/HelpSection";
 import { ExperienceSection } from "@/components/experience/ExperienceSection";
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/hero/Hero";
@@ -24,6 +25,7 @@ export default async function HomePage({ params }: HomePageProps) {
         <Hero />
         <ImpactStrip />
         <AboutSection />
+        <HelpSection />
         <ProjectsSection />
         <ExperienceSection />
         <TechnologySection />

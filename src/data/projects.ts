@@ -93,13 +93,6 @@ export function getProjectSlug(projectId: ProjectId, locale: Locale): string {
   return projects[projectId].slugs[locale];
 }
 
-export function getProjectHref(projectId: ProjectId, locale: Locale) {
-  return {
-    pathname: "/projects/[slug]" as const,
-    params: { slug: getProjectSlug(projectId, locale) },
-  };
-}
-
 export function resolveProjectIdFromSlug(slug: string): ProjectId | null {
   for (const id of projectIds) {
     const definition = projects[id];
@@ -130,20 +123,6 @@ export const projectPathSegment: Record<Locale, string> = {
   en: "projects",
   es: "proyectos",
 };
-
-export function getAdjacentProjects(id: ProjectId): {
-  previous: ProjectDefinition | null;
-  next: ProjectDefinition | null;
-} {
-  const index = projectIds.indexOf(id);
-  return {
-    previous: index > 0 ? projects[projectIds[index - 1]] : null,
-    next:
-      index >= 0 && index < projectIds.length - 1
-        ? projects[projectIds[index + 1]]
-        : null,
-  };
-}
 
 export function getAllLocalizedProjectParams(): Array<{
   locale: Locale;

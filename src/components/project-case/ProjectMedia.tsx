@@ -16,20 +16,7 @@ export function ProjectMedia({
   caption,
   priority,
 }: ProjectMediaProps) {
-  if (!src) {
-    if (process.env.NODE_ENV !== "development") return null;
-
-    return (
-      <figure
-        data-dev-placeholder={kind}
-        className="flex aspect-[16/10] items-center justify-center rounded-2xl border border-dashed border-border bg-background-secondary"
-      >
-        <figcaption className="px-4 text-center text-[11px] font-medium tracking-[0.16em] text-muted">
-          DEV / {kind}
-        </figcaption>
-      </figure>
-    );
-  }
+  if (!src) return null;
 
   return (
     <figure>

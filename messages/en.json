@@ -65,20 +65,58 @@
     "paragraph1": "My career brings together technology, management, and experience in environments where systems need to work in the real world. Over the years, I have built solutions to simplify processes, automate workflows, and turn operational challenges into practical digital products.",
     "paragraph2": "Today, my work focuses on software development, artificial intelligence, automation, and digital transformation — always pursuing solutions that deliver measurable impact and make sense for the people who actually use them."
   },
+  "help": {
+    "label": "02 / HOW I CAN HELP",
+    "headlineLine1": "Technology designed",
+    "headlineLine2": "around your problem.",
+    "intro": "I build digital solutions around real needs — from understanding the problem to architecture, development, automation, and product evolution.",
+    "areas": {
+      "systems": {
+        "title": "Systems development",
+        "text": "Custom solutions that turn processes, needs, and ideas into working digital products."
+      },
+      "automation": {
+        "title": "Process automation",
+        "text": "Reducing repetitive work and creating faster, more integrated, more efficient flows."
+      },
+      "ai": {
+        "title": "Artificial intelligence",
+        "text": "Practical application of AI, language processing, and intelligent automation in products and processes."
+      },
+      "integration": {
+        "title": "Systems integration",
+        "text": "APIs, data, external services, and existing systems working together."
+      },
+      "products": {
+        "title": "Digital products",
+        "text": "From identifying the problem to architecture, implementation, and evolution of digital solutions."
+      }
+    },
+    "ctaQuestion": "Have an idea or a problem to solve?",
+    "cta": "Let's talk"
+  },
   "projects": {
-    "label": "02 / PROJECTS",
+    "label": "03 / PROJECTS",
     "headlineLine1": "Solutions that moved",
     "headlineLine2": "from problems to practice.",
-    "intro": "Projects built around real needs across different contexts — critical operations, enterprise management, digital products, data, and artificial intelligence.",
+    "intro": "Each project is proof of capability — understanding the problem, designing the solution, and delivering systems, integrations, and digital products in production.",
+    "competenciesLabel": "Capabilities demonstrated",
     "hefesto": {
       "navName": "Hefesto",
       "name": "HEFESTO",
-      "category": "CRITICAL OPERATIONS / EMERGENCY",
+      "category": "Emergency operations • Software • Automation • AI",
       "headlineLine1": "Technology applied",
       "headlineLine2": "to the first minute",
       "headlineLine3": "of an emergency.",
-      "description": "A platform built to optimize the initial cycle of 190/193 emergency response, structuring information, automating steps, and integrating operational resources.",
-      "cta": "View full project",
+      "description": "A platform built to optimize 190/193 emergency response and incident creation, reducing repetitive work and turning call information into faster, structured records.",
+      "cta": "View project",
+      "competencies": [
+        "Software",
+        "Automation",
+        "AI",
+        "Integrations",
+        "Data"
+      ],
       "metrics": {
         "calls": {
           "value": "~4,000",
@@ -127,147 +165,71 @@
         "description": "The full case study for this project will be developed soon. For now, this page reserves space for the detailed documentation of the solution.",
         "cta": "Back to projects"
       },
-      "case": {
-        "seoTitle": "Hefesto | Technology for Emergency Operations | Marcelo Pires de Farias",
-        "seoDescription": "Case study of Hefesto, a platform built to optimize 190/193 emergency response and incident creation through software, automation, integration, and artificial intelligence.",
+      "page": {
+        "seoTitle": "Hefesto | Marcelo Pires de Farias",
+        "seoDescription": "Discover Hefesto, a platform built to optimize 190/193 emergency response and incident creation through software, automation, and integration.",
         "eyebrow": "EMERGENCY OPERATIONS • SOFTWARE • AUTOMATION",
-        "summary": "A platform built to transform the initial cycle of 190 and 193 emergency response, structuring information, automating workflows, and integrating resources to make incident creation faster, more consistent, and more efficient.",
-        "heroMetrics": {
-          "calls": { "value": "~4,000", "label": "calls per day" },
-          "incidents": { "value": "~25K", "label": "incidents per month" },
-          "time": { "value": "~1.5 min", "label": "to create an incident" }
+        "summary": "A platform built to optimize the initial cycle of 190/193 emergency response, structuring information, automating steps, and integrating resources to make incident creation faster and more efficient.",
+        "metrics": {
+          "calls": {
+            "value": "~4,000",
+            "label": "calls per day"
+          },
+          "incidents": {
+            "value": "~25K",
+            "label": "incidents per month"
+          },
+          "time": {
+            "value": "~1.5 min",
+            "label": "to create an incident"
+          }
         },
-        "productVisual": {
-          "ariaLabel": "Abstract visual composition of the Hefesto operational flow, from the call to dispatch",
-          "status": "Active call",
-          "channel": "190 / 193",
-          "elapsed": "01:24",
-          "call": "Call",
-          "location": "Location",
-          "locationValue": "Location identified",
-          "collection": "Structured collection",
-          "collectionType": "Type",
-          "collectionRoute": "Route",
-          "collectionContext": "Context",
-          "narrative": "Narrative",
-          "narrativeStatus": "Being structured",
-          "incident": "Incident",
-          "incidentValue": "Ready to continue",
-          "dispatch": "Dispatch"
-        },
-        "context": {
-          "label": "01 / CONTEXT",
-          "headlineLine1": "Before dispatch,",
-          "headlineLine2": "an entire process",
-          "headlineLine3": "needs to happen quickly.",
-          "p1": "Emergency response begins long before a team reaches the scene. The call needs to be understood, the location identified, essential information organized, and the incident recorded clearly enough for the operational process to continue.",
-          "p2": "In a high-volume environment, every step adds time. Small inefficiencies, when multiplied across thousands of calls, become a significant operational problem."
-        },
-        "challenge": {
-          "label": "02 / THE CHALLENGE",
+        "problem": {
+          "label": "THE PROBLEM",
           "headlineLine1": "Reducing time",
           "headlineLine2": "without losing information.",
-          "p1": "The challenge was not simply to make call handling faster. It was to reduce the time required to structure an incident while preserving quality, consistency, and enough information for the teams continuing the response.",
-          "p2": "The process involved multiple tasks: understanding the caller's report, identifying the correct location, recording data, structuring the narrative, and preparing the incident to continue through the operational workflow.",
-          "p3": "Every step dependent on manual entry increased both operator workload and the time required to complete the record."
+          "p1": "The initial handling of an emergency requires several pieces of information to be understood, organized, and recorded before the operational flow can continue.",
+          "p2": "In a high-volume environment, manual entry and repetitive tasks increased the time needed to turn a call into a structured incident."
         },
-        "comparison": {
+        "solution": {
+          "label": "THE SOLUTION",
+          "headlineLine1": "Turning emergency calls",
+          "headlineLine2": "into structured information.",
+          "p1": "Hefesto organizes the initial incident cycle into a single operational experience, using structured workflows, automation, lookups, and integrations to support the operator while the record is being built.",
+          "p2": "The solution brings together location, call information, structured narrative generation, and supporting resources to reduce repetitive steps and increase the consistency of the information."
+        },
+        "flow": {
+          "ariaLabel": "Hefesto flow: call, location, collection, narrative, and incident",
+          "steps": [
+            "Call",
+            "Location",
+            "Collection",
+            "Narrative",
+            "Incident"
+          ]
+        },
+        "result": {
           "before": "Before",
           "after": "After",
           "beforeValue": "~4–5 min",
           "afterValue": "~1.5 min",
           "beforeLabel": "traditional incident creation workflow",
-          "afterLabel": "optimized workflow with Hefesto"
-        },
-        "solution": {
-          "label": "03 / THE SOLUTION",
-          "headlineLine1": "Turning emergency calls",
-          "headlineLine2": "into structured information.",
-          "p1": "Hefesto was designed to organize the initial incident cycle into a single operational experience.",
-          "p2": "Instead of relying exclusively on manual entry, the system uses structured workflows, automation, lookups, and integrations to support the operator while the incident is being created.",
-          "p3": "The platform brings together context, location, call information, and supporting resources to reduce repetitive steps and transform data collected during the call into a more consistent operational record."
-        },
-        "workflow": {
-          "label": "04 / WORKFLOW",
-          "headlineLine1": "From the call",
-          "headlineLine2": "to the incident.",
-          "steps": [
-            { "title": "Call", "text": "Receiving the 190/193 emergency call" },
-            { "title": "Location", "text": "Identifying and looking up the address" },
-            { "title": "Collection", "text": "Information guided by the incident context" },
-            { "title": "Structuring", "text": "Automatic organization of collected data" },
-            { "title": "Narrative", "text": "Generation of a structured narrative" },
-            { "title": "Incident", "text": "Record prepared for operational continuity" }
-          ]
+          "afterLabel": "optimized workflow with Hefesto",
+          "text": "Reducing incident creation time in a high-volume operation represents a significant operational gain and allows the operator to focus more attention on the call itself."
         },
         "capabilities": {
-          "label": "05 / CAPABILITIES",
-          "headlineLine1": "Fewer repetitive tasks.",
-          "headlineLine2": "More context to decide.",
+          "label": "Key capabilities",
           "items": [
-            { "title": "Geolocation", "text": "Positioning the event during the call." },
-            { "title": "Automatic address lookup", "text": "Location with less repetitive typing." },
-            { "title": "Structured narrative generation", "text": "Text built from the incident context." },
-            { "title": "Telephony integration", "text": "The call connected to the operational flow." },
-            { "title": "Operational indicators", "text": "Visibility of volume and progress." },
-            { "title": "License plate lookup", "text": "Support for vehicle identification." },
-            { "title": "Recent incident history", "text": "Recent context at the moment of the call." },
-            { "title": "Event management", "text": "Organization of situations in progress." }
+            "Geolocation",
+            "Automatic address lookup",
+            "Structured narrative",
+            "Telephony integration",
+            "Operational indicators",
+            "License plate lookup"
           ]
-        },
-        "ai": {
-          "label": "06 / AI & AUTOMATION",
-          "headlineLine1": "Artificial intelligence",
-          "headlineLine2": "as support for the operator,",
-          "headlineLine3": "not a replacement for judgment.",
-          "p1": "Automation and artificial intelligence are used to reduce mechanical tasks and organize information generated during emergency calls.",
-          "p2": "Voice processing, transcription, language models, and structured content generation can support stages such as interpretation, organization, and narrative construction.",
-          "p3": "The goal is not to remove control from the operator, but to allow more attention to be focused on the caller and less on repetitive data entry."
-        },
-        "pipeline": {
-          "ariaLabel": "Hefesto artificial intelligence pipeline, with the operator remaining in final control",
-          "operatorNote": "The operator remains in control of the decision.",
-          "steps": [
-            { "title": "Audio", "text": "Call signal" },
-            { "title": "Speech-to-text", "text": "Whisper" },
-            { "title": "Structuring", "text": "Organizing the report" },
-            { "title": "LLM", "text": "Language model" },
-            { "title": "Narrative", "text": "Operational text" },
-            { "title": "Operator", "text": "Review and decision" }
-          ]
-        },
-        "architecture": {
-          "label": "07 / ARCHITECTURE",
-          "headlineLine1": "Integrations that need",
-          "headlineLine2": "to work as a single system.",
-          "p1": "Hefesto integrates different technologies and services to connect telephony, information processing, databases, and operational systems used in the response workflow.",
-          "p2": "The architecture was designed to allow continuous product evolution without losing the stability required in a high-demand environment.",
-          "core": "Hefesto",
-          "telephony": "Telephony",
-          "data": "Data",
-          "intelligence": "AI",
-          "integrations": "Integrations",
-          "technologies": ["SINESP CAD", "Asterisk", "Whisper STT", "LLM", "TTS", "Node.js", "NestJS", "PostgreSQL", "MongoDB", "Docker"]
-        },
-        "scale": {
-          "label": "08 / SCALE",
-          "headlineLine1": "When seconds",
-          "headlineLine2": "are multiplied by thousands.",
-          "calls": { "value": "~4,000", "label": "calls per day" },
-          "rate": { "value": "~30%", "label": "become incidents" },
-          "incidents": { "value": "~25,000", "label": "incidents per month" },
-          "p1": "In a high-volume operation, reducing minutes from an activity performed thousands of times becomes more than an interface improvement — it becomes an operational gain at scale."
-        },
-        "impact": {
-          "label": "09 / IMPACT",
-          "headlineLine1": "Faster.",
-          "headlineLine2": "More structured.",
-          "headlineLine3": "More consistent.",
-          "p1": "The result is a flow in which technology and automation take on part of the repetitive work, while the operator remains at the center of the operation.",
-          "p2": "The reduction in incident creation time, combined with more structured information, shows how apparently small improvements can produce significant impact when applied to a real, large-scale operation."
         },
         "role": {
-          "label": "ROLE IN THE PROJECT",
+          "label": "MY ROLE",
           "authorLabel": "Concept and development",
           "author": "Marcelo Pires de Farias",
           "coauthorLabel": "Co-author",
@@ -275,16 +237,17 @@
           "registryLabel": "Registered with INPI as",
           "registry": "Sistema Hefesto para Gestão de Ocorrências e Emergência"
         },
-        "gallery": {
-          "label": "10 / PRODUCT",
-          "headline": "The system in operation."
-        },
-        "cta": {
-          "line1": "Technology makes a difference",
-          "line2": "when it solves a real problem.",
-          "question": "Facing a similar challenge?",
-          "action": "Let's talk"
-        }
+        "technologies": [
+          "Node.js",
+          "NestJS",
+          "PostgreSQL",
+          "MongoDB",
+          "Docker",
+          "Asterisk",
+          "Whisper",
+          "LLM",
+          "SINESP CAD"
+        ]
       }
     },
     "orion": {
@@ -294,12 +257,38 @@
       "headlineLine1": "Multiple systems.",
       "headlineLine2": "One architecture.",
       "description": "An application ecosystem built to integrate administrative and operational areas through a shared structure for authentication, data, permissions, APIs, and audit.",
-      "cta": "View ecosystem",
+      "cta": "View project",
+      "competencies": [
+        "Software",
+        "Integrations",
+        "Architecture",
+        "Data"
+      ],
       "coreLabel": "Core",
       "modulesLabel": "Modules",
-      "services": ["SSO", "APIs", "Audit"],
-      "modules": ["SAD", "Quality", "Legal", "Assets", "Women", "Advisory", "Operations", "Leave"],
-      "capabilities": ["SSO", "Access control", "APIs", "Audit", "Modular architecture", "System integration"],
+      "services": [
+        "SSO",
+        "APIs",
+        "Audit"
+      ],
+      "modules": [
+        "SAD",
+        "Quality",
+        "Legal",
+        "Assets",
+        "Women",
+        "Advisory",
+        "Operations",
+        "Leave"
+      ],
+      "capabilities": [
+        "SSO",
+        "Access control",
+        "APIs",
+        "Audit",
+        "Modular architecture",
+        "System integration"
+      ],
       "product": {
         "ariaLabel": "Visual preview of the Órion modular architecture"
       },
@@ -311,18 +300,28 @@
       }
     },
     "assedub": {
-      "navName": "ASSEDUB",
-      "name": "ASSEDUB",
+      "navName": "ASSEDUB Digital Platform",
+      "name": "ASSEDUB Digital Platform",
       "category": "WEB PLATFORM / MANAGEMENT",
-      "headlineLine1": "An institutional website",
-      "headlineLine2": "with management behind it.",
-      "description": "A digital platform combining a public website and a custom CMS for communication, assemblies, documents, transparency, media, institutional management, and audit.",
+      "headlineLine1": "A digital presence built",
+      "headlineLine2": "as a platform, not just a website.",
+      "description": "An institutional platform with a public website and a dedicated management environment for communication, transparency, and day-to-day association operations.",
       "cta": "View project",
+      "competencies": [
+        "Digital products",
+        "Software",
+        "Data"
+      ],
       "placeholder": {
-        "title": "ASSEDUB",
+        "title": "ASSEDUB Digital Platform",
         "eyebrow": "Case study",
         "description": "The full case study for this project will be developed soon. For now, this page reserves space for the detailed documentation of the solution.",
         "cta": "Back to projects"
+      },
+      "page": {
+        "seoTitle": "ASSEDUB Digital Platform | Marcelo Pires de Farias",
+        "seoDescription": "Discover the ASSEDUB Digital Platform, built to integrate institutional presence, communications, assemblies, documents, transparency, media, content management, and audit.",
+        "context": "ASSEDUB is the Association of Residents, Buyers and Lot Holders of Residencial Dubai de Paracatu. The project presented on this page is the digital platform developed to support its institutional presence, communication, transparency, and content management."
       }
     },
     "elite-fc": {
@@ -331,8 +330,12 @@
       "category": "DIGITAL PRODUCT / GAME",
       "headlineLine1": "Management, strategy",
       "headlineLine2": "and simulation in a web product.",
-      "description": "A football management game built as a web application, involving data modeling, business rules, authentication, player progression, and simulation.",
+      "description": "A football management product built as a web application — from business rules to simulation and product evolution.",
       "cta": "View project",
+      "competencies": [
+        "Digital products",
+        "Software"
+      ],
       "placeholder": {
         "title": "ELITE FC",
         "eyebrow": "Case study",
@@ -346,8 +349,12 @@
       "category": "DATA / AI / STATISTICS",
       "headlineLine1": "Data transformed",
       "headlineLine2": "into analysis.",
-      "description": "An experimental platform for statistical analysis and machine-learning models, built to identify patterns, relationships, and trends in large datasets.",
+      "description": "An experimental platform for statistical analysis and artificial intelligence, built to identify patterns and trends in large datasets.",
       "cta": "View project",
+      "competencies": [
+        "AI",
+        "Data"
+      ],
       "placeholder": {
         "title": "ORÁCULO DOS NÚMEROS",
         "eyebrow": "Case study",
@@ -357,7 +364,7 @@
     }
   },
   "experience": {
-    "label": "03 / EXPERIENCE",
+    "label": "04 / EXPERIENCE",
     "headlineLine1": "Technology built",
     "headlineLine2": "on",
     "headlineAccent": "real-world experience.",
@@ -393,7 +400,7 @@
     }
   },
   "technology": {
-    "label": "04 / TECHNOLOGY",
+    "label": "05 / TECHNOLOGY",
     "headlineLine1": "From architecture",
     "headlineAccent": "to production.",
     "subLine1": "Different technologies,",
@@ -407,30 +414,54 @@
         "index": "01",
         "title": "SOFTWARE ENGINEERING",
         "description": "Development of applications, APIs, and digital products with a focus on clean architecture, maintainability, and continuous evolution.",
-        "items": ["JavaScript", "TypeScript", "Node.js", "NestJS", "Next.js"]
+        "items": [
+          "JavaScript",
+          "TypeScript",
+          "Node.js",
+          "NestJS",
+          "Next.js"
+        ]
       },
       "data": {
         "index": "02",
         "title": "DATA & BACK-END",
         "description": "Data and service architecture for applications that require consistency, integration, and room to scale.",
-        "items": ["PostgreSQL", "MongoDB", "Prisma", "APIs REST"]
+        "items": [
+          "PostgreSQL",
+          "MongoDB",
+          "Prisma",
+          "APIs REST"
+        ]
       },
       "ai": {
         "index": "03",
         "title": "AI & AUTOMATION",
         "description": "Using artificial intelligence and automation to reduce manual work, structure information, and make processes faster and smarter.",
-        "items": ["LLMs", "Whisper", "Speech-to-Text", "Text-to-Speech", "Process automation"]
+        "items": [
+          "LLMs",
+          "Whisper",
+          "Speech-to-Text",
+          "Text-to-Speech",
+          "Process automation"
+        ]
       },
       "infra": {
         "index": "04",
         "title": "INFRASTRUCTURE & INTEGRATIONS",
         "description": "Integration across applications, telephony, and external services, with environments designed for deployment, isolation, and continuous operation.",
-        "items": ["Docker", "Linux", "Asterisk", "APIs", "Webhooks", "System integrations"]
+        "items": [
+          "Docker",
+          "Linux",
+          "Asterisk",
+          "APIs",
+          "Webhooks",
+          "System integrations"
+        ]
       }
     }
   },
   "publications": {
-    "label": "05 / PUBLICATIONS",
+    "label": "06 / PUBLICATIONS",
     "headlineLine1": "Technology also needs",
     "headlineAccent": "to be understood.",
     "body": "Part of my work also involves turning technical concepts into practical knowledge. I write about artificial intelligence, automation, and technology with a focus on making complex tools more useful for people and businesses.",
@@ -443,7 +474,11 @@
         "subtitleLine1": "The Complete System to Sell,",
         "subtitleLine2": "Serve Customers, and Work Better",
         "description": "A practical guide to using artificial intelligence in everyday small-business operations to improve customer service, sales, productivity, and organization — without requiring advanced technical knowledge.",
-        "tags": ["Practical Guide", "Artificial Intelligence", "Small Business"],
+        "tags": [
+          "Practical Guide",
+          "Artificial Intelligence",
+          "Small Business"
+        ],
         "purchaseCta": "Get the e-book",
         "detailsCta": "Learn more",
         "coverAlt": "Cover of the book Small Business with AI, showing a laptop and a growth chart on a desk",
@@ -452,7 +487,7 @@
     }
   },
   "contact": {
-    "label": "06 / CONTACT",
+    "label": "07 / CONTACT",
     "headlineLine1": "Have a problem",
     "headlineLine2": "technology can solve?",
     "headlineAccent": "Let's talk.",
@@ -475,12 +510,13 @@
     "home": "Home",
     "breadcrumb": "Breadcrumb",
     "backToProjects": "Back to projects",
-    "ctaLine1": "Have a similar problem",
-    "ctaLine2": "to solve?",
+    "ctaLine1": "Have a problem",
+    "ctaLine2": "technology can solve?",
     "cta": "Let's talk",
-    "previous": "Previous project",
-    "next": "Next project",
-    "projectNav": "Project navigation",
+    "problem": "Problem",
+    "solution": "Solution",
+    "results": "Result",
+    "role": "My role in the project",
     "technologies": "Technologies",
     "meta": {
       "type": "Type",
