@@ -3,24 +3,34 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Header } from "@/components/layout/Header";
+import { ProjectBreadcrumb } from "@/components/project-case/ProjectBreadcrumb";
+import { ProjectCta } from "@/components/project-case/ProjectCta";
+import { ProjectHero } from "@/components/project-case/ProjectHero";
+import { ProjectNavigation } from "@/components/project-case/ProjectNavigation";
+import { HefestoCase } from "@/components/projects/hefesto/HefestoCase";
 import {
   getAllLocalizedProjectParams,
   getProjectSlug,
+  projectPathSegment,
+  projects,
   resolveProjectIdFromSlug,
   type ProjectId,
 } from "@/data/projects";
 import { Link } from "@/i18n/navigation";
-import { locales, type Locale } from "@/i18n/routing";
+import {
+  localeOpenGraph,
+  locales,
+  routing,
+  type Locale,
+} from "@/i18n/routing";
 
 type ProjectPageProps = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
-const projectPathSegment: Record<Locale, string> = {
-  pt: "projetos",
-  en: "projects",
-  es: "proyectos",
-};
+function projectUrl(locale: Locale, projectId: ProjectId) {
+  return `/${locale}/${projectPathSegment[locale]}/${getProjectSlug(projectId, locale)}`;
+}
 
 export function generateStaticParams() {
   return getAllLocalizedProjectParams();
@@ -39,19 +49,41 @@ export async function generateMetadata({
     namespace: `projects.${projectId}`,
   });
 
+  const title = t.has("case.seoTitle")
+    ? t("case.seoTitle")
+    : `${t("name")} | Marcelo Pires de Farias`;
+  const description = t.has("case.seoDescription")
+    ? t("case.seoDescription")
+    : t("description");
+  const canonical = projectUrl(typedLocale, projectId);
+
   const languages = Object.fromEntries(
-    locales.map((code) => [
-      code,
-      `/${code}/${projectPathSegment[code]}/${getProjectSlug(projectId, code)}`,
-    ]),
+    locales.map((code) => [code, projectUrl(code, projectId)]),
   );
+  languages["x-default"] = projectUrl(routing.defaultLocale, projectId);
 
   return {
-    title: `${t("placeholder.title")} | Marcelo Pires de Farias`,
-    description: t("placeholder.description"),
+    title,
+    description,
     alternates: {
-      canonical: `/${typedLocale}/${projectPathSegment[typedLocale]}/${getProjectSlug(projectId, typedLocale)}`,
+      canonical,
       languages,
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: "Marcelo Pires de Farias",
+      type: "article",
+      locale: localeOpenGraph[typedLocale],
+      alternateLocale: locales
+        .filter((code) => code !== typedLocale)
+        .map((code) => localeOpenGraph[code]),
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
     },
   };
 }
@@ -66,47 +98,66 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const expectedSlug = getProjectSlug(projectId, locale as Locale);
   if (slug !== expectedSlug) notFound();
 
-  const t = await getTranslations(`projects.${projectId}`);
-  const tCommon = await getTranslations("common");
+  const project = projects[projectId];
 
   return (
     <>
-      <Header />
+      <Header variant="internal" />
       <main>
-        <section className="relative min-h-[70svh] overflow-x-hidden pt-28 pb-20">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 opacity-[0.22] tech-grid"
-          />
-          <div className="relative mx-auto max-w-[800px] px-5 sm:px-8 lg:px-10">
-            <p className="text-[12px] font-medium tracking-[0.2em] text-muted">
-              {t("placeholder.eyebrow")}
-            </p>
-            <h1 className="mt-5 text-[clamp(2.4rem,6vw,4rem)] font-semibold tracking-[-0.04em] text-foreground">
-              {t("placeholder.title")}
-            </h1>
-            <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-muted sm:text-base">
-              {t("placeholder.description")}
-            </p>
-
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Link
-                href={{ pathname: "/", hash: "projetos" }}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background transition-opacity hover:opacity-90"
-              >
-                <ArrowLeft className="size-4" aria-hidden />
-                {t("placeholder.cta")}
-              </Link>
-              <Link
-                href="/"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/25"
-              >
-                {tCommon("backHome")}
-              </Link>
-            </div>
-          </div>
-        </section>
+        {projectId === "hefesto" ? (
+          <HefestoCase project={project} />
+        ) : (
+          <GenericProjectCase projectId={projectId} />
+        )}
       </main>
     </>
+  );
+}
+
+async function GenericProjectCase({ projectId }: { projectId: ProjectId }) {
+  const project = projects[projectId];
+  const t = await getTranslations(`projects.${projectId}`);
+  const tCase = await getTranslations("projectCase");
+
+  const headlines = [
+    t("headlineLine1"),
+    t("headlineLine2"),
+    t.has("headlineLine3") ? t("headlineLine3") : null,
+  ].filter((line): line is string => Boolean(line));
+
+  return (
+    <article>
+      <ProjectHero
+        leading={
+          <>
+            <Link
+              href={{ pathname: "/", hash: "projetos" }}
+              className="group/cta-secondary inline-flex items-center gap-2 text-[13px] font-medium text-muted transition-colors duration-200 hover:text-foreground"
+            >
+              <ArrowLeft
+                className="icon-shift size-3.5 transition-transform duration-200 group-hover/cta-secondary:-translate-x-0.5 group-focus-visible/cta-secondary:-translate-x-0.5"
+                aria-hidden
+              />
+              {tCase("backToProjects")}
+            </Link>
+            <div className="mt-6">
+              <ProjectBreadcrumb projectId={projectId} />
+            </div>
+          </>
+        }
+        eyebrow={t("category")}
+        title={t("name")}
+        headlines={headlines}
+        summary={t("description")}
+        stack={project.stack}
+        stackLabel={tCase("technologies")}
+      />
+      <ProjectCta
+        line1={tCase("ctaLine1")}
+        line2={tCase("ctaLine2")}
+        action={tCase("cta")}
+      />
+      <ProjectNavigation projectId={projectId} />
+    </article>
   );
 }

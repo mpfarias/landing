@@ -2,7 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
-import { useTransition } from "react";
+import { useLayoutEffect, useTransition } from "react";
 import {
   getProjectSlug,
   resolveProjectIdFromSlug,
@@ -16,6 +16,35 @@ const labels: Record<Locale, string> = {
   es: "ES",
 };
 
+const SCROLL_KEY = "mpf-locale-scroll-y";
+
+function storeScrollY() {
+  try {
+    sessionStorage.setItem(SCROLL_KEY, String(window.scrollY));
+  } catch {
+    // Safari private mode can block sessionStorage
+  }
+}
+
+function consumeStoredScrollY(): number | null {
+  try {
+    const raw = sessionStorage.getItem(SCROLL_KEY);
+    if (raw == null) return null;
+    const y = Number(raw);
+    return Number.isFinite(y) ? y : null;
+  } catch {
+    return null;
+  }
+}
+
+function clearStoredScrollY() {
+  try {
+    sessionStorage.removeItem(SCROLL_KEY);
+  } catch {
+    // ignore
+  }
+}
+
 export function LanguageSwitcher() {
   const t = useTranslations("common");
   const locale = useLocale() as Locale;
@@ -24,10 +53,34 @@ export function LanguageSwitcher() {
   const [isPending, startTransition] = useTransition();
   const activeIndex = Math.max(0, locales.indexOf(locale));
 
+  useLayoutEffect(() => {
+    const y = consumeStoredScrollY();
+    if (y == null) return;
+
+    const restore = () => {
+      window.scrollTo({ top: y, left: 0, behavior: "instant" });
+    };
+
+    restore();
+    const frame = requestAnimationFrame(restore);
+    const timeout = window.setTimeout(() => {
+      restore();
+      clearStoredScrollY();
+    }, 80);
+
+    return () => {
+      cancelAnimationFrame(frame);
+      window.clearTimeout(timeout);
+    };
+  }, []);
+
   function switchLocale(next: Locale) {
     if (next === locale) return;
 
+    storeScrollY();
+
     startTransition(() => {
+      const options = { locale: next, scroll: false as const };
       const slugParam = params.slug;
       const slug = typeof slugParam === "string" ? slugParam : null;
       const projectId = slug ? resolveProjectIdFromSlug(slug) : null;
@@ -38,12 +91,12 @@ export function LanguageSwitcher() {
             pathname: "/projects/[slug]",
             params: { slug: getProjectSlug(projectId, next) },
           },
-          { locale: next },
+          options,
         );
         return;
       }
 
-      router.replace("/", { locale: next });
+      router.replace("/", options);
     });
   }
 

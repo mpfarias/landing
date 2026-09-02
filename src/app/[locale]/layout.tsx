@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { Footer } from "@/components/layout/Footer";
 import {
   localeHtmlLang,
   localeOpenGraph,
@@ -114,6 +115,7 @@ export default async function LocaleLayout({
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
             {children}
+            <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

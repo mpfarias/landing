@@ -10,14 +10,14 @@
     "themeLight": "Tema claro",
     "themeDark": "Tema escuro",
     "language": "Idioma",
-    "photoPlaceholderLabel": "Foto editorial",
-    "photoPlaceholderHint": "Espaço reservado para fotografia profissional vertical",
     "backHome": "Voltar para a home"
   },
   "navigation": {
     "about": "Sobre",
     "projects": "Projetos",
     "experience": "Experiência",
+    "technology": "Tecnologia",
+    "publications": "Publicações",
     "contact": "Contato",
     "cta": "Vamos conversar",
     "ariaLabel": "Navegação principal"
@@ -32,6 +32,7 @@
     "primaryCta": "Explorar projetos",
     "secondaryCta": "Sobre mim",
     "name": "MARCELO PIRES DE FARIAS",
+    "portraitAlt": "Retrato profissional de Marcelo Pires de Farias",
     "expertise": "Software • IA • Automação • Transformação Digital"
   },
   "impact": {
@@ -66,14 +67,17 @@
   },
   "projects": {
     "label": "02 / PROJETOS",
-    "headlineLine1": "Projetos construídos para",
-    "headlineLine2": "resolver problemas reais.",
-    "intro": "Soluções desenvolvidas a partir de necessidades concretas, combinando software, automação, inteligência artificial e experiência operacional.",
+    "headlineLine1": "Soluções que saíram",
+    "headlineLine2": "do problema para a prática.",
+    "intro": "Projetos desenvolvidos a partir de necessidades reais, explorando diferentes contextos — operações críticas, gestão corporativa, produtos digitais, dados e inteligência artificial.",
     "hefesto": {
-      "eyebrow": "PROJETO EM DESTAQUE",
+      "navName": "Hefesto",
       "name": "HEFESTO",
-      "category": "Tecnologia para operações de emergência",
-      "description": "Plataforma criada para otimizar o atendimento e a geração de ocorrências 190/193, integrando automação, dados e inteligência operacional em um ambiente de missão crítica.",
+      "category": "OPERAÇÕES CRÍTICAS / EMERGÊNCIA",
+      "headlineLine1": "Tecnologia aplicada",
+      "headlineLine2": "ao primeiro minuto",
+      "headlineLine3": "de uma emergência.",
+      "description": "Plataforma criada para otimizar o ciclo inicial do atendimento de emergências 190/193, estruturando informações, automatizando etapas e integrando recursos operacionais.",
       "cta": "Ver projeto completo",
       "metrics": {
         "calls": {
@@ -81,7 +85,7 @@
           "label": "ligações/dia"
         },
         "incidents": {
-          "value": "~25.000",
+          "value": "~25 mil",
           "label": "ocorrências/mês"
         },
         "time": {
@@ -94,24 +98,258 @@
         "status": "Em operação",
         "call": {
           "title": "Chamada",
-          "line": "190 • Ativa",
-          "duration": "00:42"
+          "value": "190 / 193"
+        },
+        "attendance": {
+          "title": "Atendimento",
+          "value": "Em curso"
         },
         "location": {
           "title": "Localização",
-          "value": "Asa Norte, Brasília"
+          "value": "Asa Norte"
         },
         "narrative": {
           "title": "Narrativa",
-          "value": "Preenchimento assistido"
+          "value": "Assistida"
+        },
+        "incident": {
+          "title": "Ocorrência",
+          "value": "Em geração"
         },
         "dispatch": {
           "title": "Despacho",
-          "value": "CAD • Prioridade"
+          "value": "CAD"
         }
       },
       "placeholder": {
         "title": "HEFESTO",
+        "eyebrow": "Case study",
+        "description": "O case completo deste projeto será desenvolvido em breve. Por enquanto, esta página reserva o espaço da documentação detalhada da solução.",
+        "cta": "Voltar para projetos"
+      },
+      "case": {
+        "seoTitle": "Hefesto | Tecnologia para Operações de Emergência | Marcelo Pires de Farias",
+        "seoDescription": "Case do Hefesto, plataforma desenvolvida para otimizar o atendimento e a geração de ocorrências 190/193 por meio de software, automação, integração e inteligência artificial.",
+        "eyebrow": "OPERAÇÕES DE EMERGÊNCIA • SOFTWARE • AUTOMAÇÃO",
+        "summary": "Uma plataforma desenvolvida para transformar o ciclo inicial do atendimento de emergências 190 e 193, estruturando informações, automatizando etapas e integrando recursos para tornar a geração de ocorrências mais rápida, consistente e eficiente.",
+        "heroMetrics": {
+          "calls": { "value": "~4.000", "label": "ligações por dia" },
+          "incidents": { "value": "~25 mil", "label": "ocorrências por mês" },
+          "time": { "value": "~1,5 min", "label": "para geração de ocorrência" }
+        },
+        "productVisual": {
+          "ariaLabel": "Composição visual abstrata do fluxo operacional do Hefesto, da chamada ao despacho",
+          "status": "Chamada ativa",
+          "channel": "190 / 193",
+          "elapsed": "01:24",
+          "call": "Chamada",
+          "location": "Localização",
+          "locationValue": "Local identificado",
+          "collection": "Coleta estruturada",
+          "collectionType": "Tipo",
+          "collectionRoute": "Via",
+          "collectionContext": "Contexto",
+          "narrative": "Narrativa",
+          "narrativeStatus": "Em estruturação",
+          "incident": "Ocorrência",
+          "incidentValue": "Pronta para continuidade",
+          "dispatch": "Despacho"
+        },
+        "context": {
+          "label": "01 / CONTEXTO",
+          "headlineLine1": "Antes do despacho,",
+          "headlineLine2": "existe um processo inteiro",
+          "headlineLine3": "que precisa acontecer rápido.",
+          "p1": "O atendimento de uma emergência começa muito antes da chegada de uma equipe ao local. A ligação precisa ser compreendida, o endereço identificado, as informações essenciais organizadas e a ocorrência registrada de maneira suficientemente clara para que o processo operacional possa continuar.",
+          "p2": "Em um ambiente de grande volume, cada etapa adiciona tempo. Pequenas ineficiências, quando multiplicadas por milhares de atendimentos, tornam-se um problema operacional relevante."
+        },
+        "challenge": {
+          "label": "02 / O DESAFIO",
+          "headlineLine1": "Reduzir tempo",
+          "headlineLine2": "sem perder informação.",
+          "p1": "O desafio não era simplesmente tornar o atendimento mais rápido. Era reduzir o tempo necessário para estruturar uma ocorrência mantendo qualidade, consistência e informações suficientes para quem daria continuidade ao atendimento.",
+          "p2": "O processo envolvia diferentes tarefas: compreender o relato, localizar corretamente o fato, registrar dados, estruturar a narrativa e preparar a ocorrência para seguir no fluxo operacional.",
+          "p3": "Cada etapa dependente de preenchimento manual aumentava a carga do atendente e o tempo necessário para concluir o registro."
+        },
+        "comparison": {
+          "before": "Antes",
+          "after": "Depois",
+          "beforeValue": "~4–5 min",
+          "afterValue": "~1,5 min",
+          "beforeLabel": "processo tradicional de geração da ocorrência",
+          "afterLabel": "fluxo otimizado com o Hefesto"
+        },
+        "solution": {
+          "label": "03 / A SOLUÇÃO",
+          "headlineLine1": "Transformar atendimento",
+          "headlineLine2": "em informação estruturada.",
+          "p1": "O Hefesto foi concebido para organizar o ciclo inicial da ocorrência em uma única experiência operacional.",
+          "p2": "Em vez de depender exclusivamente de preenchimento manual, o sistema utiliza fluxos estruturados, automações, consultas e integrações para apoiar o atendente durante a construção da ocorrência.",
+          "p3": "A plataforma reúne contexto, localização, informações do atendimento e recursos auxiliares para reduzir etapas repetitivas e transformar dados coletados durante a ligação em um registro operacional mais consistente."
+        },
+        "workflow": {
+          "label": "04 / FLUXO",
+          "headlineLine1": "Da ligação",
+          "headlineLine2": "à ocorrência.",
+          "steps": [
+            { "title": "Ligação", "text": "Recebimento do atendimento 190/193" },
+            { "title": "Localização", "text": "Identificação e consulta do endereço" },
+            { "title": "Coleta", "text": "Informações orientadas pelo contexto da ocorrência" },
+            { "title": "Estruturação", "text": "Organização automática dos dados coletados" },
+            { "title": "Narrativa", "text": "Geração de narrativa estruturada" },
+            { "title": "Ocorrência", "text": "Registro preparado para continuidade operacional" }
+          ]
+        },
+        "capabilities": {
+          "label": "05 / CAPACIDADES",
+          "headlineLine1": "Menos tarefas repetitivas.",
+          "headlineLine2": "Mais contexto para decidir.",
+          "items": [
+            { "title": "Geolocalização", "text": "Posicionamento do fato durante o atendimento." },
+            { "title": "Consulta automática de endereço", "text": "Localização com menos digitação repetitiva." },
+            { "title": "Narrativa automática por questionários", "text": "Texto estruturado a partir do contexto." },
+            { "title": "Integração com telefonia", "text": "A chamada conectada ao fluxo operacional." },
+            { "title": "Indicadores operacionais", "text": "Acompanhamento de volume e andamento." },
+            { "title": "Consulta de placa", "text": "Apoio à identificação veicular." },
+            { "title": "Histórico das últimas ocorrências", "text": "Contexto recente no momento da ligação." },
+            { "title": "Gestão de eventos", "text": "Organização de situações em curso." }
+          ]
+        },
+        "ai": {
+          "label": "06 / IA & AUTOMAÇÃO",
+          "headlineLine1": "A inteligência artificial",
+          "headlineLine2": "como apoio ao atendimento,",
+          "headlineLine3": "não como substituição da decisão.",
+          "p1": "A automação e a inteligência artificial são utilizadas para reduzir tarefas mecânicas e organizar informações produzidas durante o atendimento.",
+          "p2": "Recursos de processamento de voz, transcrição, modelos de linguagem e geração de conteúdo estruturado podem apoiar etapas como interpretação, organização e construção da narrativa.",
+          "p3": "O objetivo não é retirar o controle do operador, mas permitir que ele concentre mais atenção no atendimento e menos no preenchimento repetitivo."
+        },
+        "pipeline": {
+          "ariaLabel": "Pipeline de inteligência artificial do Hefesto, com o operador no controle final",
+          "operatorNote": "O operador permanece no controle da decisão.",
+          "steps": [
+            { "title": "Áudio", "text": "Sinal da chamada" },
+            { "title": "Speech-to-text", "text": "Whisper" },
+            { "title": "Estruturação", "text": "Organização do relato" },
+            { "title": "LLM", "text": "Modelo de linguagem" },
+            { "title": "Narrativa", "text": "Texto operacional" },
+            { "title": "Operador", "text": "Revisão e decisão" }
+          ]
+        },
+        "architecture": {
+          "label": "07 / ARQUITETURA",
+          "headlineLine1": "Integrações que precisam",
+          "headlineLine2": "funcionar como um único sistema.",
+          "p1": "O Hefesto integra diferentes tecnologias e serviços para conectar telefonia, processamento de informação, banco de dados e sistemas operacionais utilizados no fluxo de atendimento.",
+          "p2": "A arquitetura foi pensada para permitir evolução contínua do produto sem perder a estabilidade necessária em um ambiente de alta demanda.",
+          "core": "Hefesto",
+          "telephony": "Telefonia",
+          "data": "Dados",
+          "intelligence": "IA",
+          "integrations": "Integrações",
+          "technologies": ["SINESP CAD", "Asterisk", "Whisper STT", "LLM", "TTS", "Node.js", "NestJS", "PostgreSQL", "MongoDB", "Docker"]
+        },
+        "scale": {
+          "label": "08 / ESCALA",
+          "headlineLine1": "Quando segundos",
+          "headlineLine2": "se multiplicam por milhares.",
+          "calls": { "value": "~4.000", "label": "ligações por dia" },
+          "rate": { "value": "~30%", "label": "geram ocorrências" },
+          "incidents": { "value": "~25.000", "label": "ocorrências por mês" },
+          "p1": "Em uma operação de grande volume, reduzir minutos de uma atividade realizada milhares de vezes deixa de ser apenas uma melhoria de interface e passa a representar ganho operacional em escala."
+        },
+        "impact": {
+          "label": "09 / IMPACTO",
+          "headlineLine1": "Mais rápido.",
+          "headlineLine2": "Mais estruturado.",
+          "headlineLine3": "Mais consistente.",
+          "p1": "O resultado é um fluxo em que tecnologia e automação assumem parte do trabalho repetitivo, enquanto o atendente permanece no centro da operação.",
+          "p2": "A redução do tempo de geração da ocorrência, combinada com maior estruturação das informações, demonstra como melhorias aparentemente pequenas podem produzir impacto significativo quando aplicadas a uma operação real e de grande escala."
+        },
+        "role": {
+          "label": "PAPEL NO PROJETO",
+          "authorLabel": "Idealização e desenvolvimento",
+          "author": "Marcelo Pires de Farias",
+          "coauthorLabel": "Coautoria",
+          "coauthor": "Rafael Gadelha de Menezes",
+          "registryLabel": "Sistema registrado no INPI como",
+          "registry": "Sistema Hefesto para Gestão de Ocorrências e Emergência"
+        },
+        "gallery": {
+          "label": "10 / PRODUTO",
+          "headline": "O sistema em operação."
+        },
+        "cta": {
+          "line1": "Tecnologia faz diferença",
+          "line2": "quando resolve um problema real.",
+          "question": "Tem um desafio parecido?",
+          "action": "Vamos conversar"
+        }
+      }
+    },
+    "orion": {
+      "navName": "Órion",
+      "name": "ÓRION",
+      "category": "ECOSSISTEMA CORPORATIVO / SISTEMAS INTEGRADOS",
+      "headlineLine1": "Vários sistemas.",
+      "headlineLine2": "Uma única arquitetura.",
+      "description": "Ecossistema de aplicações desenvolvido para integrar diferentes áreas administrativas e operacionais em uma estrutura compartilhada de autenticação, dados, permissões, APIs e auditoria.",
+      "cta": "Ver ecossistema",
+      "coreLabel": "Núcleo",
+      "modulesLabel": "Módulos",
+      "services": ["SSO", "APIs", "Auditoria"],
+      "modules": ["SAD", "Qualidade", "Jurídico", "Patrimônio", "Mulher", "Assessoria", "Operações", "Afastamentos"],
+      "capabilities": ["SSO", "Controle de acesso", "APIs", "Auditoria", "Arquitetura modular", "Integração entre sistemas"],
+      "product": {
+        "ariaLabel": "Prévia visual da arquitetura modular do Órion"
+      },
+      "placeholder": {
+        "title": "ÓRION",
+        "eyebrow": "Case study",
+        "description": "O case completo deste ecossistema será desenvolvido em breve. Por enquanto, esta página reserva o espaço da documentação detalhada da solução.",
+        "cta": "Voltar para projetos"
+      }
+    },
+    "assedub": {
+      "navName": "ASSEDUB",
+      "name": "ASSEDUB",
+      "category": "PLATAFORMA WEB / GESTÃO",
+      "headlineLine1": "Site institucional",
+      "headlineLine2": "com gestão por trás.",
+      "description": "Plataforma digital composta por site público e CMS próprio para comunicação, assembleias, documentos, transparência, mídia, gestão institucional e auditoria.",
+      "cta": "Ver projeto",
+      "placeholder": {
+        "title": "ASSEDUB",
+        "eyebrow": "Case study",
+        "description": "O case completo deste projeto será desenvolvido em breve. Por enquanto, esta página reserva o espaço da documentação detalhada da solução.",
+        "cta": "Voltar para projetos"
+      }
+    },
+    "elite-fc": {
+      "navName": "Elite FC",
+      "name": "ELITE FC",
+      "category": "PRODUTO DIGITAL / GAME",
+      "headlineLine1": "Gestão, estratégia",
+      "headlineLine2": "e simulação em um produto web.",
+      "description": "Projeto de jogo de gerenciamento de futebol desenvolvido como aplicação web, envolvendo modelagem de dados, regras de negócio, autenticação, evolução de jogadores e simulação.",
+      "cta": "Ver projeto",
+      "placeholder": {
+        "title": "ELITE FC",
+        "eyebrow": "Case study",
+        "description": "O case completo deste projeto será desenvolvido em breve. Por enquanto, esta página reserva o espaço da documentação detalhada da solução.",
+        "cta": "Voltar para projetos"
+      }
+    },
+    "oraculo-dos-numeros": {
+      "navName": "Oráculo dos Números",
+      "name": "ORÁCULO DOS NÚMEROS",
+      "category": "DADOS / IA / ESTATÍSTICA",
+      "headlineLine1": "Dados transformados",
+      "headlineLine2": "em análise.",
+      "description": "Plataforma experimental voltada à análise estatística e aplicação de modelos de inteligência artificial para identificar padrões, relações e tendências em grandes conjuntos de dados.",
+      "cta": "Ver projeto",
+      "placeholder": {
+        "title": "ORÁCULO DOS NÚMEROS",
         "eyebrow": "Case study",
         "description": "O case completo deste projeto será desenvolvido em breve. Por enquanto, esta página reserva o espaço da documentação detalhada da solução.",
         "cta": "Voltar para projetos"
@@ -152,6 +390,103 @@
         "role": "Construção de soluções digitais",
         "text": "Hoje, concentro minha atuação na criação de sistemas, automações e soluções baseadas em inteligência artificial, combinando experiência operacional, arquitetura de software e foco em eficiência."
       }
+    }
+  },
+  "technology": {
+    "label": "04 / TECNOLOGIA",
+    "headlineLine1": "Da arquitetura",
+    "headlineAccent": "à operação.",
+    "subLine1": "Tecnologias diferentes,",
+    "subLine2": "um mesmo objetivo:",
+    "subLine3": "construir soluções que funcionam.",
+    "body": "Meu trabalho combina desenvolvimento de software, dados, inteligência artificial, automação e integrações. A escolha das ferramentas parte do problema a ser resolvido, da arquitetura necessária e do contexto em que a solução será utilizada.",
+    "closingLine": "Tecnologia é ferramenta.",
+    "closingAccent": "A solução é o objetivo.",
+    "areas": {
+      "software": {
+        "index": "01",
+        "title": "ENGENHARIA DE SOFTWARE",
+        "description": "Desenvolvimento de aplicações, APIs e produtos digitais com foco em arquitetura organizada, manutenção e evolução contínua.",
+        "items": ["JavaScript", "TypeScript", "Node.js", "NestJS", "Next.js"]
+      },
+      "data": {
+        "index": "02",
+        "title": "DADOS & BACK-END",
+        "description": "Estruturação de dados e serviços para aplicações que precisam de consistência, integração e capacidade de crescimento.",
+        "items": ["PostgreSQL", "MongoDB", "Prisma", "APIs REST"]
+      },
+      "ai": {
+        "index": "03",
+        "title": "IA & AUTOMAÇÃO",
+        "description": "Uso de inteligência artificial e automação para reduzir tarefas manuais, estruturar informações e tornar processos mais rápidos e inteligentes.",
+        "items": ["LLMs", "Whisper", "Speech-to-Text", "Text-to-Speech", "Automação de processos"]
+      },
+      "infra": {
+        "index": "04",
+        "title": "INFRAESTRUTURA & INTEGRAÇÕES",
+        "description": "Integração entre aplicações, telefonia e serviços externos, com ambientes preparados para implantação, isolamento e operação contínua.",
+        "items": ["Docker", "Linux", "Asterisk", "APIs", "Webhooks", "Integrações entre sistemas"]
+      }
+    }
+  },
+  "publications": {
+    "label": "05 / PUBLICAÇÕES",
+    "headlineLine1": "Tecnologia também precisa",
+    "headlineAccent": "ser compreendida.",
+    "body": "Parte do meu trabalho também envolve transformar conceitos técnicos em conhecimento aplicável. Escrevo sobre inteligência artificial, automação e tecnologia com foco em tornar ferramentas complexas mais úteis para pessoas e negócios.",
+    "coverPlaceholderLabel": "Capa",
+    "coverPlaceholderHint": "Espaço reservado para a capa do livro",
+    "items": {
+      "ia-pequenos-negocios": {
+        "eyebrow": "LIVRO / INTELIGÊNCIA ARTIFICIAL",
+        "title": "Pequenos Negócios com IA",
+        "subtitleLine1": "O Sistema Completo Para Vender,",
+        "subtitleLine2": "Atender e Trabalhar Melhor",
+        "description": "Um guia prático sobre como pequenos negócios podem utilizar inteligência artificial no dia a dia para melhorar atendimento, vendas, produtividade e organização — sem exigir conhecimento técnico avançado.",
+        "tags": ["Guia prático", "Inteligência Artificial", "Pequenos Negócios"],
+        "purchaseCta": "Adquirir o e-book",
+        "detailsCta": "Saiba mais",
+        "coverAlt": "Capa do livro Pequenos Negócios com IA, com notebook e gráfico de crescimento em um ambiente de trabalho",
+        "seriesNote": "Primeiro título de uma série sobre IA aplicada a pequenos negócios."
+      }
+    }
+  },
+  "contact": {
+    "label": "06 / CONTATO",
+    "headlineLine1": "Tem um problema que",
+    "headlineLine2": "a tecnologia pode resolver?",
+    "headlineAccent": "Vamos conversar.",
+    "body": "Projetos, tecnologia, automação, inteligência artificial ou simplesmente uma boa ideia que precisa sair do papel. Se houver um problema interessante para resolver, podemos começar por uma conversa.",
+    "cta": "Vamos conversar",
+    "emailLabel": "E-MAIL",
+    "copyEmail": "Copiar e-mail",
+    "copied": "Copiado",
+    "closingLine1": "Boas soluções começam",
+    "closingLine2": "com boas perguntas."
+  },
+  "footer": {
+    "name": "Marcelo Pires de Farias",
+    "tagline": "Tecnologia • Software • IA • Automação",
+    "copyright": "© {year} Marcelo Pires de Farias. Todos os direitos reservados.",
+    "signature": "Construído com tecnologia e propósito.",
+    "ariaLabel": "Navegação do rodapé"
+  },
+  "projectCase": {
+    "home": "Início",
+    "breadcrumb": "Breadcrumb",
+    "backToProjects": "Voltar aos projetos",
+    "ctaLine1": "Tem um problema parecido",
+    "ctaLine2": "para resolver?",
+    "cta": "Vamos conversar",
+    "previous": "Projeto anterior",
+    "next": "Próximo projeto",
+    "projectNav": "Navegação entre projetos",
+    "technologies": "Tecnologias",
+    "meta": {
+      "type": "Tipo",
+      "context": "Contexto",
+      "year": "Ano",
+      "status": "Status"
     }
   }
 }

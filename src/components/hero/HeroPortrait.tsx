@@ -1,10 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion, useReducedMotion } from "motion/react";
 
 export function HeroPortrait() {
-  const t = useTranslations("common");
+  const t = useTranslations("hero");
   const reduceMotion = useReducedMotion();
 
   return (
@@ -28,34 +29,17 @@ export function HeroPortrait() {
       />
 
       <div
-        className="relative aspect-[3/4] overflow-hidden rounded-[1.25rem] border border-border bg-surface"
+        className="relative aspect-[3/4] overflow-hidden rounded-[1.25rem] border border-border bg-black"
         style={{ boxShadow: "var(--shadow-portrait)" }}
       >
-        <div
-          aria-hidden
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(160deg, color-mix(in srgb, var(--primary) 10%, var(--surface)) 0%, var(--surface) 42%, color-mix(in srgb, var(--secondary) 7%, var(--background-secondary)) 100%)",
-          }}
+        <Image
+          src="/images/profile.jpg"
+          alt={t("portraitAlt")}
+          fill
+          priority
+          sizes="(min-width: 1024px) 42vw, min(380px, 92vw)"
+          className="object-cover object-[center_18%]"
         />
-        <div
-          aria-hidden
-          className="absolute inset-0 opacity-[0.35]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, var(--grid-line) 1px, transparent 1px), linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px)",
-            backgroundSize: "28px 28px",
-          }}
-        />
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[var(--surface)] via-[var(--surface)]/80 to-transparent p-5 sm:p-6">
-          <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-muted">
-            {t("photoPlaceholderLabel")}
-          </p>
-          <p className="mt-2 max-w-[16rem] text-sm leading-relaxed text-foreground/85">
-            {t("photoPlaceholderHint")}
-          </p>
-        </div>
       </div>
     </motion.div>
   );
