@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Marcelo Pires de Farias | Tecnología, IA y Automatización",
-    "description": "Desarrollo sistemas, automatizaciones y soluciones digitales que combinan tecnología, inteligencia artificial y eficiencia operativa."
+    "description": "Transformo problemas reales en soluciones digitales. Software, automatización e inteligencia artificial aplicados a procesos del mundo real."
   },
   "common": {
     "brand": "MPF.",
@@ -9,44 +9,82 @@
     "closeMenu": "Cerrar menú",
     "themeLight": "Tema claro",
     "themeDark": "Tema oscuro",
+    "themeSystem": "Tema del sistema",
     "language": "Idioma",
     "backHome": "Volver al inicio"
   },
   "navigation": {
     "about": "Sobre mí",
-    "projects": "Proyectos",
-    "experience": "Experiencia",
+    "systems": "Sistemas",
+    "ebooks": "E-books",
     "contact": "Contacto",
-    "cta": "Hablemos",
     "ariaLabel": "Navegación principal"
   },
   "hero": {
-    "location": "BRASILIA, BRASIL",
-    "headlineLine1": "Tecnología para",
-    "headlineLine2": "transformar",
-    "headlineLine3": "problemas",
-    "headlineAccent": "reales.",
-    "description": "Desarrollo sistemas, automatizaciones y soluciones digitales que combinan tecnología, inteligencia artificial y eficiencia operativa.",
-    "primaryCta": "Explorar proyectos",
-    "secondaryCta": "Sobre mí",
     "name": "MARCELO PIRES DE FARIAS",
-    "portraitAlt": "Retrato profesional de Marcelo Pires de Farias",
-    "expertise": "Software • IA • Automatización • Transformación Digital"
+    "headlineLine1": "Transformo problemas reales",
+    "headlineLine2": "en soluciones digitales.",
+    "description": "Desarrollo de software, automatización e inteligencia artificial aplicados a procesos y necesidades del mundo real.",
+    "primaryCta": "Hablemos",
+    "secondaryCta": "Conoce mi trabajo ↓",
+    "expertise": "Software · Automatización · IA · Sistemas",
+    "portraitAlt": "Retrato profesional de Marcelo Pires de Farias"
   },
   "about": {
-    "label": "01 / SOBRE MÍ",
-    "headlineLine1": "Construyo tecnología a partir de",
-    "headlineLine2": "problemas que",
-    "headlineAccentLead": "necesitan una",
-    "headlineAccentEnd": "solución.",
-    "paragraph": "Mi trayectoria combina tecnología, gestión y experiencia en entornos donde los sistemas necesitan funcionar de verdad. Desarrollo soluciones digitales para simplificar procesos, automatizar rutinas y transformar necesidades reales en productos funcionales.",
-    "helpLabel": "Puedo ayudar con",
-    "help": {
+    "title": "Sobre mí",
+    "paragraph": "Soy profesional de tecnología con formación en Sistemas de Información y experiencia en la creación de soluciones utilizadas en entornos administrativos y operativos. Mi trabajo combina desarrollo de software, automatización, integración de sistemas e inteligencia artificial, siempre partiendo de una necesidad concreta para llegar a una solución funcional.",
+    "focus": {
       "systems": "Desarrollo de sistemas",
-      "automation": "Automatización e IA",
-      "integration": "Integración de sistemas",
+      "automation": "Automatización",
+      "ai": "Inteligencia Artificial",
+      "integrations": "Integraciones",
       "products": "Productos digitales"
     }
+  },
+  "systems": {
+    "title": "Sistemas",
+    "intro": "Algunos sistemas y productos que desarrollé o en los que participé.",
+    "items": {
+      "hefesto": {
+        "name": "HEFESTO",
+        "line": "Emergencias · Automatización · IA"
+      },
+      "orion": {
+        "name": "ÓRION",
+        "line": "Ecosistema de sistemas"
+      },
+      "assedub": {
+        "name": "Plataforma Digital de ASSEDUB",
+        "line": "Web · Gestión"
+      },
+      "elite-fc": {
+        "name": "ELITE FC",
+        "line": "Producto digital"
+      },
+      "oraculo-dos-numeros": {
+        "name": "ORÁCULO DOS NÚMEROS",
+        "line": "Datos · IA"
+      }
+    }
+  },
+  "ebooks": {
+    "title": "E-books",
+    "items": {
+      "ia-pequenos-negocios": {
+        "title": "Pequenos Negócios com IA",
+        "description": "Una guía práctica para aplicar inteligencia artificial en el día a día de los pequeños negocios.",
+        "cta": "Adquirir el e-book",
+        "coverAlt": "Portada del libro Pequenos Negócios com IA"
+      }
+    }
+  },
+  "contact": {
+    "headline": "Construyamos algo.",
+    "body": "¿Tienes un proyecto, problema o idea en el que la tecnología pueda marcar la diferencia? Hablemos.",
+    "cta": "Contactar ↗"
+  },
+  "footer": {
+    "copyright": "© {year} Marcelo Pires de Farias"
   },
   "projects": {
     "label": "02 / PROYECTOS",
@@ -256,70 +294,6 @@
         "cta": "Volver a proyectos"
       }
     }
-  },
-  "experience": {
-    "label": "03 / EXPERIENCIA",
-    "headlineLine1": "Tecnología construida",
-    "headlineLine2": "desde",
-    "headlineAccent": "la experiencia real.",
-    "intro": "Más de 15 años de experiencia profesional, con formación en Sistemas de Información y actuación en la creación de soluciones para procesos administrativos, productos digitales y operaciones críticas.",
-    "stackLabel": "Tecnologías",
-    "stack": [
-      "TypeScript",
-      "Node.js",
-      "NestJS",
-      "Next.js",
-      "PostgreSQL",
-      "MongoDB",
-      "Docker",
-      "Linux",
-      "Asterisk",
-      "LLMs",
-      "Whisper",
-      "APIs"
-    ],
-    "milestones": {
-      "formation": {
-        "period": "2009",
-        "title": "Sistemas de Información"
-      },
-      "processes": {
-        "period": "2016+",
-        "title": "Tecnología aplicada a procesos"
-      },
-      "operations": {
-        "period": "2024+",
-        "title": "Sistemas y automatización en operaciones críticas"
-      }
-    }
-  },
-  "publications": {
-    "eyebrow": "También escribo",
-    "items": {
-      "ia-pequenos-negocios": {
-        "title": "Pequeños Negocios con IA",
-        "description": "Una guía práctica sobre la aplicación de inteligencia artificial en pequeños negocios.",
-        "purchaseCta": "Adquirir el e-book",
-        "detailsCta": "Más información",
-        "coverAlt": "Portada del libro Pequeños Negocios con IA, con un portátil y un gráfico de crecimiento en un entorno de trabajo"
-      }
-    }
-  },
-  "contact": {
-    "label": "04 / CONTACTO",
-    "headlineLine1": "¿Tienes un problema",
-    "headlineLine2": "que la tecnología puede resolver?",
-    "headlineAccent": "Hablemos.",
-    "body": "Proyectos, automatización, inteligencia artificial o una idea que necesita salir del papel. Podemos empezar por una conversación.",
-    "cta": "Hablemos",
-    "emailLabel": "CORREO",
-    "copyEmail": "Copiar correo",
-    "copied": "Copiado"
-  },
-  "footer": {
-    "name": "Marcelo Pires de Farias",
-    "copyright": "© {year} Marcelo Pires de Farias. Todos los derechos reservados.",
-    "ariaLabel": "Navegación del pie de página"
   },
   "projectCase": {
     "home": "Inicio",

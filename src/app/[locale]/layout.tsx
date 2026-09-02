@@ -28,8 +28,8 @@ export const viewport: Viewport = {
   initialScale: 1,
   viewportFit: "cover",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F7F9FC" },
-    { media: "(prefers-color-scheme: dark)", color: "#080B10" },
+    { media: "(prefers-color-scheme: light)", color: "#F6F6F3" },
+    { media: "(prefers-color-scheme: dark)", color: "#0B0C0E" },
   ],
 };
 
@@ -49,6 +49,7 @@ export async function generateMetadata({
   const languages = Object.fromEntries(
     locales.map((code) => [code, `/${code}`]),
   ) as Record<string, string>;
+  languages["pt-BR"] = `/${routing.defaultLocale}`;
   languages["x-default"] = `/${routing.defaultLocale}`;
 
   return {

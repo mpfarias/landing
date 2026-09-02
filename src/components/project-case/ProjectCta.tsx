@@ -34,7 +34,7 @@ export function ProjectCta({
         {backLabel ? (
           <div className="mt-12">
             <Link
-              href={{ pathname: "/", hash: "projetos" }}
+              href={{ pathname: "/", hash: "sistemas" }}
               className="group/cta-secondary inline-flex items-center gap-2 text-[13px] font-medium text-muted transition-colors duration-200 hover:text-foreground"
             >
               <ArrowLeft

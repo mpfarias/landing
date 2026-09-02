@@ -6,7 +6,7 @@ export function ProjectBack({ label }: { label: string }) {
     <div className="border-t border-border">
       <div className="mx-auto max-w-[850px] px-5 pb-12 pt-2 sm:px-8 sm:pb-14 lg:px-10">
         <Link
-          href={{ pathname: "/", hash: "projetos" }}
+          href={{ pathname: "/", hash: "sistemas" }}
           className="group/cta-secondary inline-flex items-center gap-2 text-[13px] font-medium text-muted transition-colors duration-200 hover:text-foreground"
         >
           <ArrowLeft

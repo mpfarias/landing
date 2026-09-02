@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Marcelo Pires de Farias | Technology, AI & Automation",
-    "description": "I build systems, automations, and digital solutions that combine technology, artificial intelligence, and operational efficiency."
+    "description": "I turn real problems into digital solutions. Software, automation, and artificial intelligence applied to real-world processes."
   },
   "common": {
     "brand": "MPF.",
@@ -9,44 +9,82 @@
     "closeMenu": "Close menu",
     "themeLight": "Light theme",
     "themeDark": "Dark theme",
+    "themeSystem": "System theme",
     "language": "Language",
     "backHome": "Back to home"
   },
   "navigation": {
     "about": "About",
-    "projects": "Projects",
-    "experience": "Experience",
+    "systems": "Systems",
+    "ebooks": "E-books",
     "contact": "Contact",
-    "cta": "Let's talk",
     "ariaLabel": "Main navigation"
   },
   "hero": {
-    "location": "BRASÍLIA, BRAZIL",
-    "headlineLine1": "Technology that",
-    "headlineLine2": "transforms",
-    "headlineLine3": "real-world",
-    "headlineAccent": "problems.",
-    "description": "I build systems, automations, and digital solutions that combine technology, artificial intelligence, and operational efficiency.",
-    "primaryCta": "Explore projects",
-    "secondaryCta": "About me",
     "name": "MARCELO PIRES DE FARIAS",
-    "portraitAlt": "Professional portrait of Marcelo Pires de Farias",
-    "expertise": "Software • AI • Automation • Digital Transformation"
+    "headlineLine1": "I turn real problems",
+    "headlineLine2": "into digital solutions.",
+    "description": "Software development, automation, and artificial intelligence applied to real-world processes and needs.",
+    "primaryCta": "Let's talk",
+    "secondaryCta": "See my work ↓",
+    "expertise": "Software · Automation · AI · Systems",
+    "portraitAlt": "Professional portrait of Marcelo Pires de Farias"
   },
   "about": {
-    "label": "01 / ABOUT",
-    "headlineLine1": "I build technology around",
-    "headlineLine2": "problems that",
-    "headlineAccentLead": "need to be",
-    "headlineAccentEnd": "solved.",
-    "paragraph": "My career combines technology, management, and experience in environments where systems need to work in the real world. I build digital solutions to simplify processes, automate routines, and turn real needs into working products.",
-    "helpLabel": "I can help with",
-    "help": {
+    "title": "About",
+    "paragraph": "I'm a technology professional with a degree in Information Systems and experience building solutions used in administrative and operational environments. My work combines software development, automation, systems integration, and artificial intelligence, always starting from a concrete need to arrive at a working solution.",
+    "focus": {
       "systems": "Systems development",
-      "automation": "Automation & AI",
-      "integration": "Systems integration",
+      "automation": "Automation",
+      "ai": "Artificial Intelligence",
+      "integrations": "Integrations",
       "products": "Digital products"
     }
+  },
+  "systems": {
+    "title": "Systems",
+    "intro": "Some systems and products I have built or contributed to.",
+    "items": {
+      "hefesto": {
+        "name": "HEFESTO",
+        "line": "Emergencies · Automation · AI"
+      },
+      "orion": {
+        "name": "ÓRION",
+        "line": "Systems ecosystem"
+      },
+      "assedub": {
+        "name": "ASSEDUB Digital Platform",
+        "line": "Web · Management"
+      },
+      "elite-fc": {
+        "name": "ELITE FC",
+        "line": "Digital product"
+      },
+      "oraculo-dos-numeros": {
+        "name": "ORÁCULO DOS NÚMEROS",
+        "line": "Data · AI"
+      }
+    }
+  },
+  "ebooks": {
+    "title": "E-books",
+    "items": {
+      "ia-pequenos-negocios": {
+        "title": "Pequenos Negócios com IA",
+        "description": "A practical guide to applying artificial intelligence in the day-to-day of small businesses.",
+        "cta": "Get the e-book",
+        "coverAlt": "Cover of the book Pequenos Negócios com IA"
+      }
+    }
+  },
+  "contact": {
+    "headline": "Let's build something.",
+    "body": "Have a project, problem, or idea where technology could make a difference? Let's talk.",
+    "cta": "Get in touch ↗"
+  },
+  "footer": {
+    "copyright": "© {year} Marcelo Pires de Farias"
   },
   "projects": {
     "label": "02 / PROJECTS",
@@ -256,70 +294,6 @@
         "cta": "Back to projects"
       }
     }
-  },
-  "experience": {
-    "label": "03 / EXPERIENCE",
-    "headlineLine1": "Technology built",
-    "headlineLine2": "on",
-    "headlineAccent": "real-world experience.",
-    "intro": "More than 15 years of professional experience, with a degree in Information Systems and a track record of building solutions for administrative processes, digital products, and critical operations.",
-    "stackLabel": "Technologies",
-    "stack": [
-      "TypeScript",
-      "Node.js",
-      "NestJS",
-      "Next.js",
-      "PostgreSQL",
-      "MongoDB",
-      "Docker",
-      "Linux",
-      "Asterisk",
-      "LLMs",
-      "Whisper",
-      "APIs"
-    ],
-    "milestones": {
-      "formation": {
-        "period": "2009",
-        "title": "Information Systems"
-      },
-      "processes": {
-        "period": "2016+",
-        "title": "Technology applied to processes"
-      },
-      "operations": {
-        "period": "2024+",
-        "title": "Systems and automation in critical operations"
-      }
-    }
-  },
-  "publications": {
-    "eyebrow": "I also write",
-    "items": {
-      "ia-pequenos-negocios": {
-        "title": "Small Business with AI",
-        "description": "A practical guide to applying artificial intelligence in small businesses.",
-        "purchaseCta": "Get the e-book",
-        "detailsCta": "Learn more",
-        "coverAlt": "Cover of the book Small Business with AI, showing a laptop and a growth chart on a desk"
-      }
-    }
-  },
-  "contact": {
-    "label": "04 / CONTACT",
-    "headlineLine1": "Have a problem",
-    "headlineLine2": "technology can solve?",
-    "headlineAccent": "Let's talk.",
-    "body": "Projects, automation, artificial intelligence, or an idea that needs to leave the page. We can start with a conversation.",
-    "cta": "Let's talk",
-    "emailLabel": "EMAIL",
-    "copyEmail": "Copy email",
-    "copied": "Copied"
-  },
-  "footer": {
-    "name": "Marcelo Pires de Farias",
-    "copyright": "© {year} Marcelo Pires de Farias. All rights reserved.",
-    "ariaLabel": "Footer navigation"
   },
   "projectCase": {
     "home": "Home",

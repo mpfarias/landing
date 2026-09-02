@@ -25,10 +25,10 @@ export async function ProjectBreadcrumb({ projectId }: ProjectBreadcrumbProps) {
         </li>
         <li className="inline-flex items-center gap-2">
           <Link
-            href={{ pathname: "/", hash: "projetos" }}
+            href={{ pathname: "/", hash: "sistemas" }}
             className="transition-colors duration-200 hover:text-foreground"
           >
-            {tNav("projects")}
+            {tNav("systems")}
           </Link>
           <span aria-hidden>/</span>
         </li>

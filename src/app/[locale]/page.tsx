@@ -1,11 +1,10 @@
 import { setRequestLocale } from "next-intl/server";
-import { AboutSection } from "@/components/about/AboutSection";
-import { ExperienceSection } from "@/components/experience/ExperienceSection";
+import { About } from "@/components/home/About";
+import { Contact } from "@/components/home/Contact";
+import { Ebooks } from "@/components/home/Ebooks";
+import { Hero } from "@/components/home/Hero";
+import { Systems } from "@/components/home/Systems";
 import { Header } from "@/components/layout/Header";
-import { Hero } from "@/components/hero/Hero";
-import { PublicationCallout } from "@/components/publications/PublicationCallout";
-import { ProjectsSection } from "@/components/projects/ProjectsSection";
-import { ContactSection } from "@/components/contact/ContactSection";
 
 type HomePageProps = {
   params: Promise<{ locale: string }>;
@@ -20,11 +19,10 @@ export default async function HomePage({ params }: HomePageProps) {
       <Header />
       <main>
         <Hero />
-        <AboutSection />
-        <ProjectsSection />
-        <ExperienceSection />
-        <PublicationCallout />
-        <ContactSection />
+        <About />
+        <Systems />
+        <Ebooks />
+        <Contact />
       </main>
     </>
   );
