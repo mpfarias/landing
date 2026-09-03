@@ -3,18 +3,10 @@
 import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
+import { homeNavHashes, homeNavKeys } from "@/data/home-nav";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
-
-const navKeys = ["about", "systems", "ebooks", "contact"] as const;
-
-const navHashes: Record<(typeof navKeys)[number], string> = {
-  about: "sobre",
-  systems: "sistemas",
-  ebooks: "ebooks",
-  contact: "contato",
-};
 
 type HeaderProps = {
   variant?: "home" | "internal";
@@ -54,7 +46,7 @@ export function Header({ variant = "home" }: HeaderProps) {
   useEffect(() => {
     if (internal) return;
 
-    const sections = Object.values(navHashes)
+    const sections = Object.values(homeNavHashes)
       .map((hash) => document.getElementById(hash))
       .filter((el): el is HTMLElement => el !== null);
 
@@ -97,11 +89,11 @@ export function Header({ variant = "home" }: HeaderProps) {
           </Link>
 
           <nav
-            className="hidden items-center gap-7 lg:flex"
+            className="hidden items-center gap-5 xl:gap-7 lg:flex"
             aria-label={t("ariaLabel")}
           >
-            {navKeys.map((key) => {
-              const hash = navHashes[key];
+            {homeNavKeys.map((key) => {
+              const hash = homeNavHashes[key];
               const current = !internal && activeId === hash;
               const className = [
                 "nav-link text-[13px] font-medium transition-colors duration-200",
@@ -133,7 +125,22 @@ export function Header({ variant = "home" }: HeaderProps) {
             })}
           </nav>
 
-          <div className="hidden items-center gap-4 lg:flex">
+          <div className="hidden items-center gap-5 lg:flex">
+            {internal ? (
+              <Link
+                href={{ pathname: "/", hash: homeNavHashes.contact }}
+                className="text-[13px] font-medium text-muted transition-colors duration-200 hover:text-foreground"
+              >
+                {t("talk")}
+              </Link>
+            ) : (
+              <a
+                href={`#${homeNavHashes.contact}`}
+                className="text-[13px] font-medium text-muted transition-colors duration-200 hover:text-foreground"
+              >
+                {t("talk")}
+              </a>
+            )}
             <LanguageSwitcher />
             <ThemeToggle />
           </div>
@@ -171,8 +178,8 @@ export function Header({ variant = "home" }: HeaderProps) {
             className="flex flex-col gap-1 px-5 pt-20"
             aria-label={t("ariaLabel")}
           >
-            {navKeys.map((key) => {
-              const hash = navHashes[key];
+            {homeNavKeys.map((key) => {
+              const hash = homeNavHashes[key];
               const className =
                 "py-3 text-2xl font-medium tracking-tight text-foreground";
 

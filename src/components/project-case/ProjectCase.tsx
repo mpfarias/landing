@@ -21,6 +21,7 @@ type ProjectCaseProps = {
 export async function ProjectCase({ project }: ProjectCaseProps) {
   const t = await getTranslations(`projects.${project.id}`);
   const tUi = await getTranslations("projectCase");
+  const tCommon = await getTranslations("common");
   const hasPage = t.has("page.summary");
 
   const headlines = [
@@ -70,14 +71,14 @@ export async function ProjectCase({ project }: ProjectCaseProps) {
         leading={
           <>
             <Link
-              href={{ pathname: "/", hash: "sistemas" }}
+              href="/"
               className="group/cta-secondary inline-flex items-center gap-2 text-[13px] font-medium text-muted transition-colors duration-200 hover:text-foreground"
             >
               <ArrowLeft
                 className="icon-shift size-3.5 transition-transform duration-200 group-hover/cta-secondary:-translate-x-0.5 group-focus-visible/cta-secondary:-translate-x-0.5"
                 aria-hidden
               />
-              {tUi("backToProjects")}
+              {tCommon("backHome")}
             </Link>
             <div className="mt-5">
               <ProjectBreadcrumb projectId={project.id} />
@@ -237,7 +238,7 @@ export async function ProjectCase({ project }: ProjectCaseProps) {
         line1={tUi("ctaLine1")}
         line2={tUi("ctaLine2")}
         action={tUi("cta")}
-        backLabel={tUi("backToProjects")}
+        backLabel={tCommon("backHome")}
       />
     </article>
   );

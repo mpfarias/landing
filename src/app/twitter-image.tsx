@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Marcelo Pires de Farias — Tecnologia, IA e Automação";
+export const alt = "Marcelo Pires de Farias — Tecnologia, IA e E-books";
 
 export const size = {
   width: 1200,
@@ -46,7 +46,7 @@ export default function Image() {
               maxWidth: 900,
             }}
           >
-            Tecnologia para transformar problemas reais.
+            Tecnologia, IA e e-books para o mundo real.
           </div>
           <div
             style={{
@@ -57,7 +57,7 @@ export default function Image() {
               lineHeight: 1.4,
             }}
           >
-            Software · AI · Automation · Digital Transformation
+            Software · Inteligência Artificial · Autor
           </div>
         </div>
       </div>

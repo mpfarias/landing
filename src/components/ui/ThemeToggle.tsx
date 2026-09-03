@@ -2,7 +2,7 @@
 
 import { Monitor, Moon, Sun } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useTheme } from "next-themes";
+import { useTheme } from "@/components/providers/ThemeProvider";
 import { useEffect, useState } from "react";
 
 const themes = ["light", "dark", "system"] as const;

@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
-import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { Footer } from "@/components/layout/Footer";
+import { LocaleHtmlLang } from "@/components/providers/LocaleHtmlLang";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import {
   localeHtmlLang,
   localeOpenGraph,
@@ -12,13 +12,6 @@ import {
   routing,
   type Locale,
 } from "@/i18n/routing";
-import "../globals.css";
-
-const geistSans = Geist({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-geist-sans",
-});
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcelofarias.dev.br";
@@ -56,6 +49,7 @@ export async function generateMetadata({
     metadataBase: new URL(siteUrl),
     title: t("title"),
     description: t("description"),
+    keywords: t.raw("keywords") as string[],
     authors: [{ name: "Marcelo Pires de Farias" }],
     creator: "Marcelo Pires de Farias",
     alternates: {
@@ -72,6 +66,11 @@ export async function generateMetadata({
       alternateLocale: locales
         .filter((code) => code !== locale)
         .map((code) => localeOpenGraph[code]),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
     },
     robots: {
       index: true,
@@ -105,21 +104,14 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html
-      lang={localeHtmlLang[locale as Locale]}
-      className={geistSans.variable}
-      suppressHydrationWarning
-    >
-      <body
-        className={`${geistSans.className} bg-background text-foreground antialiased`}
-      >
-        <ThemeProvider>
-          <NextIntlClientProvider messages={messages}>
-            {children}
-            <Footer />
-          </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+    <>
+      <LocaleHtmlLang lang={localeHtmlLang[locale as Locale]} />
+      <ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
+      </ThemeProvider>
+    </>
   );
 }

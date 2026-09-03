@@ -2,8 +2,9 @@ import { setRequestLocale } from "next-intl/server";
 import { About } from "@/components/home/About";
 import { Contact } from "@/components/home/Contact";
 import { Ebooks } from "@/components/home/Ebooks";
+import { Expertise } from "@/components/home/Expertise";
 import { Hero } from "@/components/home/Hero";
-import { Systems } from "@/components/home/Systems";
+import { Projects } from "@/components/home/Projects";
 import { Header } from "@/components/layout/Header";
 
 type HomePageProps = {
@@ -20,7 +21,8 @@ export default async function HomePage({ params }: HomePageProps) {
       <main>
         <Hero />
         <About />
-        <Systems />
+        <Projects />
+        <Expertise />
         <Ebooks />
         <Contact />
       </main>

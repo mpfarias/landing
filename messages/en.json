@@ -1,10 +1,22 @@
 {
   "metadata": {
-    "title": "Marcelo Pires de Farias | Technology, AI & Automation",
-    "description": "I turn real problems into digital solutions. Software, automation, and artificial intelligence applied to real-world processes."
+    "title": "Marcelo Pires de Farias | Software Developer, Systems, AI, and Automation",
+    "description": "Software developer and builder of systems and digital products. Work in automation, integrations, APIs, and artificial intelligence — and author of e-books on technology.",
+    "keywords": [
+      "Marcelo Pires de Farias",
+      "software developer",
+      "systems",
+      "automation",
+      "artificial intelligence",
+      "APIs",
+      "digital products",
+      "author",
+      "e-books"
+    ]
   },
   "common": {
     "brand": "MPF.",
+    "authorName": "Marcelo Pires de Farias",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "themeLight": "Light theme",
@@ -15,76 +27,173 @@
   },
   "navigation": {
     "about": "About",
-    "systems": "Systems",
+    "projects": "Projects",
+    "expertise": "Expertise",
     "ebooks": "E-books",
     "contact": "Contact",
+    "talk": "Let's talk",
     "ariaLabel": "Main navigation"
   },
   "hero": {
-    "name": "MARCELO PIRES DE FARIAS",
-    "headlineLine1": "I turn real problems",
-    "headlineLine2": "into digital solutions.",
-    "description": "Software development, automation, and artificial intelligence applied to real-world processes and needs.",
-    "primaryCta": "Let's talk",
-    "secondaryCta": "See my work ↓",
-    "expertise": "Software · Automation · AI · Systems",
+    "name": "Marcelo Pires de Farias",
+    "role": "Software developer · AI · Automation",
+    "headlineLine1": "Technology built to solve",
+    "headlineLine2Prefix": "",
+    "headlineLine2Accent": "real",
+    "headlineLine2Suffix": " problems.",
+    "description": "I build systems, automation, and digital solutions that combine software, artificial intelligence, and hands-on experience to solve real-world needs.",
+    "primaryCta": "Explore my work ↓",
+    "secondaryCta": "Let's talk →",
     "portraitAlt": "Professional portrait of Marcelo Pires de Farias"
   },
   "about": {
     "title": "About",
-    "paragraph": "I'm a technology professional with a degree in Information Systems and experience building solutions used in administrative and operational environments. My work combines software development, automation, systems integration, and artificial intelligence, always starting from a concrete need to arrive at a working solution.",
-    "focus": {
-      "systems": "Systems development",
-      "automation": "Automation",
-      "ai": "Artificial Intelligence",
-      "integrations": "Integrations",
-      "products": "Digital products"
-    }
+    "headlineLine1": "Technology built",
+    "headlineLine2": "from real problems.",
+    "text": "I am a software developer and technology professional with a degree in Information Systems. My experience combines development, management, and work in administrative and operational environments, creating solutions that automate processes, integrate information, and turn needs into working digital products."
   },
-  "systems": {
-    "title": "Systems",
-    "intro": "Some systems and products I have built or contributed to.",
+  "work": {
+    "title": "Projects",
+    "headlineLine1": "Solutions that moved",
+    "headlineLine2": "from problem to practice.",
+    "intro": "A selection of systems, products, and projects that show the range of my work.",
+    "github": "View more projects on GitHub ↗",
     "items": {
       "hefesto": {
         "name": "HEFESTO",
-        "line": "Emergencies · Automation · AI"
+        "category": "Emergency · Automation · AI",
+        "description": "A system applied to 190/193 emergency response and incident recording."
       },
       "orion": {
         "name": "ÓRION",
-        "line": "Systems ecosystem"
+        "category": "Corporate ecosystem",
+        "description": "An integrated set of systems for different organizational areas and processes."
       },
       "assedub": {
-        "name": "ASSEDUB Digital Platform",
-        "line": "Web · Management"
+        "name": "Plataforma Digital da ASSEDUB",
+        "category": "Web · CMS · Management",
+        "description": "An institutional platform for content, documents, assemblies, and transparency."
       },
       "elite-fc": {
-        "name": "ELITE FC",
-        "line": "Digital product"
+        "name": "Elite FC",
+        "category": "Digital product · Software · Data",
+        "description": "A football management and simulation application with business rules and structured data."
       },
       "oraculo-dos-numeros": {
-        "name": "ORÁCULO DOS NÚMEROS",
-        "line": "Data · AI"
+        "name": "Oráculo dos Números",
+        "category": "AI · Statistics · Data",
+        "description": "An experimental project focused on analyzing patterns and trends in data."
+      },
+      "api-tarifas-energia": {
+        "name": "API de Tarifas de Energia",
+        "category": "API · Public data · Integration",
+        "description": "A public API for querying and processing electricity tariffs."
+      },
+      "api-infracoes-ctb": {
+        "name": "API de Infrações do CTB",
+        "category": "API · Data · Services",
+        "description": "A public API for looking up traffic violations under the Brazilian Traffic Code."
+      },
+      "soda-bubbles": {
+        "name": "Soda & Bubbles",
+        "category": "Web · Digital product",
+        "description": "A commercial web application with a catalog, interactive experiences, and lead capture."
+      }
+    }
+  },
+  "expertise": {
+    "title": "Expertise",
+    "headlineLine1": "Technology applied",
+    "headlineLine2": "where it actually makes a difference.",
+    "items": {
+      "systems": {
+        "title": "Systems development",
+        "text": "Applications and digital solutions built for specific needs."
+      },
+      "automation": {
+        "title": "Process automation",
+        "text": "Flows that reduce manual work, repetition, and wasted time."
+      },
+      "ai": {
+        "title": "Artificial intelligence",
+        "text": "AI applied in a practical way to products, processes, and information."
+      },
+      "integrations": {
+        "title": "Integrations and APIs",
+        "text": "Systems, data, and services working in a connected way."
+      },
+      "products": {
+        "title": "Digital products",
+        "text": "From idea and architecture to implementation and evolution of the solution."
       }
     }
   },
   "ebooks": {
-    "title": "E-books",
+    "intro": "I also share what I learn.",
+    "headline": "Pequenos Negócios com IA",
+    "seriesText": "A practical series on how small-business owners can use artificial intelligence to work better, automate processes, manage with better information, and even build a business from scratch.",
+    "cta": "Get it on Hotmart →",
+    "securePurchase": "Secure checkout via Hotmart",
+    "volumeLabel": "Volume {volume}",
+    "statusAvailable": "Available",
+    "statusInDevelopment": "In development",
+    "steps": {
+      "use": "Use",
+      "transform": "Transform",
+      "manage": "Manage",
+      "create": "Create"
+    },
     "items": {
       "ia-pequenos-negocios": {
         "title": "Pequenos Negócios com IA",
-        "description": "A practical guide to applying artificial intelligence in the day-to-day of small businesses.",
-        "cta": "Get the e-book",
-        "coverAlt": "Cover of the book Pequenos Negócios com IA"
+        "subtitle": "How to Sell More, Serve Better, and Save Time",
+        "description": "A practical guide to start applying artificial intelligence to sales, customer service, productivity, and the daily routine of a small business.",
+        "cta": "Get it on Hotmart →",
+        "coverAlt": "Cover of the book Pequenos Negócios com IA",
+        "highlights": [
+          "AI applied to everyday work",
+          "Customer service and sales",
+          "More productivity"
+        ]
+      },
+      "transforme-seu-pequeno-negocio-com-ia": {
+        "title": "Transforme seu Pequeno Negócio com IA",
+        "category": "Processes · Automation · Efficiency",
+        "description": "Turn repetitive tasks into more organized, automated processes and bring AI into the daily routine of the business.",
+        "coverAlt": "Cover of the book Transforme seu Pequeno Negócio com IA"
+      },
+      "gerencie-seu-pequeno-negocio-com-ia": {
+        "title": "Gerencie seu Pequeno Negócio com IA",
+        "category": "Management · Data · Decision",
+        "description": "Use information, indicators, and artificial intelligence to understand the business better and make more grounded decisions.",
+        "coverAlt": "Cover of the book Gerencie seu Pequeno Negócio com IA"
+      },
+      "crie-seu-pequeno-negocio-com-ia": {
+        "title": "Crie seu Pequeno Negócio com IA",
+        "category": "Idea · Planning · Execution",
+        "description": "A guided project to structure a small business from scratch and prepare it to start operating with the help of AI.",
+        "coverAlt": "Cover of the book Crie seu Pequeno Negócio com IA"
       }
     }
   },
   "contact": {
-    "headline": "Let's build something.",
-    "body": "Have a project, problem, or idea where technology could make a difference? Let's talk.",
-    "cta": "Get in touch ↗"
+    "title": "Contact",
+    "headlineLine1": "Have a problem, a project,",
+    "headlineLine2": "or an idea to bring to life?",
+    "body": "If you want to talk about development, automation, artificial intelligence, digital products, content, or partnerships, get in touch.",
+    "whatsappLabel": "WhatsApp",
+    "whatsappCta": "Chat on WhatsApp ↗",
+    "whatsappAria": "Open a WhatsApp conversation with Marcelo",
+    "whatsappMessage": "Hi Marcelo. I found your contact information on marcelofarias.dev.br and would like to get in touch.",
+    "emailLabel": "Email",
+    "emailCta": "Send an email ↗",
+    "emailAria": "Send an email to Marcelo Pires de Farias"
   },
   "footer": {
-    "copyright": "© {year} Marcelo Pires de Farias"
+    "copyright": "© {year} Marcelo Pires de Farias",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "github": "GitHub ↗"
   },
   "projects": {
     "label": "02 / PROJECTS",

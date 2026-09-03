@@ -8,7 +8,6 @@ type ProjectBreadcrumbProps = {
 
 export async function ProjectBreadcrumb({ projectId }: ProjectBreadcrumbProps) {
   const tCase = await getTranslations("projectCase");
-  const tNav = await getTranslations("navigation");
   const tProject = await getTranslations(`projects.${projectId}`);
 
   return (
@@ -20,15 +19,6 @@ export async function ProjectBreadcrumb({ projectId }: ProjectBreadcrumbProps) {
             className="transition-colors duration-200 hover:text-foreground"
           >
             {tCase("home")}
-          </Link>
-          <span aria-hidden>/</span>
-        </li>
-        <li className="inline-flex items-center gap-2">
-          <Link
-            href={{ pathname: "/", hash: "sistemas" }}
-            className="transition-colors duration-200 hover:text-foreground"
-          >
-            {tNav("systems")}
           </Link>
           <span aria-hidden>/</span>
         </li>

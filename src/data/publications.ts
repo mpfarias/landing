@@ -1,28 +1,33 @@
 import type { Locale } from "@/i18n/routing";
 
-export const publicationIds = ["ia-pequenos-negocios"] as const;
-export type PublicationId = (typeof publicationIds)[number];
+export const publicationIds = [
+  "ia-pequenos-negocios",
+  "transforme-seu-pequeno-negocio-com-ia",
+  "gerencie-seu-pequeno-negocio-com-ia",
+  "crie-seu-pequeno-negocio-com-ia",
+] as const;
 
-export type PublicationStatus = "available" | "coming-soon" | "draft";
+export type PublicationId = (typeof publicationIds)[number];
+export type PublicationStatus = "available" | "in-development" | "draft";
+export type PublicationStep = "use" | "transform" | "manage" | "create";
 
 export type PublicationDefinition = {
   id: PublicationId;
+  volume: number;
+  step: PublicationStep;
   featured: boolean;
-  year: number | null;
-  platform: string | null;
   language: Locale;
   status: PublicationStatus;
   covers: Record<Locale, string | null>;
   purchaseUrl: string | null;
-  detailsUrl: string | null;
 };
 
 export const publications: Record<PublicationId, PublicationDefinition> = {
   "ia-pequenos-negocios": {
     id: "ia-pequenos-negocios",
+    volume: 1,
+    step: "use",
     featured: true,
-    year: null,
-    platform: null,
     language: "pt",
     status: "available",
     covers: {
@@ -31,7 +36,48 @@ export const publications: Record<PublicationId, PublicationDefinition> = {
       es: "/images/publications/ia-pequenos-negocios-es.jpg",
     },
     purchaseUrl: null,
-    detailsUrl: null,
+  },
+  "transforme-seu-pequeno-negocio-com-ia": {
+    id: "transforme-seu-pequeno-negocio-com-ia",
+    volume: 2,
+    step: "transform",
+    featured: false,
+    language: "pt",
+    status: "in-development",
+    covers: {
+      pt: "/images/publications/transforme-seu-pequeno-negocio-com-ia-pt.jpg",
+      en: null,
+      es: null,
+    },
+    purchaseUrl: null,
+  },
+  "gerencie-seu-pequeno-negocio-com-ia": {
+    id: "gerencie-seu-pequeno-negocio-com-ia",
+    volume: 3,
+    step: "manage",
+    featured: false,
+    language: "pt",
+    status: "in-development",
+    covers: {
+      pt: "/images/publications/gerencie-seu-pequeno-negocio-com-ia-pt.jpg",
+      en: null,
+      es: null,
+    },
+    purchaseUrl: null,
+  },
+  "crie-seu-pequeno-negocio-com-ia": {
+    id: "crie-seu-pequeno-negocio-com-ia",
+    volume: 4,
+    step: "create",
+    featured: false,
+    language: "pt",
+    status: "in-development",
+    covers: {
+      pt: "/images/publications/crie-seu-pequeno-negocio-com-ia-pt.jpg",
+      en: null,
+      es: null,
+    },
+    purchaseUrl: null,
   },
 };
 
@@ -54,8 +100,21 @@ export function getPublicationCover(
   );
 }
 
-export function getFeaturedPublications(): PublicationDefinition[] {
+export function getSeriesPublications(): PublicationDefinition[] {
   return publicationIds
     .map((id) => publications[id])
-    .filter((item) => item.featured && item.status !== "draft");
+    .filter((item) => item.status !== "draft")
+    .sort((a, b) => a.volume - b.volume);
+}
+
+export function getFeaturedPublication(): PublicationDefinition | null {
+  return (
+    getSeriesPublications().find(
+      (item) => item.featured && item.status === "available",
+    ) ?? null
+  );
+}
+
+export function getUpcomingPublications(): PublicationDefinition[] {
+  return getSeriesPublications().filter((item) => !item.featured);
 }
