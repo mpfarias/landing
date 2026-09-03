@@ -129,14 +129,20 @@
     }
   },
   "ebooks": {
-    "intro": "I also share what I learn.",
-    "headline": "Pequenos Negócios com IA",
-    "seriesText": "A practical series on how small-business owners can use artificial intelligence to work better, automate processes, manage with better information, and even build a business from scratch.",
-    "cta": "Get it on Hotmart →",
+    "seriesLabel": "Small Businesses with AI series",
+    "seriesHeadlineLine1": "From the first conversation with AI",
+    "seriesHeadlineLine2": "to building a complete business.",
+    "seriesText": "A practical, progressive series that follows the small-business owner's evolution in using artificial intelligence: first learning how to use the technology, then incorporating it into processes, using information to improve management, and finally applying all of that knowledge to building a business from scratch.",
+    "upcomingLabel": "Upcoming volumes",
+    "cta": "Get the e-book →",
     "securePurchase": "Secure checkout via Hotmart",
     "volumeLabel": "Volume {volume}",
     "statusAvailable": "Available",
     "statusInDevelopment": "In development",
+    "expandVolume": "Learn about this volume ↓",
+    "collapseVolume": "Hide this volume ↑",
+    "questionLabel": "Central question",
+    "resultLabel": "Outcome",
     "steps": {
       "use": "Use",
       "transform": "Transform",
@@ -145,34 +151,98 @@
     },
     "items": {
       "ia-pequenos-negocios": {
-        "title": "Pequenos Negócios com IA",
-        "subtitle": "How to Sell More, Serve Better, and Save Time",
-        "description": "A practical guide to start applying artificial intelligence to sales, customer service, productivity, and the daily routine of a small business.",
-        "cta": "Get it on Hotmart →",
-        "coverAlt": "Cover of the book Pequenos Negócios com IA",
-        "highlights": [
-          "AI applied to everyday work",
-          "Customer service and sales",
-          "More productivity"
-        ]
+        "title": "Small Businesses with AI",
+        "subtitle": "The Complete System to Sell, Serve, and Work Better",
+        "lead": "The first volume introduces artificial intelligence in a practical, accessible way for small-business owners. The goal is to show how AI tools can be used day to day to improve sales, customer service, communication, productivity, and organization.",
+        "body": [
+          "The reader learns to talk more effectively with AI tools, write better prompts, produce content, structure messages, improve customer service, organize tasks, and use the technology as support in real business work."
+        ],
+        "highlight": "The starting point of the series.",
+        "question": "How can I use AI in my small business?",
+        "result": "By the end of the volume, the reader will have learned to use artificial intelligence in a practical and deliberate way across everyday business situations.",
+        "cta": "Get the e-book →",
+        "coverAlt": "Cover of the book Small Businesses with AI"
       },
       "transforme-seu-pequeno-negocio-com-ia": {
-        "title": "Transforme seu Pequeno Negócio com IA",
+        "title": "Transform Your Small Business with AI",
+        "subtitle": "Automate Processes, Reduce Repetitive Tasks, and Gain Efficiency",
         "category": "Processes · Automation · Efficiency",
-        "description": "Turn repetitive tasks into more organized, automated processes and bring AI into the daily routine of the business.",
-        "coverAlt": "Cover of the book Transforme seu Pequeno Negócio com IA"
+        "lead": "After learning how to use artificial intelligence in the first volume, the reader begins to observe how work actually happens inside the business.",
+        "body": [
+          "This book teaches how to distinguish tasks, processes, and automations; identify repetitive activities; map routines; find bottlenecks; create procedures; and organize work more efficiently.",
+          "The reader also learns the logic behind automations — triggers, conditions, and actions — and how to apply that in customer service, sales, follow-up, administrative work, forms, spreadsheets, documents, proposals, quotes, and notifications.",
+          "AI becomes part of the workflows themselves, instead of being used only in isolation when a need appears."
+        ],
+        "highlight": "From using AI to automating the work.",
+        "question": "How can I turn my tasks into better, automated processes?",
+        "result": "The reader stops using AI only occasionally and starts incorporating it into the everyday processes of the business.",
+        "coverAlt": "Cover of the book Transform Your Small Business with AI"
       },
       "gerencie-seu-pequeno-negocio-com-ia": {
-        "title": "Gerencie seu Pequeno Negócio com IA",
+        "title": "Manage Your Small Business with AI",
+        "subtitle": "Use Data, Indicators, and AI to Make Better Decisions",
         "category": "Management · Data · Decision",
-        "description": "Use information, indicators, and artificial intelligence to understand the business better and make more grounded decisions.",
-        "coverAlt": "Cover of the book Gerencie seu Pequeno Negócio com IA"
+        "lead": "After learning to use AI and organize processes, the reader moves to a new level: using technology to understand the business itself.",
+        "body": [
+          "This volume teaches how to organize information about sales, revenue, costs, expenses, customers, products, and services, and turn it into useful management insight.",
+          "The reader learns to track indicators, compare periods, spot trends, analyze results, and use artificial intelligence to ask questions of their own data."
+        ],
+        "examples": [
+          "Which products had a drop in sales?",
+          "Which expenses grew the most?",
+          "Which product generates the most revenue?",
+          "Is there a pattern among customers who stopped buying?"
+        ],
+        "highlight": "AI analyzes and helps. The entrepreneur decides.",
+        "question": "How can I better understand what is happening in my business and make better decisions?",
+        "result": "The reader starts using information, indicators, and analysis to support more grounded decisions.",
+        "coverAlt": "Cover of the book Manage Your Small Business with AI"
       },
       "crie-seu-pequeno-negocio-com-ia": {
-        "title": "Crie seu Pequeno Negócio com IA",
+        "title": "Create Your Small Business with AI",
+        "subtitle": "From Idea to Operation: Build Your Business with AI Support",
         "category": "Idea · Planning · Execution",
-        "description": "A guided project to structure a small business from scratch and prepare it to start operating with the help of AI.",
-        "coverAlt": "Cover of the book Crie seu Pequeno Negócio com IA"
+        "lead": "The final volume brings the whole series together in a guided project.",
+        "body": [
+          "The reader starts with an idea — or even without a defined idea — and uses artificial intelligence to research opportunities, understand market problems, define customers, analyze competitors, validate proposals, and structure a small business.",
+          "This is not just a book about entrepreneurship. It is a guided project.",
+          "The reader does not only learn about target audience: they define the audience of their own business. They do not only read about pricing: they start structuring their own prices. They do not only learn about processes: they design the processes of the new business. They do not only learn about promotion: they prepare their own launch strategy."
+        ],
+        "workItems": [
+          "idea",
+          "audience",
+          "product or service",
+          "value proposition",
+          "prices and costs",
+          "identity and positioning",
+          "sales channels",
+          "digital presence",
+          "customer service",
+          "processes",
+          "automations",
+          "financial organization",
+          "indicators",
+          "promotion plan",
+          "launch",
+          "first sales"
+        ],
+        "journey": [
+          "Idea",
+          "Validation",
+          "Customer",
+          "Product",
+          "Model",
+          "Price",
+          "Brand",
+          "Sales",
+          "Processes",
+          "Automation",
+          "Management",
+          "Launch"
+        ],
+        "question": "How do I apply all of this to build a small business from scratch?",
+        "result": "The reader applies the knowledge built across the previous three volumes to plan, structure, and prepare a small business to start operating with the support of artificial intelligence.",
+        "coverAlt": "Cover of the book Create Your Small Business with AI"
       }
     }
   },

@@ -129,14 +129,20 @@
     }
   },
   "ebooks": {
-    "intro": "Também compartilho o que aprendo.",
-    "headline": "Pequenos Negócios com IA",
-    "seriesText": "Uma série prática sobre como pequenos empreendedores podem utilizar inteligência artificial para trabalhar melhor, automatizar processos, gerir com mais informação e até construir um negócio do zero.",
-    "cta": "Adquirir na Hotmart →",
+    "seriesLabel": "Série Pequenos Negócios com IA",
+    "seriesHeadlineLine1": "Da primeira conversa com a IA",
+    "seriesHeadlineLine2": "à criação de um negócio completo.",
+    "seriesText": "Uma série prática e progressiva que acompanha a evolução do pequeno empreendedor no uso da inteligência artificial: primeiro aprendendo a utilizar a tecnologia, depois incorporando-a aos processos, usando informações para melhorar a gestão e, por fim, aplicando todo esse conhecimento na construção de um negócio do zero.",
+    "upcomingLabel": "Próximos volumes",
+    "cta": "Adquirir o e-book →",
     "securePurchase": "Compra segura pela Hotmart",
     "volumeLabel": "Volume {volume}",
     "statusAvailable": "Disponível",
     "statusInDevelopment": "Em desenvolvimento",
+    "expandVolume": "Entenda este volume ↓",
+    "collapseVolume": "Recolher este volume ↑",
+    "questionLabel": "Pergunta central",
+    "resultLabel": "Resultado",
     "steps": {
       "use": "Use",
       "transform": "Transforme",
@@ -146,32 +152,96 @@
     "items": {
       "ia-pequenos-negocios": {
         "title": "Pequenos Negócios com IA",
-        "subtitle": "Como Vender Mais, Atender Melhor e Economizar Tempo",
-        "description": "Um guia prático para começar a aplicar inteligência artificial em vendas, atendimento, produtividade e rotina do pequeno negócio.",
-        "cta": "Adquirir na Hotmart →",
-        "coverAlt": "Capa do livro Pequenos Negócios com IA",
-        "highlights": [
-          "IA aplicada ao dia a dia",
-          "Atendimento e vendas",
-          "Mais produtividade"
-        ]
+        "subtitle": "O Sistema Completo Para Vender, Atender e Trabalhar Melhor",
+        "lead": "O primeiro volume apresenta a inteligência artificial de forma prática e acessível para pequenos empreendedores. O objetivo é mostrar como ferramentas de IA podem ser utilizadas no dia a dia para melhorar vendas, atendimento, comunicação, produtividade e organização.",
+        "body": [
+          "O leitor aprende a conversar melhor com ferramentas de IA, criar comandos mais eficientes, produzir conteúdos, estruturar mensagens, melhorar o atendimento ao cliente, organizar atividades e utilizar a tecnologia como apoio em tarefas reais do negócio."
+        ],
+        "highlight": "O ponto de partida da série.",
+        "question": "Como posso usar IA no meu pequeno negócio?",
+        "result": "Ao final do volume, o leitor terá aprendido a utilizar inteligência artificial de maneira prática e consciente em diferentes situações do cotidiano empresarial.",
+        "cta": "Adquirir o e-book →",
+        "coverAlt": "Capa do livro Pequenos Negócios com IA"
       },
       "transforme-seu-pequeno-negocio-com-ia": {
         "title": "Transforme seu Pequeno Negócio com IA",
+        "subtitle": "Automatize Processos, Reduza Tarefas Repetitivas e Ganhe Eficiência",
         "category": "Processos · Automação · Eficiência",
-        "description": "Transforme tarefas repetitivas em processos mais organizados e automatizados, incorporando IA à rotina do negócio.",
+        "lead": "Depois de aprender a utilizar inteligência artificial no primeiro volume, o leitor passa a observar como o trabalho acontece dentro do negócio.",
+        "body": [
+          "Este livro ensina a diferenciar tarefas, processos e automações; identificar atividades repetitivas; mapear rotinas; encontrar gargalos; criar procedimentos e organizar atividades de forma mais eficiente.",
+          "O leitor também conhecerá a lógica por trás das automações — gatilhos, condições e ações — e aprenderá a aplicar isso em atendimento, vendas, acompanhamento de clientes, tarefas administrativas, formulários, planilhas, documentos, propostas, orçamentos e notificações.",
+          "A IA passa a fazer parte dos próprios fluxos de trabalho, e não apenas ser utilizada de forma isolada quando surge uma necessidade."
+        ],
+        "highlight": "Do uso da IA para a automação do trabalho.",
+        "question": "Como posso transformar minhas tarefas em processos melhores e automatizados?",
+        "result": "O leitor deixa de utilizar IA apenas pontualmente e começa a incorporá-la aos processos cotidianos do negócio.",
         "coverAlt": "Capa do livro Transforme seu Pequeno Negócio com IA"
       },
       "gerencie-seu-pequeno-negocio-com-ia": {
         "title": "Gerencie seu Pequeno Negócio com IA",
+        "subtitle": "Use Dados, Indicadores e IA Para Tomar Decisões Melhores",
         "category": "Gestão · Dados · Decisão",
-        "description": "Use informações, indicadores e inteligência artificial para compreender melhor o negócio e tomar decisões mais fundamentadas.",
+        "lead": "Depois de aprender a utilizar IA e organizar processos, o leitor passa para um novo nível: utilizar tecnologia para compreender melhor o próprio negócio.",
+        "body": [
+          "Este volume ensina a organizar informações sobre vendas, receitas, custos, despesas, clientes, produtos e serviços e transformá-las em informações úteis para a gestão.",
+          "O leitor aprenderá a acompanhar indicadores, comparar períodos, identificar tendências, analisar resultados e utilizar inteligência artificial para fazer perguntas aos próprios dados."
+        ],
+        "examples": [
+          "Quais produtos tiveram queda de vendas?",
+          "Quais despesas cresceram mais?",
+          "Qual produto gera maior receita?",
+          "Existe algum padrão nos clientes que deixaram de comprar?"
+        ],
+        "highlight": "A IA analisa e ajuda. O empreendedor decide.",
+        "question": "Como posso entender melhor o que está acontecendo no meu negócio e tomar decisões melhores?",
+        "result": "O leitor passa a utilizar informações, indicadores e análises para apoiar decisões mais fundamentadas.",
         "coverAlt": "Capa do livro Gerencie seu Pequeno Negócio com IA"
       },
       "crie-seu-pequeno-negocio-com-ia": {
         "title": "Crie seu Pequeno Negócio com IA",
+        "subtitle": "Da Ideia à Operação: Construa seu Negócio com Apoio da IA",
         "category": "Ideia · Planejamento · Execução",
-        "description": "Um projeto guiado para estruturar um pequeno negócio do zero e prepará-lo para começar a operar com auxílio da IA.",
+        "lead": "O último volume reúne todo o conhecimento da série em um projeto guiado.",
+        "body": [
+          "O leitor começa com uma ideia — ou até mesmo sem uma ideia definida — e utiliza inteligência artificial para pesquisar oportunidades, entender problemas do mercado, definir clientes, analisar concorrentes, validar propostas e estruturar um pequeno negócio.",
+          "Este não é apenas um livro sobre empreendedorismo. É um projeto guiado.",
+          "O leitor não apenas aprende sobre público-alvo: ele define o público do próprio negócio. Não apenas lê sobre precificação: ele começa a estruturar seus próprios preços. Não apenas aprende sobre processos: ele desenha os processos do novo negócio. Não apenas aprende sobre divulgação: ele prepara sua própria estratégia de lançamento."
+        ],
+        "workItems": [
+          "ideia",
+          "público",
+          "produto ou serviço",
+          "proposta de valor",
+          "preços e custos",
+          "identidade e posicionamento",
+          "canais de venda",
+          "presença digital",
+          "atendimento",
+          "processos",
+          "automações",
+          "organização financeira",
+          "indicadores",
+          "plano de divulgação",
+          "lançamento",
+          "primeiras vendas"
+        ],
+        "journey": [
+          "Ideia",
+          "Validação",
+          "Cliente",
+          "Produto",
+          "Modelo",
+          "Preço",
+          "Marca",
+          "Vendas",
+          "Processos",
+          "Automação",
+          "Gestão",
+          "Lançamento"
+        ],
+        "question": "Como aplico tudo isso para construir um pequeno negócio do zero?",
+        "result": "O leitor aplica o conhecimento acumulado nos três volumes anteriores para planejar, estruturar e preparar um pequeno negócio para começar a operar com auxílio da inteligência artificial.",
         "coverAlt": "Capa do livro Crie seu Pequeno Negócio com IA"
       }
     }

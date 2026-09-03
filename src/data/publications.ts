@@ -22,6 +22,20 @@ export type PublicationDefinition = {
   purchaseUrl: string | null;
 };
 
+export function isActivePublicationHref(
+  href: string | null | undefined,
+): href is string {
+  if (typeof href !== "string") return false;
+  const value = href.trim();
+  return value.length > 0 && value !== "#";
+}
+
+export function resolvePublicationHref(
+  href: string | null | undefined,
+): string | null {
+  return isActivePublicationHref(href) ? href.trim() : null;
+}
+
 export const publications: Record<PublicationId, PublicationDefinition> = {
   "ia-pequenos-negocios": {
     id: "ia-pequenos-negocios",
@@ -35,7 +49,10 @@ export const publications: Record<PublicationId, PublicationDefinition> = {
       en: "/images/publications/ia-pequenos-negocios-en.jpg",
       es: "/images/publications/ia-pequenos-negocios-es.jpg",
     },
-    purchaseUrl: null,
+    // TODO: Configurar URL real da Hotmart do Livro 1
+    purchaseUrl: resolvePublicationHref(
+      process.env.NEXT_PUBLIC_EBOOK_VOLUME_1_URL,
+    ),
   },
   "transforme-seu-pequeno-negocio-com-ia": {
     id: "transforme-seu-pequeno-negocio-com-ia",
@@ -46,8 +63,8 @@ export const publications: Record<PublicationId, PublicationDefinition> = {
     status: "in-development",
     covers: {
       pt: "/images/publications/transforme-seu-pequeno-negocio-com-ia-pt.jpg",
-      en: null,
-      es: null,
+      en: "/images/publications/transforme-seu-pequeno-negocio-com-ia-en.png",
+      es: "/images/publications/transforme-seu-pequeno-negocio-com-ia-es.png",
     },
     purchaseUrl: null,
   },
@@ -60,8 +77,8 @@ export const publications: Record<PublicationId, PublicationDefinition> = {
     status: "in-development",
     covers: {
       pt: "/images/publications/gerencie-seu-pequeno-negocio-com-ia-pt.jpg",
-      en: null,
-      es: null,
+      en: "/images/publications/gerencie-seu-pequeno-negocio-com-ia-en.png",
+      es: "/images/publications/gerencie-seu-pequeno-negocio-com-ia-es.png",
     },
     purchaseUrl: null,
   },
@@ -74,20 +91,12 @@ export const publications: Record<PublicationId, PublicationDefinition> = {
     status: "in-development",
     covers: {
       pt: "/images/publications/crie-seu-pequeno-negocio-com-ia-pt.jpg",
-      en: null,
-      es: null,
+      en: "/images/publications/crie-seu-pequeno-negocio-com-ia-en.png",
+      es: "/images/publications/crie-seu-pequeno-negocio-com-ia-es.png",
     },
     purchaseUrl: null,
   },
 };
-
-export function isActivePublicationHref(
-  href: string | null | undefined,
-): href is string {
-  if (typeof href !== "string") return false;
-  const value = href.trim();
-  return value.length > 0 && value !== "#";
-}
 
 export function getPublicationCover(
   publication: PublicationDefinition,
