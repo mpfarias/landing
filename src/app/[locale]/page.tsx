@@ -1,31 +1,31 @@
-import { setRequestLocale } from "next-intl/server";
-import { About } from "@/components/home/About";
-import { Contact } from "@/components/home/Contact";
-import { Ebooks } from "@/components/home/Ebooks";
-import { Expertise } from "@/components/home/Expertise";
-import { Hero } from "@/components/home/Hero";
-import { Projects } from "@/components/home/Projects";
-import { Header } from "@/components/layout/Header";
+import { notFound } from "next/navigation";
+import { Author } from "@/components/sections/Author";
+import { Benefits } from "@/components/sections/Benefits";
+import { FeaturedBook } from "@/components/sections/FeaturedBook";
+import { Hero } from "@/components/sections/Hero";
+import { Journey } from "@/components/sections/Journey";
+import { Series } from "@/components/sections/Series";
+import { isLocale } from "@/i18n/config";
+import { getMessages } from "@/content";
 
-type HomePageProps = {
+export default async function HomePage({
+  params,
+}: {
   params: Promise<{ locale: string }>;
-};
+}) {
+  const { locale: raw } = await params;
+  if (!isLocale(raw)) notFound();
 
-export default async function HomePage({ params }: HomePageProps) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+  const copy = getMessages(raw);
 
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Expertise />
-        <Ebooks />
-        <Contact />
-      </main>
-    </>
+    <main id="conteudo">
+      <Hero locale={raw} copy={copy} />
+      <Benefits copy={copy} />
+      <Series copy={copy} />
+      <Journey locale={raw} copy={copy} />
+      <FeaturedBook locale={raw} copy={copy} />
+      <Author copy={copy} />
+    </main>
   );
 }

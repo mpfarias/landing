@@ -1,67 +1,52 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Marcelo Pires de Farias — Tecnologia, IA e E-books";
-
-export const size = {
-  width: 1200,
-  height: 630,
-};
-
+export const alt = "Pequenos Negócios com IA | Série prática para pequenos negócios";
+export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function Image() {
+export default function OpenGraphImage() {
   return new ImageResponse(
     (
       <div
         style={{
           width: "100%",
           height: "100%",
-          background: "#080B10",
-          color: "#F5F7FA",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
+          background: "#050B11",
+          color: "#F5F5F2",
           padding: "72px",
-          fontFamily: "Arial, sans-serif",
         }}
       >
         <div
           style={{
-            display: "flex",
-            fontSize: 28,
-            letterSpacing: "0.28em",
-            fontWeight: 600,
-            color: "#9AA4B2",
+            fontSize: 20,
+            letterSpacing: "0.22em",
+            textTransform: "uppercase",
+            color: "#F5B52E",
           }}
         >
-          MPF.
+          Série prática para pequenos negócios
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
           <div
             style={{
-              display: "flex",
-              fontSize: 64,
-              fontWeight: 600,
-              lineHeight: 1.1,
-              maxWidth: 900,
+              fontSize: 56,
+              lineHeight: 0.95,
+              letterSpacing: "-0.03em",
+              textTransform: "uppercase",
+              maxWidth: 980,
             }}
           >
-            Tecnologia, IA e e-books para o mundo real.
+            Usar. Transformar. Gerenciar. Criar.
           </div>
-          <div
-            style={{
-              display: "flex",
-              fontSize: 24,
-              color: "#9AA4B2",
-              maxWidth: 720,
-              lineHeight: 1.4,
-            }}
-          >
-            Software · Inteligência Artificial · Autor
+          <div style={{ fontSize: 26, color: "#AEB7C0", maxWidth: 760 }}>
+            Pequenos Negócios com IA
           </div>
         </div>
       </div>
     ),
-    { ...size },
+    size,
   );
 }

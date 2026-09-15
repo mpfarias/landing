@@ -1,30 +1,12 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
-import { Footer } from "@/components/layout/Footer";
-import { LocaleHtmlLang } from "@/components/providers/LocaleHtmlLang";
-import { ThemeProvider } from "@/components/providers/ThemeProvider";
-import {
-  localeHtmlLang,
-  localeOpenGraph,
-  locales,
-  routing,
-  type Locale,
-} from "@/i18n/routing";
-
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcelofarias.dev.br";
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  viewportFit: "cover",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F6F6F3" },
-    { media: "(prefers-color-scheme: dark)", color: "#0B0C0E" },
-  ],
-};
+import { DocumentLang } from "@/components/i18n/DocumentLang";
+import { Header } from "@/components/layout/Header";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { getFeaturedBook, getPurchaseHref } from "@/data/books";
+import { site } from "@/data/site";
+import { htmlLang, isLocale, locales, openGraphLocale, type Locale } from "@/i18n/config";
+import { getMessages } from "@/content";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -35,54 +17,41 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const { locale: localeParam } = await params;
-  const locale = localeParam as Locale;
-  const t = await getTranslations({ locale, namespace: "metadata" });
+  const { locale: raw } = await params;
+  if (!isLocale(raw)) return {};
 
-  const languages = Object.fromEntries(
-    locales.map((code) => [code, `/${code}`]),
-  ) as Record<string, string>;
-  languages["pt-BR"] = `/${routing.defaultLocale}`;
-  languages["x-default"] = `/${routing.defaultLocale}`;
+  const locale = raw;
+  const copy = getMessages(locale);
+  const languages: Record<string, string> = {
+    "pt-BR": "/pt-br",
+    "pt-br": "/pt-br",
+    en: "/en",
+    es: "/es",
+    "x-default": "/pt-br",
+  };
 
   return {
-    metadataBase: new URL(siteUrl),
-    title: t("title"),
-    description: t("description"),
-    keywords: t.raw("keywords") as string[],
-    authors: [{ name: "Marcelo Pires de Farias" }],
-    creator: "Marcelo Pires de Farias",
+    metadataBase: new URL(site.url),
+    title: copy.metadata.title,
+    description: copy.metadata.description,
+    authors: [{ name: site.author }],
+    creator: site.author,
     alternates: {
       canonical: `/${locale}`,
       languages,
     },
     openGraph: {
-      title: t("title"),
-      description: t("description"),
-      url: `/${locale}`,
-      siteName: "Marcelo Pires de Farias",
       type: "website",
-      locale: localeOpenGraph[locale],
-      alternateLocale: locales
-        .filter((code) => code !== locale)
-        .map((code) => localeOpenGraph[code]),
+      locale: openGraphLocale[locale],
+      url: `/${locale}`,
+      siteName: copy.brand,
+      title: copy.metadata.title,
+      description: copy.metadata.description,
     },
     twitter: {
       card: "summary_large_image",
-      title: t("title"),
-      description: t("description"),
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-    icons: {
-      icon: [
-        { url: "/favicon.ico", type: "image/x-icon", sizes: "any" },
-        { url: "/icon.png", type: "image/png", sizes: "1024x1024" },
-      ],
-      shortcut: [{ url: "/favicon.ico", type: "image/x-icon", sizes: "any" }],
-      apple: [{ url: "/icon.png", type: "image/png", sizes: "1024x1024" }],
+      title: copy.metadata.title,
+      description: copy.metadata.description,
     },
   };
 }
@@ -90,28 +59,33 @@ export async function generateMetadata({
 export default async function LocaleLayout({
   children,
   params,
-}: Readonly<{
+}: {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
-}>) {
-  const { locale } = await params;
+}) {
+  const { locale: raw } = await params;
+  if (!isLocale(raw)) notFound();
 
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
-
-  setRequestLocale(locale);
-  const messages = await getMessages();
+  const locale: Locale = raw;
+  const copy = getMessages(locale);
+  const featured = getFeaturedBook();
 
   return (
     <>
-      <LocaleHtmlLang lang={localeHtmlLang[locale as Locale]} />
-      <ThemeProvider>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-          <Footer />
-        </NextIntlClientProvider>
-      </ThemeProvider>
+      <DocumentLang lang={htmlLang[locale]} />
+      <JsonLd locale={locale} />
+      <a
+        href="#conteudo"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[60] focus:rounded-full focus:bg-gold focus:px-4 focus:py-2 focus:text-background"
+      >
+        {copy.skipToContent}
+      </a>
+      <Header
+        locale={locale}
+        copy={copy}
+        purchaseHref={getPurchaseHref(featured, locale)}
+      />
+      {children}
     </>
   );
 }

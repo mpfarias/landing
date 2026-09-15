@@ -1,45 +1,39 @@
-import type { Metadata } from "next";
-import type { ReactNode } from "react";
-import { Geist } from "next/font/google";
-import { themeInitScript } from "@/components/providers/theme-script";
-import { localeHtmlLang, routing, type Locale } from "@/i18n/routing";
+import type { Metadata, Viewport } from "next";
+import { Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
+const sourceSans = Source_Sans_3({
   subsets: ["latin"],
+  variable: "--font-source-sans",
   display: "swap",
-  variable: "--font-geist-sans",
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcelofarias.dev.br";
+const barlow = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-barlow",
+  display: "swap",
+});
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#050B11",
+};
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  robots: { index: true, follow: true },
 };
 
-const defaultLang = localeHtmlLang[routing.defaultLocale as Locale];
-
-type RootLayoutProps = {
-  children: ReactNode;
-};
-
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang={defaultLang}
-      className={geistSans.variable}
-      suppressHydrationWarning
+      lang="pt-BR"
+      data-scroll-behavior="smooth"
+      className={`${sourceSans.variable} ${barlow.variable} h-full antialiased`}
     >
-      <head>
-        <script
-          id="theme-init"
-          dangerouslySetInnerHTML={{ __html: themeInitScript }}
-        />
-      </head>
-      <body
-        className={`${geistSans.className} bg-background text-foreground antialiased`}
-      >
+      <body className="min-h-full bg-background font-sans text-foreground">
         {children}
       </body>
     </html>
