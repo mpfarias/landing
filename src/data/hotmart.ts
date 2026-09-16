@@ -2,9 +2,9 @@ import type { Locale } from "@/i18n/config";
 import type { BookPrice } from "@/data/types";
 
 export const HOTMART_BOOK_1: Record<Locale, string | null> = {
-  "pt-br": "https://pay.hotmart.com/L107597226L?checkoutMode=2",
-  en: "https://go.hotmart.com/M107610021B",
-  es: "https://go.hotmart.com/E107638013T",
+  "pt-br": "https://pay.hotmart.com/L107597226L?bid=1789590587932",
+  en: "https://pay.hotmart.com/M107610021B",
+  es: "https://pay.hotmart.com/E107638013T",
 };
 
 export const BOOK_1_PRICE: Record<Locale, BookPrice> = {

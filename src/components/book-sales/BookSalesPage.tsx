@@ -388,7 +388,39 @@ function SalesPrice({
   if (!price) return null;
 
   const cash = price.cashText ?? price.display;
-  const installment = price.installmentText;
+  const installmentValue = price.installmentDisplay;
+  const installmentCount = price.installmentCount;
+  const symbol = price.currency === "BRL" ? "R$" : "US$";
+
+  if (installmentValue && installmentCount) {
+    return (
+      <div className="mt-7">
+        <p className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+          <span className="text-[16px] font-semibold text-foreground sm:text-[18px]">
+            em até {installmentCount}x de
+          </span>
+          <span
+            className={[
+              "font-display font-semibold tracking-[-0.03em] text-gold",
+              large ? "text-[1.45rem] sm:text-[1.65rem]" : "text-[1.3rem] sm:text-[1.45rem]",
+            ].join(" ")}
+          >
+            {symbol}
+          </span>
+          <span
+            className={[
+              "font-display leading-none font-semibold tracking-[-0.04em] text-gold",
+              large ? "text-[2.6rem] sm:text-[3.1rem]" : "text-[2.2rem] sm:text-[2.6rem]",
+            ].join(" ")}
+          >
+            {installmentValue}
+            <sup className="ml-0.5 text-[1rem] font-semibold sm:text-[1.15rem]">*</sup>
+          </span>
+        </p>
+        <p className="mt-3 text-[16px] text-muted sm:text-[18px]">{cash}</p>
+      </div>
+    );
+  }
 
   return (
     <div className="mt-7">
@@ -400,11 +432,6 @@ function SalesPrice({
       >
         {cash}
       </p>
-      {installment ? (
-        <p className="mt-3 text-[16px] font-semibold text-foreground sm:text-[18px]">
-          {installment}
-        </p>
-      ) : null}
     </div>
   );
 }
