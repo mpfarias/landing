@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type {
   AnchorHTMLAttributes,
   ButtonHTMLAttributes,
@@ -22,6 +23,10 @@ const variants: Record<Variant, string> = {
     "border border-line bg-transparent text-foreground hover:border-gold/50 hover:text-gold",
 };
 
+function isExternalHref(href: string) {
+  return /^https?:\/\//i.test(href);
+}
+
 export function Button({
   children,
   variant = "primary",
@@ -29,6 +34,8 @@ export function Button({
   href,
   disabled = false,
   type = "button",
+  target: _target,
+  rel: _rel,
   ...rest
 }: ButtonProps) {
   const classes = [
@@ -45,19 +52,24 @@ export function Button({
   const hasHref = typeof href === "string" && href.trim().length > 0;
 
   if (hasHref && !disabled) {
-    const external = href.startsWith("http");
+    if (isExternalHref(href)) {
+      return (
+        <a
+          href={href}
+          className={classes}
+          target="_blank"
+          rel="noopener noreferrer"
+          {...rest}
+        >
+          {children}
+        </a>
+      );
+    }
 
     return (
-      <a
-        href={href}
-        className={classes}
-        {...(external
-          ? { target: "_blank", rel: "noopener noreferrer" }
-          : undefined)}
-        {...rest}
-      >
+      <Link href={href} className={classes} {...rest}>
         {children}
-      </a>
+      </Link>
     );
   }
 

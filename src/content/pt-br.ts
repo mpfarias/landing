@@ -80,6 +80,11 @@ export const ptBr: Messages = {
       from: "De",
       to: "Por",
       limited: "Por tempo limitado",
+      only: "por apenas",
+      installmentsOf: "8x de",
+      or: "ou",
+      cash: "à vista",
+      card: "no cartão",
     },
     learnTitle: "O que você vai aprender",
     learn: [

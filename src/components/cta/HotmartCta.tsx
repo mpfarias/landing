@@ -12,6 +12,7 @@ type HotmartCtaProps = {
     | "book-1-primary"
     | "book-1-secondary"
     | "sales-hero"
+    | "sales-mid"
     | "sales-offer"
     | "sales-final";
   className?: string;

@@ -14,6 +14,8 @@ export const BOOK_1_PRICE: Record<Locale, BookPrice> = {
     display: "R$ 37,00",
     compareAtAmount: 89.9,
     compareAtDisplay: "R$ 89,90",
+    installmentCount: 8,
+    installmentDisplay: "5,38",
   },
   en: {
     amount: 6.99,
@@ -21,6 +23,8 @@ export const BOOK_1_PRICE: Record<Locale, BookPrice> = {
     display: "US$ 6.99",
     compareAtAmount: 19.9,
     compareAtDisplay: "US$ 19.90",
+    installmentCount: 8,
+    installmentDisplay: "0.87",
   },
   es: {
     amount: 6.99,
@@ -28,6 +32,8 @@ export const BOOK_1_PRICE: Record<Locale, BookPrice> = {
     display: "US$ 6.99",
     compareAtAmount: 19.9,
     compareAtDisplay: "US$ 19.90",
+    installmentCount: 8,
+    installmentDisplay: "0.87",
   },
 };
 

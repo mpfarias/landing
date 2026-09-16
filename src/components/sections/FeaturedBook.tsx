@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { BookCover } from "@/components/ui/BookCover";
-import { BookPriceDisplay } from "@/components/ui/BookPriceDisplay";
+import { LandingPrice } from "@/components/ui/LandingPrice";
 import { Container } from "@/components/ui/Container";
 import {
   getBook1SalesHref,
@@ -23,6 +23,7 @@ export function FeaturedBook({ locale, copy }: FeaturedBookProps) {
   const title = getBookTitle(book, locale) ?? copy.brand;
   const subtitle = getBookSubtitle(book, locale);
   const price = getBookPrice(book, locale);
+  const shortBody = copy.book1.body[0];
 
   return (
     <section
@@ -65,102 +66,28 @@ export function FeaturedBook({ locale, copy }: FeaturedBookProps) {
                 {subtitle}
               </p>
             ) : null}
-            <div className="mt-6 max-w-xl space-y-4 text-[15px] leading-relaxed text-muted sm:text-[16px]">
-              {copy.book1.body.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
+            <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-muted sm:text-[16px]">
+              {shortBody}
+            </p>
 
             {price ? (
-              <BookPriceDisplay price={price} promo={copy.book1.promo} />
+              <LandingPrice
+                price={price}
+                promo={copy.book1.promo}
+                locale={locale}
+              />
             ) : null}
 
             {salesHref ? (
               <div className={price?.display ? "mt-5" : "mt-7"}>
-                <Button href={salesHref}>{copy.book1.buy}</Button>
+                <Button href={salesHref} data-nav="series-to-book-1">
+                  {copy.book1.buy}
+                </Button>
               </div>
             ) : null}
           </div>
-        </div>
-
-        <div className="mt-14 lg:mt-16">
-          <h3 className="font-display text-[1.35rem] font-semibold tracking-[-0.01em] text-foreground sm:text-[1.5rem]">
-            {copy.book1.learnTitle}
-          </h3>
-          <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-3">
-            {copy.book1.learn.map((item) => (
-              <li
-                key={item}
-                className="flex items-start gap-3 text-[15px] leading-relaxed text-muted"
-              >
-                <CheckIcon />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mt-14 lg:mt-16">
-          <h3 className="font-display text-[1.35rem] font-semibold tracking-[-0.01em] text-foreground sm:text-[1.5rem]">
-            {copy.audience.title}
-          </h3>
-          <ul className="mt-8 grid grid-cols-1 gap-x-8 gap-y-7 sm:grid-cols-2">
-            {copy.audience.profiles.map((profile) => (
-              <li key={profile.id} className="min-w-0">
-                <span className="mb-3 block h-px w-8 bg-gold" aria-hidden />
-                <p className="font-display text-[13px] font-semibold tracking-[0.14em] text-foreground uppercase">
-                  {profile.title}
-                </p>
-                <p className="mt-2 text-[15px] leading-relaxed text-muted">
-                  {profile.text}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mt-14 lg:mt-16">
-          <blockquote className="max-w-3xl border-l-2 border-gold pl-5 sm:pl-6">
-            <p className="font-display text-[clamp(1.6rem,4vw,2.4rem)] leading-[1.05] font-semibold tracking-[-0.02em] text-foreground">
-              {copy.noCode.title}
-            </p>
-            <p className="mt-4 text-[15px] leading-relaxed text-muted sm:text-[16px]">
-              {copy.noCode.text}
-            </p>
-            <p className="mt-3 text-[15px] leading-relaxed text-foreground sm:text-[16px]">
-              {copy.noCode.note}
-            </p>
-          </blockquote>
-
-          {salesHref ? (
-            <div className="mt-8">
-              <Button href={salesHref}>{copy.book1.buy}</Button>
-            </div>
-          ) : null}
         </div>
       </Container>
     </section>
   );
 }
-
-function CheckIcon() {
-  return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 18 18"
-      fill="none"
-      aria-hidden
-      className="mt-0.5 shrink-0 text-gold"
-    >
-      <path
-        d="M3.5 9.2l3.4 3.3L14.5 5"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-

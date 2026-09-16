@@ -49,6 +49,11 @@ export type Messages = {
       from: string;
       to: string;
       limited: string;
+      only: string;
+      installmentsOf: string;
+      or: string;
+      cash: string;
+      card: string;
     };
   };
   audience: {

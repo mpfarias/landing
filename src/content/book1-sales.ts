@@ -20,6 +20,14 @@ export type Book1SalesCopy = {
     lead: string;
     points: Array<{ title: string; text: string }>;
   };
+  help: {
+    title: string;
+    lead: string;
+  };
+  presentation: {
+    eyebrow: string;
+    title: string;
+  };
   inside: {
     eyebrow: string;
     title: string;
@@ -94,6 +102,14 @@ const catalog: Record<Locale, Book1SalesCopy> = {
           text: "Não é preciso saber código nem ser especialista.",
         },
       ],
+    },
+    help: {
+      title: "Como a IA pode ajudar",
+      lead: "Não se trata de substituir o trabalho de quem empreende. Trata-se de usar a IA para apoiar o que já consome tempo: atendimento, conteúdo, divulgação e organização.",
+    },
+    presentation: {
+      eyebrow: "O livro",
+      title: "Um guia prático para o primeiro passo.",
     },
     inside: {
       eyebrow: "Veja o livro por dentro",
@@ -205,6 +221,14 @@ const catalog: Record<Locale, Book1SalesCopy> = {
         },
       ],
     },
+    help: {
+      title: "How AI can help",
+      lead: "It is not about replacing the person who runs the business. It is about using AI to support what already takes time: customer service, content, promotion, and organization.",
+    },
+    presentation: {
+      eyebrow: "The book",
+      title: "A practical guide for the first step.",
+    },
     inside: {
       eyebrow: "Look inside the book",
       title: "See some pages from the material",
@@ -314,6 +338,14 @@ const catalog: Record<Locale, Book1SalesCopy> = {
           text: "No hace falta saber código ni ser especialista.",
         },
       ],
+    },
+    help: {
+      title: "Cómo puede ayudar la IA",
+      lead: "No se trata de reemplazar el trabajo de quien emprende. Se trata de usar la IA para apoyar lo que ya consume tiempo: atención, contenido, difusión y organización.",
+    },
+    presentation: {
+      eyebrow: "El libro",
+      title: "Una guía práctica para el primer paso.",
     },
     inside: {
       eyebrow: "Mira el libro por dentro",

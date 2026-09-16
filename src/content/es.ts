@@ -80,6 +80,11 @@ export const es: Messages = {
       from: "De",
       to: "Por",
       limited: "Por tiempo limitado",
+      only: "por solo",
+      installmentsOf: "8x de",
+      or: "o",
+      cash: "al contado",
+      card: "en tarjeta",
     },
     learnTitle: "Lo que aprenderás",
     learn: [

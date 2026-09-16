@@ -80,6 +80,11 @@ export const en: Messages = {
       from: "From",
       to: "Now",
       limited: "For a limited time",
+      only: "for only",
+      installmentsOf: "8x of",
+      or: "or",
+      cash: "cash",
+      card: "on the card",
     },
     learnTitle: "What you’ll learn",
     learn: [

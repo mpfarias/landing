@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
@@ -72,14 +73,14 @@ export function Header({ locale, copy }: HeaderProps) {
       ].join(" ")}
     >
       <Container className="flex min-h-[4.25rem] items-center justify-between gap-4 overflow-hidden py-3 sm:min-h-[4.5rem]">
-        <a href={homeHref} className="min-w-0 shrink leading-tight">
+        <Link href={homeHref} className="min-w-0 shrink leading-tight">
           <span className="font-display block truncate text-[13px] font-semibold tracking-[0.04em] text-foreground uppercase sm:text-[16px] sm:tracking-[0.06em]">
             {copy.brand}
           </span>
           <span className="mt-0.5 block truncate text-[10px] font-medium tracking-[0.12em] text-muted uppercase sm:tracking-[0.16em]">
             {copy.brandLine}
           </span>
-        </a>
+        </Link>
 
         <nav
           className="hidden shrink-0 items-center gap-6 xl:flex"
@@ -200,7 +201,12 @@ function HeaderCta({
   if (!salesHref) return null;
 
   return (
-    <Button href={salesHref} className={className} onClick={onClick}>
+    <Button
+      href={salesHref}
+      className={className}
+      onClick={onClick}
+      data-nav="series-to-book-1"
+    >
       {label}
     </Button>
   );
