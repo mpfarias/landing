@@ -1,4 +1,4 @@
-import { getBookPrice, getBookTitle, getFeaturedBook, getPurchaseHref, books } from "@/data/books";
+import { getBook1SalesHref, getBookPrice, getBookTitle, getFeaturedBook, getPurchaseHref, books } from "@/data/books";
 import { site } from "@/data/site";
 import { getMessages } from "@/content";
 import { htmlLang, type Locale } from "@/i18n/config";
@@ -7,8 +7,10 @@ export function JsonLd({ locale }: { locale: Locale }) {
   const copy = getMessages(locale);
   const featured = getFeaturedBook();
   const purchaseHref = getPurchaseHref(featured, locale);
+  const salesHref = getBook1SalesHref(locale);
   const featuredTitle = getBookTitle(featured, locale) ?? copy.brand;
   const price = getBookPrice(featured, locale);
+  const bookUrl = salesHref ? `${site.url}${salesHref}` : `${site.url}/${locale}`;
 
   const offer = price
     ? {
@@ -54,7 +56,7 @@ export function JsonLd({ locale }: { locale: Locale }) {
         name: featuredTitle,
         inLanguage: htmlLang[locale],
         description: copy.book1.body[0],
-        ...(purchaseHref ? { url: purchaseHref } : {}),
+        url: bookUrl,
         ...(offer ? { offers: offer } : {}),
       },
     ],

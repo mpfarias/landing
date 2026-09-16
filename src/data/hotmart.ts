@@ -4,24 +4,30 @@ import type { BookPrice } from "@/data/types";
 export const HOTMART_BOOK_1: Record<Locale, string | null> = {
   "pt-br": "https://go.hotmart.com/L107597226L?dp=1",
   en: "https://go.hotmart.com/M107610021B",
-  es: "https://go.hotmart.com/E107638013T",
+  es: null,
 };
 
 export const BOOK_1_PRICE: Record<Locale, BookPrice> = {
   "pt-br": {
-    amount: 26.99,
+    amount: 37,
     currency: "BRL",
-    display: "R$ 26,99",
+    display: "R$ 37,00",
+    compareAtAmount: 89.9,
+    compareAtDisplay: "R$ 89,90",
   },
   en: {
     amount: 6.99,
     currency: "USD",
     display: "US$ 6.99",
+    compareAtAmount: 19.9,
+    compareAtDisplay: "US$ 19.90",
   },
   es: {
     amount: 6.99,
     currency: "USD",
     display: "US$ 6.99",
+    compareAtAmount: 19.9,
+    compareAtDisplay: "US$ 19.90",
   },
 };
 

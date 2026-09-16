@@ -10,6 +10,8 @@ export type BookPrice = {
   amount: number;
   currency: "BRL" | "USD";
   display: string;
+  compareAtAmount?: number;
+  compareAtDisplay?: string;
 };
 
 export type BookChapter = {
@@ -30,6 +32,7 @@ export type Book = {
   subtitle: LocaleField<string>;
   description: LocaleField<string>;
   cover: LocaleField<string | null>;
+  coverMockup?: LocaleField<string | null>;
   coverAlt: LocaleField<string>;
   hotmartUrl: Record<Locale, string | null>;
   price: Record<Locale, BookPrice | null>;

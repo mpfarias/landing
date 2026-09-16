@@ -1,12 +1,13 @@
-import { HotmartCta } from "@/components/cta/HotmartCta";
+import { Button } from "@/components/ui/Button";
 import { BookCover } from "@/components/ui/BookCover";
+import { BookPriceDisplay } from "@/components/ui/BookPriceDisplay";
 import { Container } from "@/components/ui/Container";
 import {
+  getBook1SalesHref,
   getBookPrice,
   getBookSubtitle,
   getBookTitle,
   getFeaturedBook,
-  getPurchaseHref,
 } from "@/data/books";
 import type { Messages } from "@/content/types";
 import type { Locale } from "@/i18n/config";
@@ -18,7 +19,7 @@ type FeaturedBookProps = {
 
 export function FeaturedBook({ locale, copy }: FeaturedBookProps) {
   const book = getFeaturedBook();
-  const purchaseHref = getPurchaseHref(book, locale);
+  const salesHref = getBook1SalesHref(locale);
   const title = getBookTitle(book, locale) ?? copy.brand;
   const subtitle = getBookSubtitle(book, locale);
   const price = getBookPrice(book, locale);
@@ -35,7 +36,7 @@ export function FeaturedBook({ locale, copy }: FeaturedBookProps) {
       />
       <Container className="relative">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16 xl:gap-20">
-          <div className="relative mx-auto w-full max-w-[340px] sm:max-w-[380px] lg:sticky lg:top-28 lg:mx-0 lg:max-w-none">
+          <div className="relative mx-auto w-full max-w-[340px] sm:max-w-[380px] lg:mx-0 lg:max-w-none">
             <div className="cover-glow pointer-events-none absolute inset-[-10%] -z-10" aria-hidden />
             <BookCover
               book={book}
@@ -69,6 +70,16 @@ export function FeaturedBook({ locale, copy }: FeaturedBookProps) {
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
+
+            {price ? (
+              <BookPriceDisplay price={price} promo={copy.book1.promo} />
+            ) : null}
+
+            {salesHref ? (
+              <div className={price?.display ? "mt-5" : "mt-7"}>
+                <Button href={salesHref}>{copy.book1.buy}</Button>
+              </div>
+            ) : null}
           </div>
         </div>
 
@@ -89,21 +100,11 @@ export function FeaturedBook({ locale, copy }: FeaturedBookProps) {
           </ul>
         </div>
 
-        <div className="mt-10 lg:mt-12">
-          <PurchaseBlock
-            href={purchaseHref}
-            locale={locale}
-            copy={copy}
-            priceDisplay={price?.display ?? null}
-            location="book-1-primary"
-          />
-        </div>
-
-        <div className="mt-16 lg:mt-20">
+        <div className="mt-14 lg:mt-16">
           <h3 className="font-display text-[1.35rem] font-semibold tracking-[-0.01em] text-foreground sm:text-[1.5rem]">
             {copy.audience.title}
           </h3>
-          <ul className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-10">
+          <ul className="mt-8 grid grid-cols-1 gap-x-8 gap-y-7 sm:grid-cols-2">
             {copy.audience.profiles.map((profile) => (
               <li key={profile.id} className="min-w-0">
                 <span className="mb-3 block h-px w-8 bg-gold" aria-hidden />
@@ -118,65 +119,27 @@ export function FeaturedBook({ locale, copy }: FeaturedBookProps) {
           </ul>
         </div>
 
-        <blockquote className="mt-16 max-w-3xl border-l-2 border-gold pl-5 sm:pl-6 lg:mt-20">
-          <p className="font-display text-[clamp(1.6rem,4vw,2.4rem)] leading-[1.05] font-semibold tracking-[-0.02em] text-foreground">
-            {copy.noCode.title}
-          </p>
-          <p className="mt-4 text-[15px] leading-relaxed text-muted sm:text-[16px]">
-            {copy.noCode.text}
-          </p>
-          <p className="mt-3 text-[15px] leading-relaxed text-foreground sm:text-[16px]">
-            {copy.noCode.note}
-          </p>
-        </blockquote>
+        <div className="mt-14 lg:mt-16">
+          <blockquote className="max-w-3xl border-l-2 border-gold pl-5 sm:pl-6">
+            <p className="font-display text-[clamp(1.6rem,4vw,2.4rem)] leading-[1.05] font-semibold tracking-[-0.02em] text-foreground">
+              {copy.noCode.title}
+            </p>
+            <p className="mt-4 text-[15px] leading-relaxed text-muted sm:text-[16px]">
+              {copy.noCode.text}
+            </p>
+            <p className="mt-3 text-[15px] leading-relaxed text-foreground sm:text-[16px]">
+              {copy.noCode.note}
+            </p>
+          </blockquote>
 
-        {purchaseHref ? (
-          <div className="mt-12 lg:mt-14">
-            <HotmartCta href={purchaseHref} locale={locale} location="book-1-secondary">
-              {copy.book1.buySecondary}
-            </HotmartCta>
-          </div>
-        ) : null}
+          {salesHref ? (
+            <div className="mt-8">
+              <Button href={salesHref}>{copy.book1.buy}</Button>
+            </div>
+          ) : null}
+        </div>
       </Container>
     </section>
-  );
-}
-
-function PurchaseBlock({
-  href,
-  locale,
-  copy,
-  priceDisplay,
-  location,
-}: {
-  href: string | null;
-  locale: Locale;
-  copy: Messages;
-  priceDisplay: string | null;
-  location: "book-1-primary";
-}) {
-  if (!priceDisplay && !href) return null;
-
-  return (
-    <div>
-      {priceDisplay ? (
-        <p className="font-display text-[2rem] leading-none font-semibold tracking-[-0.03em] text-foreground sm:text-[2.15rem]">
-          {priceDisplay}
-        </p>
-      ) : null}
-      {href ? (
-        <>
-          <div className={priceDisplay ? "mt-5" : undefined}>
-            <HotmartCta href={href} locale={locale} location={location}>
-              {copy.book1.buy}
-            </HotmartCta>
-          </div>
-          <p className="mt-3 text-[13px] font-semibold text-foreground">
-            {copy.book1.hotmartNote}
-          </p>
-        </>
-      ) : null}
-    </div>
   );
 }
 
@@ -200,3 +163,4 @@ function CheckIcon() {
     </svg>
   );
 }
+

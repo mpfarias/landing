@@ -72,9 +72,15 @@ export const en: Messages = {
       "The goal is not to teach technology for technology’s sake.",
       "It is to show how AI can help solve real tasks, improve everyday work and save time.",
     ],
-    buy: "Buy on Hotmart",
-    buySecondary: "Start with AI",
+    buy: "Get it now",
+    viewSeries: "See the series",
     hotmartNote: "Purchase processed through Hotmart.",
+    promo: {
+      badge: "Special Launch Offer",
+      from: "From",
+      to: "Now",
+      limited: "For a limited time",
+    },
     learnTitle: "What you’ll learn",
     learn: [
       "create content with AI assistance",

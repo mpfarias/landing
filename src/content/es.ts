@@ -72,9 +72,15 @@ export const es: Messages = {
       "El objetivo no es enseñar tecnología por la tecnología.",
       "Es mostrar cómo utilizar la IA para resolver tareas reales, trabajar mejor y ahorrar tiempo.",
     ],
-    buy: "Comprar en Hotmart",
-    buySecondary: "Quiero empezar con IA",
+    buy: "Adquiérelo ya",
+    viewSeries: "Ver la serie",
     hotmartNote: "Compra realizada a través de Hotmart.",
+    promo: {
+      badge: "Promoción especial de lanzamiento",
+      from: "De",
+      to: "Por",
+      limited: "Por tiempo limitado",
+    },
     learnTitle: "Lo que aprenderás",
     learn: [
       "crear contenidos con ayuda de la IA",

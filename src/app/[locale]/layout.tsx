@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { DocumentLang } from "@/components/i18n/DocumentLang";
 import { Header } from "@/components/layout/Header";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { getFeaturedBook, getPurchaseHref } from "@/data/books";
 import { site } from "@/data/site";
 import { htmlLang, isLocale, locales, openGraphLocale, type Locale } from "@/i18n/config";
 import { getMessages } from "@/content";
@@ -68,7 +67,6 @@ export default async function LocaleLayout({
 
   const locale: Locale = raw;
   const copy = getMessages(locale);
-  const featured = getFeaturedBook();
 
   return (
     <>
@@ -80,11 +78,7 @@ export default async function LocaleLayout({
       >
         {copy.skipToContent}
       </a>
-      <Header
-        locale={locale}
-        copy={copy}
-        purchaseHref={getPurchaseHref(featured, locale)}
-      />
+      <Header locale={locale} copy={copy} />
       {children}
     </>
   );

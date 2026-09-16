@@ -4,13 +4,19 @@ import { localeLabels, locales, type Locale } from "@/i18n/config";
 type LanguageSwitcherProps = {
   locale: Locale;
   label: string;
+  hrefForLocale?: (code: Locale) => string;
 };
 
-export function LanguageSwitcher({ locale, label }: LanguageSwitcherProps) {
+export function LanguageSwitcher({
+  locale,
+  label,
+  hrefForLocale,
+}: LanguageSwitcherProps) {
   return (
     <nav className="flex items-center gap-1.5 text-[12px] font-semibold tracking-[0.08em]" aria-label={label}>
       {locales.map((code, index) => {
         const current = code === locale;
+        const href = hrefForLocale ? hrefForLocale(code) : `/${code}`;
 
         return (
           <span key={code} className="flex items-center gap-1.5">
@@ -20,7 +26,7 @@ export function LanguageSwitcher({ locale, label }: LanguageSwitcherProps) {
               </span>
             ) : null}
             <Link
-              href={`/${code}`}
+              href={href}
               hrefLang={code}
               aria-current={current ? "page" : undefined}
               className={

@@ -6,7 +6,14 @@ type HotmartCtaProps = {
   href: string | null;
   locale: Locale;
   children: ReactNode;
-  location: "header" | "header-mobile" | "book-1-primary" | "book-1-secondary";
+  location:
+    | "header"
+    | "header-mobile"
+    | "book-1-primary"
+    | "book-1-secondary"
+    | "sales-hero"
+    | "sales-offer"
+    | "sales-final";
   className?: string;
   onClick?: () => void;
 };

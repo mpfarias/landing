@@ -48,6 +48,11 @@ export const pequenosNegociosBooks: Book[] = [
       en: "/books/en/small-businesses-with-ai-en.jpg",
       es: "/books/es/pequenos-negocios-con-ia-es.jpg",
     },
+    coverMockup: {
+      "pt-br": "/books/pt-br/pequenos-negocios-com-ia-pt-br-mockup.jpg",
+      en: "/books/en/small-businesses-with-ai-en-mockup.jpg",
+      es: "/books/es/pequenos-negocios-con-ia-es-mockup.jpg",
+    },
     coverAlt: {
       "pt-br": "Capa do livro Pequenos Negócios com IA",
       en: "Cover of Small Businesses with AI",

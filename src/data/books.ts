@@ -16,9 +16,14 @@ export function getFeaturedBook(): Book {
   );
 }
 
-export function getBookCover(book: Book, locale: Locale): string | null {
-  const cover = book.cover[locale];
-  return typeof cover === "string" && cover.trim() ? cover : null;
+export function getBookCover(
+  book: Book,
+  locale: Locale,
+  variant: "cover" | "mockup" = "cover",
+): string | null {
+  const source =
+    variant === "mockup" ? (book.coverMockup?.[locale] ?? book.cover[locale]) : book.cover[locale];
+  return typeof source === "string" && source.trim() ? source : null;
 }
 
 export function getPurchaseHref(book: Book, locale: Locale): string | null {
@@ -45,6 +50,40 @@ export function getBookSubtitle(book: Book, locale: Locale): string | null {
 
 export function getBookPrice(book: Book, locale: Locale): BookPrice | null {
   return book.price[locale] ?? null;
+}
+
+export function getBook1SalesHref(locale: Locale): string | null {
+  const book = getFeaturedBook();
+  const slug = book.slug[locale];
+  if (!slug) return null;
+  return `/${locale}/${slug}`;
+}
+
+export function isBook1SalesPath(pathname: string | null): boolean {
+  if (!pathname) return false;
+  const book = getFeaturedBook();
+  return Boolean(
+    book.slug["pt-br"] &&
+      (pathname === `/pt-br/${book.slug["pt-br"]}` ||
+        pathname === `/en/${book.slug.en}` ||
+        pathname === `/es/${book.slug.es}`),
+  );
+}
+
+export function getBook1BySlug(locale: Locale, slug: string) {
+  const book = getFeaturedBook();
+  return book.slug[locale] === slug ? book : null;
+}
+
+export function getBook1Hreflang(): Record<string, string> {
+  const book = getFeaturedBook();
+  return {
+    "pt-BR": `/pt-br/${book.slug["pt-br"]}`,
+    "pt-br": `/pt-br/${book.slug["pt-br"]}`,
+    en: `/en/${book.slug.en}`,
+    es: `/es/${book.slug.es}`,
+    "x-default": `/pt-br/${book.slug["pt-br"]}`,
+  };
 }
 
 export function getStatusLabel(

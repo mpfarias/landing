@@ -23,7 +23,7 @@ export function BookCover({
   className = "",
   sizes = "(min-width: 1024px) 280px, 220px",
 }: BookCoverProps) {
-  const cover = getBookCover(book, locale);
+  const cover = getBookCover(book, locale, featured ? "mockup" : "cover");
   const alt = getCoverAlt(book, locale);
   const accent = volumeAccent[book.stage];
 
@@ -31,22 +31,26 @@ export function BookCover({
     <div className={`relative ${className}`}>
       <div
         className={[
-          "relative flex aspect-[2/3] items-center justify-center overflow-hidden rounded-[3px] bg-surface",
+          "relative flex items-center justify-center",
           featured
-            ? "cover-shadow-featured"
-            : "book-shadow transition-transform duration-300 ease-out hover:-translate-y-1",
+            ? "cover-shadow-featured overflow-hidden rounded-[6px] bg-transparent"
+            : "aspect-[2/3] overflow-hidden rounded-[3px] bg-surface book-shadow transition-transform duration-300 ease-out hover:-translate-y-1",
         ].join(" ")}
       >
         {cover ? (
           <Image
             src={cover}
             alt={alt}
-            width={680}
-            height={1020}
+            width={featured ? 768 : 680}
+            height={featured ? 1024 : 1020}
             loading="eager"
             fetchPriority={priority ? "high" : "auto"}
             sizes={sizes}
-            className="h-full w-full object-contain"
+            className={
+              featured
+                ? "h-auto w-full object-contain"
+                : "h-full w-full object-cover"
+            }
           />
         ) : (
           <CoverPlaceholder

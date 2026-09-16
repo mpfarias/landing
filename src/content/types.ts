@@ -40,10 +40,16 @@ export type Messages = {
     question: string;
     body: [string, string, string];
     buy: string;
-    buySecondary: string;
+    viewSeries: string;
     hotmartNote: string;
     learnTitle: string;
     learn: string[];
+    promo: {
+      badge: string;
+      from: string;
+      to: string;
+      limited: string;
+    };
   };
   audience: {
     title: string;
