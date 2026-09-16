@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { DocumentLang } from "@/components/i18n/DocumentLang";
-import { Header } from "@/components/layout/Header";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { site } from "@/data/site";
 import { htmlLang, isLocale, locales, openGraphLocale, type Locale } from "@/i18n/config";
@@ -78,7 +77,6 @@ export default async function LocaleLayout({
       >
         {copy.skipToContent}
       </a>
-      <Header locale={locale} copy={copy} />
       {children}
     </>
   );

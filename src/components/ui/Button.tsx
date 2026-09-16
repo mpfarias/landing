@@ -13,6 +13,7 @@ type ButtonProps = {
   className?: string;
   href?: string | null;
   disabled?: boolean;
+  openInNewTab?: boolean;
 } & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "href" | "children"> &
   Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href" | "children">;
 
@@ -34,6 +35,7 @@ export function Button({
   href,
   disabled = false,
   type = "button",
+  openInNewTab = false,
   target: _target,
   rel: _rel,
   ...rest
@@ -52,7 +54,7 @@ export function Button({
   const hasHref = typeof href === "string" && href.trim().length > 0;
 
   if (hasHref && !disabled) {
-    if (isExternalHref(href)) {
+    if (isExternalHref(href) || openInNewTab) {
       return (
         <a
           href={href}

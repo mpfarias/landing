@@ -18,7 +18,7 @@ export const en: Messages = {
     lead:
       "A practical journey to learn how to use Artificial Intelligence in a small business, transform processes, manage with better information, and finally build a business from scratch.",
     discover: "See the first book",
-    buyHotmart: "Buy on Hotmart",
+    buyHotmart: "Get it now",
   },
   benefits: [
     {
@@ -74,7 +74,6 @@ export const en: Messages = {
     ],
     buy: "Get it now",
     viewSeries: "See the series",
-    hotmartNote: "Purchase processed through Hotmart.",
     promo: {
       badge: "Special Launch Offer",
       from: "From",
@@ -149,6 +148,6 @@ export const en: Messages = {
   metadata: {
     title: "Small Businesses with AI | AI for small businesses",
     description:
-      "Small Businesses with AI is a practical series of AI for small businesses. Book 1 shows how to use Artificial Intelligence in daily work, with no coding required. Purchase via Hotmart.",
+      "Small Businesses with AI is a practical series of AI for small businesses. Book 1 shows how to use Artificial Intelligence in daily work, with no coding required.",
   },
 };

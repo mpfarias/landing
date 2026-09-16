@@ -18,7 +18,7 @@ export const ptBr: Messages = {
     lead:
       "Uma jornada prática para aprender a usar Inteligência Artificial no pequeno negócio, transformar processos, gerenciar com mais informação e, por fim, construir um negócio do zero.",
     discover: "Conheça o primeiro livro",
-    buyHotmart: "Comprar na Hotmart",
+    buyHotmart: "Adquira já",
   },
   benefits: [
     {
@@ -74,7 +74,6 @@ export const ptBr: Messages = {
     ],
     buy: "Adquira já",
     viewSeries: "Ver a série",
-    hotmartNote: "Compra realizada através da Hotmart.",
     promo: {
       badge: "Promoção Especial de Lançamento",
       from: "De",
@@ -150,6 +149,6 @@ export const ptBr: Messages = {
   metadata: {
     title: "Pequenos Negócios com IA | Inteligência Artificial para pequenos negócios",
     description:
-      "Pequenos Negócios com IA é uma série prática de Inteligência Artificial para pequenos negócios. O Livro 1 ensina a usar IA no dia a dia, sem programar. Compra pela Hotmart.",
+      "Pequenos Negócios com IA é uma série prática de Inteligência Artificial para pequenos negócios. O Livro 1 ensina a usar IA no dia a dia, sem programar.",
   },
 };

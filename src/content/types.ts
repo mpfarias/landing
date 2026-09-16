@@ -41,7 +41,6 @@ export type Messages = {
     body: [string, string, string];
     buy: string;
     viewSeries: string;
-    hotmartNote: string;
     learnTitle: string;
     learn: string[];
     promo: {

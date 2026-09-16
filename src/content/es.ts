@@ -18,7 +18,7 @@ export const es: Messages = {
     lead:
       "Una jornada práctica para aprender a usar Inteligencia Artificial en el pequeño negocio, transformar procesos, gestionar con más información y, por último, construir un negocio desde cero.",
     discover: "Conoce el primer libro",
-    buyHotmart: "Comprar en Hotmart",
+    buyHotmart: "Adquiérelo ya",
   },
   benefits: [
     {
@@ -74,7 +74,6 @@ export const es: Messages = {
     ],
     buy: "Adquiérelo ya",
     viewSeries: "Ver la serie",
-    hotmartNote: "Compra realizada a través de Hotmart.",
     promo: {
       badge: "Promoción especial de lanzamiento",
       from: "De",

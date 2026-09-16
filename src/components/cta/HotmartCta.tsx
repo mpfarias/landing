@@ -12,8 +12,8 @@ type HotmartCtaProps = {
     | "book-1-primary"
     | "book-1-secondary"
     | "sales-hero"
-    | "sales-mid"
     | "sales-offer"
+    | "sales-author"
     | "sales-final";
   className?: string;
   onClick?: () => void;
@@ -34,7 +34,7 @@ export function HotmartCta({
       href={href}
       className={className}
       onClick={onClick}
-      data-cta="hotmart-book-1"
+      data-cta="purchase-book-1"
       data-cta-location={location}
       data-cta-locale={locale}
     >

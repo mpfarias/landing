@@ -2,9 +2,9 @@ import type { Locale } from "@/i18n/config";
 import type { BookPrice } from "@/data/types";
 
 export const HOTMART_BOOK_1: Record<Locale, string | null> = {
-  "pt-br": "https://go.hotmart.com/L107597226L?dp=1",
+  "pt-br": "https://pay.hotmart.com/L107597226L?checkoutMode=2",
   en: "https://go.hotmart.com/M107610021B",
-  es: null,
+  es: "https://go.hotmart.com/E107638013T",
 };
 
 export const BOOK_1_PRICE: Record<Locale, BookPrice> = {
@@ -16,6 +16,8 @@ export const BOOK_1_PRICE: Record<Locale, BookPrice> = {
     compareAtDisplay: "R$ 89,90",
     installmentCount: 8,
     installmentDisplay: "5,38",
+    cashText: "R$ 37,00 à vista",
+    installmentText: "em até 8x de R$ 5,38*",
   },
   en: {
     amount: 6.99,
@@ -23,8 +25,6 @@ export const BOOK_1_PRICE: Record<Locale, BookPrice> = {
     display: "US$ 6.99",
     compareAtAmount: 19.9,
     compareAtDisplay: "US$ 19.90",
-    installmentCount: 8,
-    installmentDisplay: "0.87",
   },
   es: {
     amount: 6.99,
@@ -32,8 +32,6 @@ export const BOOK_1_PRICE: Record<Locale, BookPrice> = {
     display: "US$ 6.99",
     compareAtAmount: 19.9,
     compareAtDisplay: "US$ 19.90",
-    installmentCount: 8,
-    installmentDisplay: "0.87",
   },
 };
 

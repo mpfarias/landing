@@ -1,52 +1,50 @@
 import type { Locale } from "@/i18n/config";
 
 export type Book1SalesCopy = {
-  metadata: {
-    title: string;
-    description: string;
-  };
+  metadata: { title: string; description: string };
+  back: string;
   hero: {
     headline: string;
     lead: string;
     cta: string;
   };
+  badges: [string, string, string];
   problem: {
     title: string;
     items: string[];
     close: string;
   };
-  proposal: {
-    title: string;
-    lead: string;
-    points: Array<{ title: string; text: string }>;
-  };
-  help: {
-    title: string;
-    lead: string;
-  };
-  presentation: {
-    eyebrow: string;
-    title: string;
-  };
+  learnClose: string;
   inside: {
     eyebrow: string;
     title: string;
+    lead: string;
   };
-  difference: {
+  receive: {
     title: string;
-    paragraphs: string[];
-    quote: string;
+    subtitle: string;
+    items: Array<{ title: string; text: string }>;
   };
-  offer: {
-    cta: string;
+  guarantee: {
+    title: string;
+    text: string;
+  };
+  author: {
+    eyebrow: string;
+    name: string;
+    highlight: string;
+    intro: [string, string, string];
+    principleLead: string;
+    principleQuote: string;
+    closing: [string, string];
+    quote: string;
+    photoAlt: string;
   };
   faq: {
     title: string;
     items: Array<{ question: string; answer: string }>;
   };
-  final: {
-    text: string;
-  };
+  final: { text: string };
 };
 
 const catalog: Record<Locale, Book1SalesCopy> = {
@@ -56,75 +54,79 @@ const catalog: Record<Locale, Book1SalesCopy> = {
       description:
         "Aprenda a utilizar Inteligência Artificial para melhorar atendimento, conteúdo, divulgação, organização e produtividade no seu pequeno negócio.",
     },
+    back: "Voltar para a série",
     hero: {
       headline:
         "Use a Inteligência Artificial no seu negócio sem precisar ser especialista em tecnologia.",
-      lead: "Aprenda, de forma prática, como utilizar IA para melhorar o atendimento, criar conteúdos, divulgar seu negócio, organizar tarefas e ganhar tempo no dia a dia.",
+      lead: "Aprenda de forma prática como utilizar IA para melhorar o atendimento, criar conteúdos, divulgar seu negócio, organizar tarefas e ganhar tempo no dia a dia.",
       cta: "Adquira já",
     },
+    badges: ["Acesso imediato", "Pagamento seguro", "Garantia de 7 dias"],
     problem: {
-      title:
-        "Você já percebeu quanto tempo pequenas tarefas consomem no seu negócio?",
+      title: "Você se identifica com alguma dessas situações?",
       items: [
-        "responder mensagens repetidas",
-        "pensar no que publicar",
-        "escrever textos para divulgação",
-        "organizar informações",
-        "preparar comunicações",
-        "ter ideias para promoções",
-        "realizar várias tarefas sozinho",
+        "você perde tempo respondendo mensagens parecidas;",
+        "não sabe o que publicar para divulgar o negócio;",
+        "tem dificuldade para escrever textos de atendimento ou divulgação;",
+        "precisa organizar melhor tarefas e informações;",
+        "quer ganhar produtividade, mas não sabe como usar IA na prática;",
+        "sente que a IA parece útil, mas complicada demais.",
       ],
       close:
-        "A Inteligência Artificial pode ajudar em muitas dessas atividades — desde que você saiba como utilizá-la.",
+        "A boa notícia é que usar Inteligência Artificial no pequeno negócio pode ser muito mais simples do que parece.",
     },
-    proposal: {
-      title: "IA não precisa ser complicada para ser útil.",
-      lead: "O livro foi criado para aproximar a Inteligência Artificial do pequeno empreendedor, com exemplos do dia a dia e aplicação imediata.",
-      points: [
+    learnClose:
+      "Tudo explicado de forma prática, simples e direta ao ponto.",
+    inside: {
+      eyebrow: "Veja por dentro",
+      title: "Conheça as primeiras páginas do livro",
+      lead: "Veja uma amostra real do material antes de adquirir o ebook.",
+    },
+    receive: {
+      title: "O que você recebe",
+      subtitle:
+        "Um material prático para aplicar a IA no dia a dia do seu negócio.",
+      items: [
         {
-          title: "Linguagem simples",
-          text: "Sem jargão desnecessário.",
+          title: "E-book digital em PDF",
+          text: "O Livro 1 completo, para consultar quando precisar.",
         },
         {
-          title: "Situações reais",
-          text: "Tarefas que realmente acontecem no pequeno negócio.",
+          title: "Acesso imediato após a compra",
+          text: "Assim que o pagamento for confirmado, o material é liberado.",
         },
         {
-          title: "Aplicação prática",
-          text: "Conteúdo para usar, não apenas para ler.",
+          title: "Leitura no celular, tablet ou computador",
+          text: "Estude no dispositivo que fizer mais sentido para a sua rotina.",
         },
         {
-          title: "Autonomia",
-          text: "Você aprende a adaptar a IA ao seu contexto.",
-        },
-        {
-          title: "Sem programação",
-          text: "Não é preciso saber código nem ser especialista.",
+          title: "Conteúdo direto e prático",
+          text: "Sem rodeios: aplicação no atendimento, divulgação, organização e produtividade.",
         },
       ],
     },
-    help: {
-      title: "Como a IA pode ajudar",
-      lead: "Não se trata de substituir o trabalho de quem empreende. Trata-se de usar a IA para apoiar o que já consome tempo: atendimento, conteúdo, divulgação e organização.",
+    guarantee: {
+      title: "Garantia de 7 dias",
+      text: "Se o material não atender às suas expectativas, você poderá solicitar reembolso dentro do prazo de garantia.",
     },
-    presentation: {
-      eyebrow: "O livro",
-      title: "Um guia prático para o primeiro passo.",
-    },
-    inside: {
-      eyebrow: "Veja o livro por dentro",
-      title: "Conheça algumas páginas do material",
-    },
-    difference: {
-      title: "Mais do que comandos prontos.",
-      paragraphs: [
-        "A proposta não é entregar uma lista de prompts para copiar e colar.",
-        "O objetivo é ajudar o leitor a entender como conversar com a IA, fornecer contexto, avaliar respostas e adaptar a ferramenta às necessidades do próprio negócio.",
+    author: {
+      eyebrow: "Conheça quem escreveu este material",
+      name: "Marcelo Pires de Farias",
+      highlight: "Tecnologia aplicada a problemas reais.",
+      intro: [
+        "Marcelo Pires de Farias é formado em Sistemas de Informação e atua há anos no desenvolvimento e aplicação de soluções tecnológicas voltadas à resolução de problemas reais.",
+        "Ao longo de sua trajetória, desenvolveu sistemas e ferramentas para simplificar processos, organizar informações e tornar atividades do dia a dia mais eficientes.",
+        "Mais recentemente, passou a explorar também o uso prático da Inteligência Artificial, especialmente como ferramenta de apoio à produtividade, comunicação, organização e tomada de decisões.",
+      ],
+      principleLead: "Sua relação com a tecnologia parte de um princípio simples:",
+      principleQuote: "Uma boa ferramenta não precisa ser complicada para ser útil.",
+      closing: [
+        "Foi com essa visão que nasceu Pequenos Negócios com IA: aproximar a Inteligência Artificial de quem empreende e mostrar, com exemplos simples e aplicação prática, que não é necessário ser especialista em tecnologia para aproveitar seus benefícios.",
+        "Mais do que ensinar comandos prontos, a proposta é ajudar o leitor a desenvolver autonomia para utilizar a IA de acordo com as necessidades do próprio negócio.",
       ],
       quote: "A IA ajuda. Você decide.",
-    },
-    offer: {
-      cta: "Adquira já",
+      photoAlt:
+        "Foto de Marcelo Pires de Farias, autor de Pequenos Negócios com IA",
     },
     faq: {
       title: "Perguntas frequentes",
@@ -137,7 +139,7 @@ const catalog: Record<Locale, Book1SalesCopy> = {
         {
           question: "Preciso saber programar?",
           answer:
-            "Não. O Livro 1 foi feito para quem quer usar IA no dia a dia do negócio, sem programação.",
+            "Não. O Livro 1 foi feito para usar IA no dia a dia do negócio, sem programação.",
         },
         {
           question: "Para quem este livro é indicado?",
@@ -146,12 +148,12 @@ const catalog: Record<Locale, Book1SalesCopy> = {
         },
         {
           question: "O livro é digital?",
-          answer: "Sim. Trata-se de um e-book.",
+          answer: "Sim. Trata-se de um e-book em PDF.",
         },
         {
           question: "Como recebo o ebook depois da compra?",
           answer:
-            "A compra é feita pela Hotmart. Depois do pagamento, o acesso ao e-book é liberado na área do comprador da plataforma.",
+            "Depois do pagamento confirmado, o acesso ao e-book em PDF é liberado na sua área de compras.",
         },
         {
           question: "Posso ler pelo celular, tablet ou computador?",
@@ -159,8 +161,14 @@ const catalog: Record<Locale, Book1SalesCopy> = {
             "Sim. Você pode ler no dispositivo que preferir, de acordo com os formatos disponibilizados após a compra.",
         },
         {
-          question: "Onde é realizado o pagamento?",
-          answer: "O pagamento é realizado através da Hotmart.",
+          question: "Como funciona o pagamento?",
+          answer:
+            "O pagamento é feito de forma online no checkout da compra, com as opções disponíveis no momento, incluindo parcelamento no cartão.",
+        },
+        {
+          question: "Existe garantia?",
+          answer:
+            "Sim. Você tem 7 dias de garantia. Se o material não atender às suas expectativas, poderá solicitar o reembolso dentro desse prazo.",
         },
       ],
     },
@@ -174,75 +182,76 @@ const catalog: Record<Locale, Book1SalesCopy> = {
       description:
         "Learn how to use Artificial Intelligence to improve customer service, content, promotion, organization, and productivity in your small business.",
     },
+    back: "Back to the series",
     hero: {
       headline:
         "Use Artificial Intelligence in your business without needing to be a technology expert.",
       lead: "Learn, in a practical way, how to use AI to improve customer service, create content, promote your business, organize tasks, and save time every day.",
       cta: "Get it now",
     },
+    badges: ["Immediate access", "Secure payment", "7-day guarantee"],
     problem: {
-      title:
-        "Have you noticed how much time small tasks take in your business?",
+      title: "Do you recognize any of these situations?",
       items: [
-        "answering repeated messages",
-        "figuring out what to post",
-        "writing promotional texts",
-        "organizing information",
-        "preparing communications",
-        "coming up with promotion ideas",
-        "handling many tasks on your own",
+        "you spend time answering similar messages;",
+        "you don’t know what to post to promote the business;",
+        "you struggle to write customer-service or promotional texts;",
+        "you need to organize tasks and information better;",
+        "you want more productivity, but don’t know how to use AI in practice;",
+        "AI seems useful, but too complicated.",
       ],
       close:
-        "Artificial Intelligence can help with many of these activities — as long as you know how to use it.",
+        "The good news is that using Artificial Intelligence in a small business can be much simpler than it seems.",
     },
-    proposal: {
-      title: "AI does not need to be complicated to be useful.",
-      lead: "The book was created to bring Artificial Intelligence closer to small-business owners, with everyday examples and immediate application.",
-      points: [
+    learnClose: "Everything explained in a practical, simple, and direct way.",
+    inside: {
+      eyebrow: "Look inside",
+      title: "See the first pages of the book",
+      lead: "See a real sample of the material before purchasing the e-book.",
+    },
+    receive: {
+      title: "What you get",
+      subtitle: "A practical material to apply AI in the everyday work of your business.",
+      items: [
         {
-          title: "Simple language",
-          text: "No unnecessary jargon.",
+          title: "Digital e-book in PDF",
+          text: "The complete Book 1, ready to consult whenever you need it.",
         },
         {
-          title: "Real situations",
-          text: "Tasks that actually happen in a small business.",
+          title: "Immediate access after purchase",
+          text: "As soon as payment is confirmed, the material is released.",
         },
         {
-          title: "Practical application",
-          text: "Content to use, not just to read.",
+          title: "Read on phone, tablet, or computer",
+          text: "Study on the device that best fits your routine.",
         },
         {
-          title: "Autonomy",
-          text: "You learn to adapt AI to your own context.",
-        },
-        {
-          title: "No coding",
-          text: "You do not need to know how to code or be a specialist.",
+          title: "Direct, practical content",
+          text: "No detours: application in service, promotion, organization, and productivity.",
         },
       ],
     },
-    help: {
-      title: "How AI can help",
-      lead: "It is not about replacing the person who runs the business. It is about using AI to support what already takes time: customer service, content, promotion, and organization.",
+    guarantee: {
+      title: "7-day guarantee",
+      text: "If the material does not meet your expectations, you can request a refund within the guarantee period.",
     },
-    presentation: {
-      eyebrow: "The book",
-      title: "A practical guide for the first step.",
-    },
-    inside: {
-      eyebrow: "Look inside the book",
-      title: "See some pages from the material",
-    },
-    difference: {
-      title: "More than ready-made prompts.",
-      paragraphs: [
-        "The goal is not to hand over a list of prompts to copy and paste.",
-        "The aim is to help you understand how to talk with AI, provide context, evaluate answers, and adapt the tool to the needs of your own business.",
+    author: {
+      eyebrow: "Meet the person who wrote this material",
+      name: "Marcelo Pires de Farias",
+      highlight: "Technology applied to real problems.",
+      intro: [
+        "Marcelo Pires de Farias holds a degree in Information Systems and has spent years developing and applying technology solutions focused on real problems.",
+        "Throughout his career, he has built systems and tools to simplify processes, organize information, and make everyday activities more efficient.",
+        "More recently, he has also explored the practical use of Artificial Intelligence, especially as support for productivity, communication, organization, and decision-making.",
+      ],
+      principleLead: "His relationship with technology starts from a simple principle:",
+      principleQuote: "A good tool does not need to be complicated to be useful.",
+      closing: [
+        "It was with this view that Small Businesses with AI was born: to bring Artificial Intelligence closer to people who run a business and show, with simple examples and practical application, that you do not need to be a technology expert to benefit from it.",
+        "More than teaching ready-made prompts, the aim is to help readers develop autonomy to use AI according to the needs of their own business.",
       ],
       quote: "AI helps. You decide.",
-    },
-    offer: {
-      cta: "Get it now",
+      photoAlt: "Photo of Marcelo Pires de Farias, author of Small Businesses with AI",
     },
     faq: {
       title: "Frequently asked questions",
@@ -255,7 +264,7 @@ const catalog: Record<Locale, Book1SalesCopy> = {
         {
           question: "Do I need to know how to code?",
           answer:
-            "No. Book 1 is for people who want to use AI in everyday business work, with no programming required.",
+            "No. Book 1 is for using AI in everyday business work, with no programming required.",
         },
         {
           question: "Who is this book for?",
@@ -264,12 +273,12 @@ const catalog: Record<Locale, Book1SalesCopy> = {
         },
         {
           question: "Is the book digital?",
-          answer: "Yes. It is an e-book.",
+          answer: "Yes. It is a PDF e-book.",
         },
         {
           question: "How do I receive the e-book after purchase?",
           answer:
-            "The purchase is made through Hotmart. After payment, access to the e-book is released in your Hotmart buyer area.",
+            "After payment is confirmed, access to the PDF e-book is released in your purchase area.",
         },
         {
           question: "Can I read it on a phone, tablet, or computer?",
@@ -277,8 +286,14 @@ const catalog: Record<Locale, Book1SalesCopy> = {
             "Yes. You can read it on the device you prefer, according to the formats available after purchase.",
         },
         {
-          question: "Where is payment processed?",
-          answer: "Payment is processed through Hotmart.",
+          question: "How does payment work?",
+          answer:
+            "Payment is made online at checkout, with the options available at the time of purchase.",
+        },
+        {
+          question: "Is there a guarantee?",
+          answer:
+            "Yes. You have a 7-day guarantee. If the material does not meet your expectations, you can request a refund within that period.",
         },
       ],
     },
@@ -292,75 +307,78 @@ const catalog: Record<Locale, Book1SalesCopy> = {
       description:
         "Aprende a utilizar inteligencia artificial para mejorar la atención, el contenido, la difusión, la organización y la productividad en tu pequeño negocio.",
     },
+    back: "Volver a la serie",
     hero: {
       headline:
         "Usa la inteligencia artificial en tu negocio sin necesidad de ser especialista en tecnología.",
       lead: "Aprende, de forma práctica, cómo utilizar la IA para mejorar la atención, crear contenidos, difundir tu negocio, organizar tareas y ganar tiempo en el día a día.",
       cta: "Adquiérelo ya",
     },
+    badges: ["Acceso inmediato", "Pago seguro", "Garantía de 7 días"],
     problem: {
-      title:
-        "¿Ya te diste cuenta de cuánto tiempo consumen las pequeñas tareas en tu negocio?",
+      title: "¿Te identificas con alguna de estas situaciones?",
       items: [
-        "responder mensajes repetidos",
-        "pensar qué publicar",
-        "escribir textos para difusión",
-        "organizar información",
-        "preparar comunicaciones",
-        "tener ideas para promociones",
-        "hacer varias tareas en solitario",
+        "pierdes tiempo respondiendo mensajes parecidos;",
+        "no sabes qué publicar para difundir el negocio;",
+        "te cuesta escribir textos de atención o difusión;",
+        "necesitas organizar mejor las tareas y la información;",
+        "quieres ganar productividad, pero no sabes cómo usar la IA en la práctica;",
+        "sientes que la IA parece útil, pero demasiado complicada.",
       ],
       close:
-        "La inteligencia artificial puede ayudar en muchas de estas actividades, siempre que sepas cómo utilizarla.",
+        "La buena noticia es que usar inteligencia artificial en el pequeño negocio puede ser mucho más simple de lo que parece.",
     },
-    proposal: {
-      title: "La IA no necesita ser complicada para ser útil.",
-      lead: "El libro fue creado para acercar la inteligencia artificial al pequeño emprendedor, con ejemplos del día a día y aplicación inmediata.",
-      points: [
+    learnClose: "Todo explicado de forma práctica, simple y directa.",
+    inside: {
+      eyebrow: "Mira por dentro",
+      title: "Conoce las primeras páginas del libro",
+      lead: "Ve una muestra real del material antes de adquirir el e-book.",
+    },
+    receive: {
+      title: "Qué recibes",
+      subtitle:
+        "Un material práctico para aplicar la IA en el día a día de tu negocio.",
+      items: [
         {
-          title: "Lenguaje simple",
-          text: "Sin jerga innecesaria.",
+          title: "E-book digital en PDF",
+          text: "El Libro 1 completo, para consultar cuando lo necesites.",
         },
         {
-          title: "Situaciones reales",
-          text: "Tareas que realmente ocurren en el pequeño negocio.",
+          title: "Acceso inmediato después de la compra",
+          text: "Cuando se confirma el pago, el material se libera.",
         },
         {
-          title: "Aplicación práctica",
-          text: "Contenido para usar, no solo para leer.",
+          title: "Lectura en celular, tablet o computadora",
+          text: "Estudia en el dispositivo que mejor encaje con tu rutina.",
         },
         {
-          title: "Autonomía",
-          text: "Aprendes a adaptar la IA a tu propio contexto.",
-        },
-        {
-          title: "Sin programación",
-          text: "No hace falta saber código ni ser especialista.",
+          title: "Contenido directo y práctico",
+          text: "Sin rodeos: aplicación en atención, difusión, organización y productividad.",
         },
       ],
     },
-    help: {
-      title: "Cómo puede ayudar la IA",
-      lead: "No se trata de reemplazar el trabajo de quien emprende. Se trata de usar la IA para apoyar lo que ya consume tiempo: atención, contenido, difusión y organización.",
+    guarantee: {
+      title: "Garantía de 7 días",
+      text: "Si el material no cumple tus expectativas, podrás solicitar el reembolso dentro del plazo de garantía.",
     },
-    presentation: {
-      eyebrow: "El libro",
-      title: "Una guía práctica para el primer paso.",
-    },
-    inside: {
-      eyebrow: "Mira el libro por dentro",
-      title: "Conoce algunas páginas del material",
-    },
-    difference: {
-      title: "Más que comandos listos.",
-      paragraphs: [
-        "La propuesta no es entregar una lista de indicaciones para copiar y pegar.",
-        "El objetivo es ayudar al lector a entender cómo conversar con la IA, dar contexto, evaluar respuestas y adaptar la herramienta a las necesidades de su propio negocio.",
+    author: {
+      eyebrow: "Conoce a quien escribió este material",
+      name: "Marcelo Pires de Farias",
+      highlight: "Tecnología aplicada a problemas reales.",
+      intro: [
+        "Marcelo Pires de Farias es formado en Sistemas de Información y actúa desde hace años en el desarrollo y la aplicación de soluciones tecnológicas orientadas a problemas reales.",
+        "A lo largo de su trayectoria, desarrolló sistemas y herramientas para simplificar procesos, organizar información y hacer más eficientes las actividades del día a día.",
+        "Más recientemente, también exploró el uso práctico de la inteligencia artificial, especialmente como apoyo a la productividad, la comunicación, la organización y la toma de decisiones.",
+      ],
+      principleLead: "Su relación con la tecnología parte de un principio simple:",
+      principleQuote: "Una buena herramienta no necesita ser complicada para ser útil.",
+      closing: [
+        "Fue con esa visión que nació Pequeños Negocios con IA: acercar la inteligencia artificial a quien emprende y mostrar, con ejemplos simples y aplicación práctica, que no es necesario ser especialista en tecnología para aprovechar sus beneficios.",
+        "Más que enseñar indicaciones listas, la propuesta es ayudar al lector a desarrollar autonomía para utilizar la IA según las necesidades de su propio negocio.",
       ],
       quote: "La IA ayuda. Tú decides.",
-    },
-    offer: {
-      cta: "Adquiérelo ya",
+      photoAlt:
+        "Foto de Marcelo Pires de Farias, autor de Pequeños Negocios con IA",
     },
     faq: {
       title: "Preguntas frecuentes",
@@ -382,12 +400,12 @@ const catalog: Record<Locale, Book1SalesCopy> = {
         },
         {
           question: "¿El libro es digital?",
-          answer: "Sí. Es un e-book.",
+          answer: "Sí. Es un e-book en PDF.",
         },
         {
           question: "¿Cómo recibo el e-book después de la compra?",
           answer:
-            "La compra se realiza a través de Hotmart. Después del pago, el acceso al e-book se libera en el área del comprador de la plataforma.",
+            "Después de confirmar el pago, el acceso al e-book en PDF se libera en tu área de compras.",
         },
         {
           question: "¿Puedo leerlo en el celular, la tablet o la computadora?",
@@ -395,8 +413,14 @@ const catalog: Record<Locale, Book1SalesCopy> = {
             "Sí. Puedes leerlo en el dispositivo que prefieras, según los formatos disponibles después de la compra.",
         },
         {
-          question: "¿Dónde se realiza el pago?",
-          answer: "El pago se realiza a través de Hotmart.",
+          question: "¿Cómo funciona el pago?",
+          answer:
+            "El pago se realiza en línea en el checkout de la compra, con las opciones disponibles en ese momento.",
+        },
+        {
+          question: "¿Existe garantía?",
+          answer:
+            "Sí. Tienes 7 días de garantía. Si el material no cumple tus expectativas, puedes solicitar el reembolso dentro de ese plazo.",
         },
       ],
     },

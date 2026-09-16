@@ -80,7 +80,7 @@ export function FeaturedBook({ locale, copy }: FeaturedBookProps) {
 
             {salesHref ? (
               <div className={price?.display ? "mt-5" : "mt-7"}>
-                <Button href={salesHref} data-nav="series-to-book-1">
+                <Button href={salesHref} data-nav="series-to-book-1" openInNewTab>
                   {copy.book1.buy}
                 </Button>
               </div>

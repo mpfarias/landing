@@ -14,6 +14,8 @@ export type BookPrice = {
   compareAtDisplay?: string;
   installmentCount?: number;
   installmentDisplay?: string;
+  cashText?: string;
+  installmentText?: string;
 };
 
 export type BookChapter = {
