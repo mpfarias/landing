@@ -4,7 +4,7 @@ import type { BookPrice } from "@/data/types";
 export const HOTMART_BOOK_1: Record<Locale, string | null> = {
   "pt-br": "https://go.hotmart.com/L107597226L",
   en: "https://go.hotmart.com/M107610021B",
-  es: null,
+  es: "https://go.hotmart.com/E107638013T",
 };
 
 export const BOOK_1_PRICE: Record<Locale, BookPrice> = {
