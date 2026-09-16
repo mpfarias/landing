@@ -2,7 +2,7 @@ import type { Locale } from "@/i18n/config";
 import type { BookPrice } from "@/data/types";
 
 export const HOTMART_BOOK_1: Record<Locale, string | null> = {
-  "pt-br": "https://go.hotmart.com/L107597226L",
+  "pt-br": "https://go.hotmart.com/L107597226L?dp=1",
   en: "https://go.hotmart.com/M107610021B",
   es: "https://go.hotmart.com/E107638013T",
 };
