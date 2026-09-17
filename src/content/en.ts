@@ -44,7 +44,7 @@ export const en: Messages = {
   ],
   status: {
     available: "Available",
-    development: "In development",
+    development: "Coming soon",
   },
   series: {
     eyebrow: "The Series",

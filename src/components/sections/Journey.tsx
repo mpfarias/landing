@@ -1,3 +1,4 @@
+import { BookCover } from "@/components/ui/BookCover";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { Container } from "@/components/ui/Container";
 import {
@@ -25,18 +26,13 @@ export function Journey({ locale, copy }: JourneyProps) {
       className="bg-background pt-8 pb-16 sm:pt-10 sm:pb-20 lg:pb-24"
     >
       <Container>
-        <ol className="relative grid grid-cols-1 gap-0 lg:grid-cols-4 lg:gap-x-8">
-          <span
-            className="pointer-events-none absolute top-[1.15rem] right-0 left-0 hidden h-px bg-line lg:block"
-            aria-hidden
-          />
-          {volumes.map((book, index) => (
+        <ol className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8">
+          {volumes.map((book) => (
             <VolumeStep
               key={book.id}
               book={book}
               locale={locale}
               copy={copy}
-              isLast={index === volumes.length - 1}
             />
           ))}
         </ol>
@@ -49,12 +45,10 @@ function VolumeStep({
   book,
   locale,
   copy,
-  isLast,
 }: {
   book: Book;
   locale: Locale;
   copy: Messages;
-  isLast: boolean;
 }) {
   const accent = volumeAccent[book.stage];
   const stage = copy.hero.stages[book.order - 1] ?? book.stageLabel;
@@ -63,20 +57,14 @@ function VolumeStep({
   const status = getStatusLabel(book.status, copy.status);
 
   return (
-    <li
-      className={[
-        "relative border-line py-6 lg:border-0 lg:py-0",
-        isLast ? "border-b-0" : "border-b lg:border-b-0",
-      ].join(" ")}
-    >
+    <li>
       <div className="flex items-start gap-4 lg:block">
-        <div className="flex shrink-0 flex-col items-center lg:mb-5 lg:flex-row lg:gap-3">
-          <span
-            className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border bg-background text-[11px] font-semibold tracking-[0.08em]"
-            style={{ borderColor: accent, color: accent }}
-          >
-            {String(book.order).padStart(2, "0")}
-          </span>
+        <div className="w-[88px] shrink-0 lg:mb-5 lg:w-full lg:max-w-[168px]">
+          <BookCover
+            book={book}
+            locale={locale}
+            sizes="(min-width: 1024px) 168px, 88px"
+          />
         </div>
 
         <div className="min-w-0 flex-1">

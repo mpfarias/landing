@@ -44,7 +44,7 @@ export const ptBr: Messages = {
   ],
   status: {
     available: "Disponível",
-    development: "Em desenvolvimento",
+    development: "Em breve",
   },
   series: {
     eyebrow: "A Série",
