@@ -101,7 +101,7 @@ export function Portfolio() {
           ) : null}
 
           {ebookItems.length ? (
-            <ul className="grid grid-cols-1">
+            <ul className="grid grid-cols-1 gap-5">
               {ebookItems.map((item) => (
                 <li key={item.id} className="min-w-0">
                   <EbookCard item={item} />
@@ -143,7 +143,7 @@ function FeaturedCard({ item }: { item: PortfolioItem }) {
         </h3>
         <p className="mt-3 text-[15px] leading-relaxed text-muted">{item.description}</p>
         <TechList items={item.technologies} limit={6} className="mt-4" />
-        {item.url ? <ProjectLink item={item} /> : null}
+        <ProjectLink item={item} />
       </div>
     </article>
   );
@@ -164,7 +164,7 @@ function CompactCard({ item }: { item: PortfolioItem }) {
         </h3>
         <p className="mt-2 text-[14px] leading-relaxed text-muted">{item.description}</p>
         <TechList items={item.technologies} limit={4} className="mt-4" />
-        {item.url ? <ProjectLink item={item} /> : null}
+        <ProjectLink item={item} />
       </div>
     </article>
   );
@@ -226,7 +226,7 @@ function EbookCard({ item }: { item: PortfolioItem }) {
           </p>
         ) : null}
         <TechList items={item.technologies} limit={3} className="mt-5" />
-        {item.url ? <ProjectLink item={item} /> : null}
+        <ProjectLink item={item} />
       </div>
     </article>
   );
@@ -256,6 +256,17 @@ function TechList({
 }
 
 function ProjectLink({ item }: { item: PortfolioItem }) {
+  if (item.comingSoon && !item.url) {
+    return (
+      <span
+        className="mt-5 inline-flex min-h-12 w-fit cursor-default items-center justify-center rounded-xl border border-line px-6 text-[13px] font-semibold tracking-[0.08em] text-muted uppercase"
+        aria-disabled="true"
+      >
+        Em breve
+      </span>
+    );
+  }
+
   if (!item.url) return null;
 
   return (
@@ -275,7 +286,13 @@ function CoverGrid({
   series: string;
 }) {
   return (
-    <ul className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
+    <ul
+      className={
+        covers.length === 1
+          ? "grid max-w-[180px] grid-cols-1 sm:max-w-[200px]"
+          : "grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3"
+      }
+    >
       {covers.map((src, index) => {
         const title = titles[index] ?? `${series} — volume ${index + 1}`;
         return (

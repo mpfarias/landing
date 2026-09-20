@@ -175,4 +175,29 @@ export const portfolioItems: PortfolioItem[] = [
     urlLabel: "Conhecer a série",
     external: Boolean(links.negociosComIaUrl?.startsWith("http")),
   },
+  {
+    id: "desenvolvendo-sistemas-com-ia",
+    slug: "desenvolvendo-sistemas-com-ia",
+    title: "Desenvolvendo Sistemas com IA",
+    subtitle: "Série de ebooks",
+    category: "ebook",
+    description:
+      "Projeto editorial sobre o uso de Inteligência Artificial no desenvolvimento de sistemas.",
+    covers: [
+      "/portfolio/desenvolvendo-sistemas-com-ia/livro-1.png",
+      "/portfolio/desenvolvendo-sistemas-com-ia/livro-2.png",
+      "/portfolio/desenvolvendo-sistemas-com-ia/livro-3.png",
+      "/portfolio/desenvolvendo-sistemas-com-ia/livro-4.png",
+    ],
+    coverTitles: [
+      "Desenvolvendo Landing Page com IA",
+      "Desenvolvendo E-commerce com IA",
+      "Desenvolvendo Sistema de Comércio com IA",
+      "Desenvolvendo Sistemas de Pagamentos com IA",
+    ],
+    coverImage: null,
+    technologies: ["Inteligência Artificial", "Desenvolvimento", "Ebooks"],
+    url: null,
+    comingSoon: true,
+  },
 ];

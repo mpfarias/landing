@@ -25,6 +25,7 @@ export type PortfolioItem = {
   urlLabel?: string;
   external?: boolean;
   featured?: boolean;
+  comingSoon?: boolean;
 };
 
 export type ExperienceItem = {
