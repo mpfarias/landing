@@ -68,8 +68,8 @@ export default async function LocaleLayout({
   const copy = getMessages(locale);
 
   return (
-    <>
-      <DocumentLang lang={htmlLang[locale]} />
+    <div data-theme="series" className="min-h-full bg-background font-sans text-foreground">
+      <DocumentLang lang={htmlLang[locale]} theme="series" />
       <JsonLd locale={locale} />
       <a
         href="#conteudo"
@@ -78,6 +78,6 @@ export default async function LocaleLayout({
         {copy.skipToContent}
       </a>
       {children}
-    </>
+    </div>
   );
 }

@@ -4,30 +4,61 @@
   --color-background: var(--background);
   --color-background-secondary: var(--background-secondary);
   --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
   --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-gold: var(--gold);
   --color-gold-hover: var(--gold-hover);
   --color-amber: var(--amber);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
   --color-accent-blue: var(--accent-blue);
+  --color-cyan: var(--cyan);
+  --color-on-accent: var(--on-accent);
   --color-volume-green: var(--volume-green);
   --color-line: var(--line);
-  --font-sans: var(--font-source-sans);
-  --font-display: var(--font-barlow);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --duration-250: 250ms;
 }
 
 :root {
-  --background: #050b11;
-  --background-secondary: #0a1420;
-  --surface: #101d29;
-  --foreground: #f5f5f2;
-  --muted: #aeb7c0;
+  --background: #07111f;
+  --background-secondary: #0b1727;
+  --surface: #101e30;
+  --surface-alt: #16273c;
+  --foreground: #f5f8fc;
+  --ink: #f5f8fc;
+  --muted: #9dabba;
+  --accent: #438bff;
+  --accent-hover: #5a9aff;
+  --cyan: #38c7c7;
+  --on-accent: #f5f8fc;
+  --line: #24364b;
   --gold: #f5b52e;
   --gold-hover: #ffc64a;
   --amber: #e99a1e;
   --accent-blue: #3d6487;
   --volume-green: #78a90f;
+  --focus-color: #438bff;
+  --font-body: var(--font-inter);
+  --font-heading: var(--font-manrope);
+}
+
+html[data-theme="series"],
+[data-theme="series"] {
+  --background: #050b11;
+  --background-secondary: #0a1420;
+  --surface: #101d29;
+  --surface-alt: #101d29;
+  --foreground: #f5f5f2;
+  --ink: #f5f5f2;
+  --muted: #aeb7c0;
   --line: #253442;
+  --focus-color: #f5b52e;
+  --font-body: var(--font-source-sans);
+  --font-heading: var(--font-barlow);
 }
 
 @layer base {
@@ -39,7 +70,7 @@
   body {
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+    font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
   }
 
   [id] {
@@ -47,7 +78,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--gold);
+    outline: 2px solid var(--focus-color);
     outline-offset: 3px;
   }
 }
@@ -121,6 +152,14 @@
     animation: fade-up 700ms ease both;
   }
 
+  .animate-rise {
+    animation: rise 0.7s ease both;
+  }
+
+  .animate-filter {
+    animation: filter-in 0.2s ease both;
+  }
+
   .animation-delay-1 {
     animation-delay: 90ms;
   }
@@ -149,12 +188,36 @@
   }
 }
 
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes filter-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
   .animate-fade-up,
+  .animate-rise,
+  .animate-filter,
   .faq-panel,
   .faq-answer {
     animation: none;

@@ -11,6 +11,10 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
+  if (pathname === "/") {
+    return NextResponse.next();
+  }
+
   const hasLocale = locales.some(
     (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`),
   );
